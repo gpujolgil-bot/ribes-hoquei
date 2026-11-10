@@ -6,6 +6,8 @@ on:
     - cron: "*/20 7-21 * * 6,0"
     # Entre setmana: tres comprovacions al dia (partits ajornats, divendres al vespre).
     - cron: "17 6,13,20 * * 1-5"
+    # Diumenge a mitjanit (hora catalana): 23:00 UTC a l'hivern i 22:00 UTC a l'estiu.
+    - cron: "0 22,23 * * 0"
   push:
     branches: [main]
   workflow_dispatch:

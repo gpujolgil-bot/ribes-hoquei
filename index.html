@@ -3,637 +3,517 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Seguiment Ribes CP</title>
-<meta name="description" content="Resultats, classificació i previsions dels equips del Ribes CP d'hoquei patins">
-<meta name="theme-color" content="#c8102e">
+<title>Ribes Club Patí · Hoquei patins a Sant Pere de Ribes</title>
+<meta name="description" content="Ribes Club Patí, club d'hoquei patins de Sant Pere de Ribes des de 1989. Història, equips, resultats i com apuntar-s'hi.">
+<meta name="theme-color" content="#14204a">
+<meta property="og:title" content="Ribes Club Patí · Som una pinya">
+<meta property="og:description" content="Hoquei patins a Sant Pere de Ribes des de 1989. Vine a provar-ho!">
+<meta property="og:image" content="img/pinya-943.jpg">
+<meta property="og:type" content="website">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Ribes CP">
 <meta name="format-detection" content="telephone=no">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="icon" href="img/escut-128.png" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script>
+  /* Els enllaços antics del seguiment (?equip=...) van a la nova secció de resultats */
+  (function(){var q=location.search.match(/[?&]equip=([\w-]+)/);if(q)location.replace('resultats/?equip='+q[1]+location.hash);})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Marcador de pista: superfícies fredes i netes, vermell Ribes només per al que és nostre. Mòbil primer, pestanyes fixes a dalt */
-  --bg:#f3f5f8; --surface:#ffffff; --ink:#18212c; --muted:#5f6b78; --line:#dde2e8;
-  --accent:#c8102e; --accent-soft:#fbe6ea; --heat:#2c5a87;
-  --win:#1f8a4c; --draw:#c48a1c; --loss:#7b8794; --good:#1f8a4c; --warn:#c2621a;
+  /* Colors de la samarreta i l'escut: blau marí de fons, vermell per a l'acció, or de la corona de llorer. Una sola pàgina llarga, mòbil primer, amb navegació fixa a dalt */
+  --navy:#14204a; --navy-2:#1d2d63; --red:#d0102b; --red-dark:#a80c22; --gold:#f2c230;
+  --paper:#f4f6fb; --white:#ffffff; --ink:#151b2e; --muted:#5a6378; --line:#dfe3ec;
+  --win:#1f8a4c; --draw:#c48a1c; --loss:#8a93a6;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Barlow",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
   --sat:env(safe-area-inset-top,0px); --sab:env(safe-area-inset-bottom,0px);
   color-scheme:light;
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0f141a; --surface:#171e27; --ink:#e7ecf1; --muted:#9aa6b3; --line:#2a3542;
-    --accent:#ff4b5c; --accent-soft:#3b1a21; --heat:#6aa3db;
-    --win:#41c47e; --draw:#e2a83c; --loss:#7d8996; --good:#41c47e; --warn:#f08a3c;
-    color-scheme:dark;
-  }
-}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-button,select{font:inherit;color:inherit}
-button{touch-action:manipulation}
-.wrap{max-width:980px;margin:0 auto;padding:calc(14px + var(--sat)) max(16px,env(safe-area-inset-right)) calc(40px + var(--sab)) max(16px,env(safe-area-inset-left));display:flex;flex-direction:column;gap:14px}
-h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:.01em;margin:0}
-h1{font-size:27px;line-height:1.05}
-h2{font-size:21px}
-h3{font-size:16px}
-.sub{color:var(--muted);margin:3px 0 0;font-size:13px}
-header{display:flex;flex-direction:column;gap:10px}
-.toprow{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.brand{display:flex;gap:12px;align-items:center;min-width:0}
-.stripe{flex:none;width:9px;height:42px;border-radius:3px;background:repeating-linear-gradient(180deg,var(--accent) 0 10px,var(--surface) 10px 14px);border:1px solid var(--line)}
-.refresh{flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 13px;font-weight:600;font-size:14px;cursor:pointer}
-.refresh svg{width:16px;height:16px}
-.refresh.spin svg{animation:spin 1s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
-.meta a{color:inherit}
-.teams{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:2px 16px}
-.teams::-webkit-scrollbar{display:none}
-.teams button{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap}
-.teams button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.pill{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid var(--line);background:var(--surface)}
-.pill .dot{width:9px;height:9px;border-radius:50%;background:var(--muted);flex:none}
-.pill.up{border-color:var(--good);color:var(--good)} .pill.up .dot{background:var(--good)}
-.pill.down{border-color:var(--warn);color:var(--warn)} .pill.down .dot{background:var(--warn)}
-/* pestanyes */
-.tabs{position:-webkit-sticky;position:sticky;top:0;z-index:6;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:calc(6px + var(--sat)) 6px 6px;margin:0 -16px;background:var(--bg);border-bottom:1px solid var(--line)}
-@supports ((-webkit-backdrop-filter:blur(6px)) or (backdrop-filter:blur(6px))){
-  .tabs{background:rgba(243,245,248,.88);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-  @media (prefers-color-scheme: dark){.tabs{background:rgba(15,20,26,.88)}}
-}
-.tabs button{border:0;background:transparent;padding:9px 4px;border-radius:8px;font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;white-space:nowrap}
-.tabs button[aria-selected="true"]{background:var(--ink);color:var(--surface)}
-.tabs .lg{display:none}
-.panel{display:none;flex-direction:column;gap:14px}
-.panel.on{display:flex}
-/* targetes */
-.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
-.tile .lab{font-size:12.5px;color:var(--muted);line-height:1.25}
-.tile .val{font-family:var(--display);font-size:34px;font-weight:700;line-height:1.05}
-.tile .val small{font-size:16px;color:var(--muted);font-weight:600}
-.tile .cmp{font-size:12.5px;color:var(--muted)}
-.tile.key{border-color:var(--accent);box-shadow:inset 4px 0 0 var(--accent)}
-.delta-up{color:var(--good);font-weight:600} .delta-down{color:var(--warn);font-weight:600}
-section.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.cardhead{display:flex;flex-direction:column;gap:4px}
-.cardhead p,.note{margin:0;color:var(--muted);font-size:14px;max-width:65ch}
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted)}
-.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
-svg text{fill:var(--muted);font-family:var(--body)}
-.goal{display:flex;align-items:center;gap:8px;font-size:14px;flex-wrap:wrap}
-select{font-size:16px;padding:7px 30px 7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235f6b78' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 10px center;-webkit-appearance:none;appearance:none;max-width:100%}
-/* posicions */
-.posbars{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:2px;align-items:end}
-.pcol{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;cursor:pointer;border-radius:4px;padding:2px 0;border:0;background:transparent}
-.pcol[aria-pressed="true"]{background:var(--accent-soft)}
-.pbars{height:110px;display:flex;align-items:flex-end;gap:1px;width:100%;justify-content:center;border-bottom:1px solid var(--line)}
-.pbars span{width:42%;border-radius:2px 2px 0 0;min-height:1px}
-.pbars .b0{background:var(--loss);opacity:.45}
-.pbars .b1{background:var(--accent)}
-.pcol .pv{font-size:10px;color:var(--ink);font-weight:600;min-height:14px}
-.pcol .pl{font-size:11px;color:var(--muted)}
-.posinfo{font-size:13.5px;min-height:1.4em;margin:0}
-/* partits */
-.games{display:flex;flex-direction:column}
-.game{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:10px 0;border-bottom:1px solid var(--line);align-items:center}
-.game:last-child{border-bottom:0}
-.game .when{font-size:12.5px;color:var(--muted)}
-.game .opp{font-weight:600}
-.game .right{text-align:right}
-.game .prob{grid-column:1/-1}
-.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;padding:1px 6px;border-radius:4px;text-transform:uppercase;vertical-align:1px;margin-left:6px}
-.tag.casa{background:var(--ink);color:var(--surface)} .tag.fora{border:1px solid var(--ink);color:var(--ink)}
-.res{font-family:var(--display);font-size:20px;font-weight:700}
-.res.w{color:var(--win)} .res.d{color:var(--draw)} .res.l{color:var(--loss)}
-.was{font-size:12px;color:var(--muted)}
-.wdl{display:flex;height:10px;border-radius:3px;overflow:hidden;background:var(--line)}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%;text-size-adjust:100%;font-variant-numeric:tabular-nums}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1;margin:0;letter-spacing:.005em;text-wrap:balance}
+h2{font-size:clamp(34px,8vw,56px);text-transform:uppercase}
+h3{font-size:22px;font-weight:700}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(18px,env(safe-area-inset-left)) 0 max(18px,env(safe-area-inset-right))}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.lead{font-size:18px;color:var(--muted);max-width:60ch}
+section{padding:64px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform 160ms var(--ease-out),background-color 160ms ease,border-color 160ms ease;touch-action:manipulation}
+.btn:active{transform:scale(0.97)}
+.btn-red{background:var(--red);color:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-line{border-color:var(--navy);color:var(--navy)}
+@media (hover:hover) and (pointer:fine){.btn-red:hover{background:var(--red-dark)}.btn-ghost:hover{border-color:#fff}.btn-dark:hover{background:var(--navy-2)}}
+.btn svg{width:18px;height:18px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* capçalera */
+.top{position:-webkit-sticky;position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;padding-top:var(--sat);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.logo img{width:42px;height:42px;border-radius:50%}
+.logo b{font-family:var(--display);font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+.bar .btn{min-height:40px;padding:8px 16px;font-size:15px}
+.nav{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 0 10px;margin:0 -4px}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;text-decoration:none;font-weight:600;font-size:15px;padding:8px 12px;border-radius:999px;color:rgba(255,255,255,.82);transition:background-color 160ms ease,color 160ms ease}
+.nav a[aria-current="true"]{background:rgba(255,255,255,.14);color:#fff}
+
+/* portada */
+.hero{background:var(--navy);color:#fff;padding:0 0 56px;overflow:hidden}
+.hero-grid{display:grid;gap:28px}
+.hero-photo{position:relative;margin:0 calc(-1 * max(18px,env(safe-area-inset-left)));aspect-ratio:943/600;background:var(--navy-2)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,74,0) 72%,var(--navy) 100%)}
+.hero-copy{display:flex;flex-direction:column;gap:18px;margin-top:-28px;position:relative;z-index:1}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(64px,18vw,128px);font-style:italic;text-transform:uppercase;line-height:.88;letter-spacing:-.01em}
+.hero h1 span{color:var(--red);-webkit-text-stroke:0}
+.hero p.lead{color:rgba(255,255,255,.82)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.stripes{display:flex;gap:6px}
+.stripes i{width:28px;height:6px;border-radius:3px;background:var(--red)}
+.stripes i:nth-child(2){background:var(--gold)}.stripes i:nth-child(3){background:#2f5bd8}
+
+/* xifres */
+.stats{background:var(--white);padding:0;border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(2,1fr)}
+.stat{padding:22px 4px;border-bottom:1px solid var(--line)}
+.stat:nth-child(odd){border-right:1px solid var(--line);padding-right:12px}
+.stat:nth-child(even){padding-left:16px}
+.stat:nth-last-child(-n+2){border-bottom:0}
+.stat b{display:block;font-family:var(--display);font-size:44px;font-weight:800;line-height:1;color:var(--navy)}
+.stat span{font-size:14px;color:var(--muted)}
+
+/* més que un club */
+.mqc-grid{display:grid;gap:32px;align-items:center}
+.phone{position:relative;max-width:300px;margin:0 auto;border-radius:28px;overflow:hidden;background:#000;box-shadow:0 20px 50px rgba(20,32,74,.28);aspect-ratio:540/960}
+.phone video{width:100%;height:100%;object-fit:cover}
+.credit{font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px}
+.quote{font-family:var(--display);font-style:italic;font-weight:700;font-size:clamp(26px,6vw,36px);line-height:1.1;color:var(--navy);border-left:6px solid var(--red);padding:4px 0 4px 18px}
+.quote small{display:block;font-family:var(--body);font-style:normal;font-weight:500;font-size:14px;color:var(--muted);margin-top:10px}
+.mqc-copy{display:flex;flex-direction:column;gap:18px}
+.values{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.values li{display:flex;gap:12px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.values li svg{flex:none;width:26px;height:26px;color:var(--red);margin-top:2px}
+.values b{display:block;font-size:17px}
+.values span{color:var(--muted);font-size:15px}
+
+/* història */
+.hist{background:var(--white)}
+.timeline{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:0;position:relative}
+.timeline::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 26px 40px}
+.timeline li::before{content:"";position:absolute;left:4px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--white);border:4px solid var(--red)}
+.timeline li.key::before{background:var(--gold);border-color:var(--navy)}
+.timeline .when{font-family:var(--display);font-weight:800;font-size:24px;color:var(--red);text-transform:uppercase;line-height:1.1}
+.timeline h3{margin:2px 0 6px}
+.timeline p{color:var(--muted);max-width:62ch}
+.crest-band{display:flex;gap:18px;align-items:center;background:var(--paper);border-radius:18px;padding:18px;margin-top:8px}
+.crest-band img{width:88px;height:88px;flex:none}
+.crest-band p{font-size:15px;color:var(--muted)}
+
+/* equips */
+.teams{display:grid;gap:12px;margin-top:28px}
+.team{display:flex;flex-direction:column;gap:10px;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px;text-decoration:none;transition:transform 160ms var(--ease-out),box-shadow 160ms ease}
+.team:active{transform:scale(0.98)}
+@media (hover:hover) and (pointer:fine){.team:hover{box-shadow:0 10px 28px rgba(20,32,74,.12)}}
+.team .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.team h3{font-size:26px;text-transform:uppercase}
+.team .grp{font-size:13px;color:var(--muted)}
+.pos{flex:none;text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:6px 10px;min-width:62px}
+.pos b{display:block;font-family:var(--display);font-size:28px;line-height:1}
+.pos span{font-size:11px;opacity:.8}
+.pos.lead{background:var(--gold);color:var(--navy)}
+.team .row{display:flex;justify-content:space-between;gap:10px;font-size:14px;border-top:1px solid var(--line);padding-top:8px}
+.team .row>span:first-child{color:var(--muted)}
+.team .row b{text-align:right}
+.chip{display:inline-block;min-width:20px;padding:0 6px;border-radius:5px;color:#fff;font-weight:700;font-size:12px;text-align:center;margin-right:4px}
+.chip.w{background:var(--win)}.chip.d{background:var(--draw)}.chip.l{background:var(--loss)}
+.team .more{font-weight:700;color:var(--red);font-size:14px}
+.skel{height:170px;border-radius:16px;background:linear-gradient(90deg,#e9edf5 0%,#f4f6fb 50%,#e9edf5 100%);background-size:200% 100%}
+@media (prefers-reduced-motion: no-preference){.skel{animation:sh 1.2s linear infinite}}
+@keyframes sh{to{background-position:-200% 0}}
+
+/* resultats */
+.res{background:var(--navy);color:#fff}
+.res .eyebrow{color:var(--gold)}
+.res .lead{color:rgba(255,255,255,.78)}
+.seg{display:inline-grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.1);border-radius:999px;padding:4px;margin:24px 0 16px}
+.seg button{border:0;background:transparent;color:rgba(255,255,255,.8);font:inherit;font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;min-height:44px;cursor:pointer;transition:background-color 160ms ease,color 160ms ease}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--navy)}
+.games{display:grid;gap:8px}
+.game{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 14px}
+.game .cat{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.game .vs{font-weight:600;font-size:16px}
+.game .vs .us{color:#fff;font-weight:800}
+.game .when{font-size:13px;color:rgba(255,255,255,.65)}
+.game .score{font-family:var(--display);font-size:30px;font-weight:800;line-height:1;text-align:right}
+.game .score.w{color:#5fd68f}.game .score.d{color:var(--gold)}.game .score.l{color:rgba(255,255,255,.6)}
+.game .tag{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);border-radius:5px;padding:2px 7px;text-align:right}
+.game .tag.home{background:var(--red);border-color:var(--red)}
+.season{display:grid;gap:12px;margin-top:36px}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px}
+.card .k{font-size:13px;color:rgba(255,255,255,.7)}
+.card .v{font-family:var(--display);font-size:42px;font-weight:800;line-height:1.05}
+.card .v small{font-size:18px;color:rgba(255,255,255,.65);font-weight:700}
+.wdl{display:flex;height:12px;border-radius:6px;overflow:hidden;margin:10px 0 6px;background:rgba(255,255,255,.12)}
 .wdl span{height:100%}
-.wdl .w{background:var(--win)} .wdl .d{background:var(--draw)} .wdl .l{background:var(--loss)}
-.wdltxt{font-size:12px;color:var(--muted);margin-top:3px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px}
-/* jornades */
-.jnav{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;align-items:center}
-.jnav button{height:40px;border:1px solid var(--line);background:var(--surface);border-radius:8px;font-size:20px;cursor:pointer}
-.jnav button:disabled{opacity:.35}
-.jnav select{width:100%}
-.mrow{display:grid;grid-template-columns:44px minmax(0,1fr) 54px minmax(0,1fr);gap:8px;align-items:center;padding:9px 6px;border-bottom:1px solid var(--line)}
-.mrow.ours{background:var(--accent-soft);border-radius:8px;border-bottom-color:transparent}
-.mrow .st{font-size:12px;color:var(--muted)}
-.mrow .h{text-align:right;font-weight:500;overflow-wrap:break-word;min-width:0}
-.mrow .a{font-weight:500;overflow-wrap:break-word;min-width:0}
-.mrow .sc{text-align:center;font-family:var(--display);font-size:19px;font-weight:700}
-.mrow .sc.pend{font-family:var(--body);font-size:12px;color:var(--muted);font-weight:500}
-.mrow .w8{font-weight:700}
-.mrow .pr{grid-column:2/-1}
-.dsep{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:12px 6px 4px}
-/* xips i segments */
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{font-size:14px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);cursor:pointer}
-.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--bg)}
-.seg button{border:0;border-left:1px solid var(--line);background:transparent;padding:10px 2px;font-size:13.5px;font-weight:600;cursor:pointer;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.seg button:first-child{border-left:0}
-.seg button[aria-pressed="true"].W{background:var(--win);color:#fff}
-.seg button[aria-pressed="true"].D{background:var(--draw);color:#fff}
-.seg button[aria-pressed="true"].L{background:var(--loss);color:#fff}
-.seg button[aria-pressed="true"].O{background:var(--surface)}
-.seg button.O{color:var(--muted);font-weight:500}
-.wif{display:flex;flex-direction:column;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}
-.wif:last-child{border-bottom:0}
-.wif .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
-.answer{font-size:15.5px;line-height:1.5;margin:0;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
-.answer b{color:var(--accent)}
-.simbar{position:-webkit-sticky;position:sticky;bottom:calc(10px + var(--sab));z-index:5;display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--ink);color:var(--surface);padding:10px 14px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.25);font-size:14px}
-.simbar b{font-family:var(--display);font-size:20px}
-.simbar .sp{display:flex;gap:14px;flex-wrap:wrap}
-.simbar .sp span{white-space:nowrap}
-.simbar .btn{background:var(--surface);color:var(--ink);border:0;border-radius:8px;padding:6px 11px;font-weight:600;font-size:13px;cursor:pointer}
-details.others{border:1px solid var(--line);border-radius:10px}
-details.others summary{padding:12px 14px;cursor:pointer;font-weight:600}
-details.others .inner{padding:0 14px 8px;display:flex;flex-direction:column;gap:8px}
-.ptsneed{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:6px}
-.pn{border:1px solid var(--line);border-radius:8px;padding:6px;text-align:center}
-.pn b{display:block;font-family:var(--display);font-size:19px;white-space:nowrap}
-.pn span{font-size:12px;font-weight:600}
-.team-ribes{color:var(--accent);font-weight:700}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.empty{color:var(--muted);font-size:14px;margin:0}
-.loading{padding:30px 0;text-align:center;color:var(--muted)}
-/* taules */
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table{border-collapse:collapse;width:100%}
-th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
-th{font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
-td.num,th.num{text-align:right}
-.std td.pos{font-family:var(--display);font-weight:700;font-size:17px;width:26px}
-.std tr.ribes td,.heat tr.ribes td.team{background:var(--accent-soft)}
-.std tr.ribes td.team,.heat tr.ribes td.team{color:var(--accent);font-weight:700}
-.std td.team{font-weight:500;min-width:120px}
-.form{display:flex;gap:3px}
-.form b{width:18px;height:18px;border-radius:50%;font-size:10px;display:grid;place-items:center;color:#fff}
-.form .W{background:var(--win)} .form .D{background:var(--draw)} .form .L{background:var(--loss)}
-.hide-sm{display:none}
-.heat td.team{position:-webkit-sticky;position:sticky;left:0;background:var(--surface);z-index:1;font-size:13px;padding-right:8px;white-space:nowrap}
-.heat td.h{min-width:30px;text-align:center;font-size:12px;padding:6px 1px}
-.heat th.h{text-align:center;padding:6px 1px}
-.heat th:first-child{position:-webkit-sticky;position:sticky;left:0;background:var(--surface);z-index:1}
-footer{font-size:12.5px;color:var(--muted);text-align:center}
-footer a{color:inherit}
-@media (min-width:700px){
-  .wrap{padding-top:calc(22px + var(--sat));gap:18px}
-  h1{font-size:34px}
-  .teams{margin:0;padding:2px 0}
-  .tabs{margin:0;border:1px solid var(--line);border-radius:12px;top:8px;padding:6px}
-  .tabs .lg{display:inline} .tabs .sm{display:none}
-  .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .tile .val{font-size:38px}
-  .hide-sm{display:table-cell}
-  .pbars{height:130px}
-  .game{grid-template-columns:150px minmax(0,1fr) minmax(200px,260px)}
-  .game .prob{grid-column:auto}
-  .game .right{grid-column:3}
-  .mrow{grid-template-columns:60px minmax(0,1fr) 64px minmax(0,1fr) 200px}
-  .mrow .pr{grid-column:auto}
+.wdl .w{background:#5fd68f}.wdl .d{background:var(--gold)}.wdl .l{background:rgba(255,255,255,.35)}
+.legend{display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.78)}
+.leaders{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.leaders span{background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;border-radius:999px;padding:4px 10px}
+.res .foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:28px}
+.res .note{font-size:13px;color:rgba(255,255,255,.6)}
+
+/* galeria */
+.gallery{display:grid;gap:12px;margin-top:28px}
+.gallery figure{margin:0;position:relative;border-radius:16px;overflow:hidden;background:var(--line)}
+.gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;color:#fff;font-weight:600;font-size:15px;background:linear-gradient(180deg,rgba(20,32,74,0),rgba(20,32,74,.85))}
+
+/* apunta't */
+.join{background:var(--red);color:#fff;position:relative;overflow:hidden}
+.join::before{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:34px solid rgba(255,255,255,.08)}
+.join .eyebrow{color:#fff;opacity:.85}
+.join h2{font-style:italic}
+.join .lead{color:rgba(255,255,255,.9)}
+.steps{list-style:none;padding:0;margin:28px 0;display:grid;gap:12px;counter-reset:s}
+.steps li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.1);border-radius:16px;padding:16px;counter-increment:s}
+.steps li::before{content:counter(s);flex:none;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--red);font-family:var(--display);font-weight:800;font-size:24px;display:grid;place-items:center}
+.steps b{display:block;font-size:18px}
+.steps span{opacity:.88;font-size:15px}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.cats span{border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:4px 12px;font-size:14px;font-weight:600}
+.join .btn-red{background:#fff;color:var(--red)}
+.where{display:flex;gap:12px;align-items:center;margin-top:24px;font-size:15px}
+.where svg{flex:none;width:24px;height:24px}
+
+footer{background:var(--navy);color:rgba(255,255,255,.75);padding:40px 0 calc(40px + var(--sab));font-size:14px}
+footer .wrap{display:grid;gap:18px}
+footer .brand{display:flex;gap:12px;align-items:center;color:#fff}
+footer .brand img{width:56px;height:56px}
+footer .brand b{font-family:var(--display);font-size:24px;text-transform:uppercase}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer a{color:#fff}
+
+@media (min-width:720px){
+  section{padding:96px 0}
+  .stats .wrap{grid-template-columns:repeat(4,1fr)}
+  .stat,.stat:nth-child(odd),.stat:nth-child(even){border-bottom:0;border-right:1px solid var(--line);padding:30px 20px}
+  .stat:last-child{border-right:0}
+  .teams{grid-template-columns:repeat(2,1fr)}
+  .season{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:1.3fr 1fr}
+  .gallery figure:first-child{grid-row:span 2}
+  .gallery figure:first-child img{aspect-ratio:auto}
+  .steps{grid-template-columns:repeat(3,1fr)}
 }
-@media (prefers-reduced-motion: reduce){.refresh.spin svg{animation:none}}
-@media (prefers-reduced-motion: no-preference){.pbars span,.wdl span{transition:height .3s,width .3s}}
+@media (min-width:960px){
+  .hero{padding:40px 0 80px}
+  .hero-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:48px}
+  .hero-copy{margin-top:0;order:-1}
+  .hero-photo{margin:0;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+  .hero-photo::after{display:none}
+  .mqc-grid{grid-template-columns:320px 1fr;gap:64px}
+  .teams{grid-template-columns:repeat(3,1fr)}
+  .hist .cols{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+  .hist .cols>div:first-child{position:-webkit-sticky;position:sticky;top:140px}
+  .timeline{margin-top:0}
+  .nav{padding-bottom:0}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .bar{flex:none}
+  .top .nav{order:0;margin:0}
+  .top .bar .btn{display:none}
+  .top .cta-desk{display:inline-flex}
+}
+.cta-desk{display:none}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="toprow">
-      <div class="brand">
-        <div class="stripe" aria-hidden="true"></div>
-        <div>
-          <h1>Seguiment Ribes CP</h1>
-          <p class="sub" id="subtitle">Hoquei patins · temporada 2026-27</p>
-        </div>
-      </div>
-      <button class="refresh" id="refresh" type="button" aria-label="Actualitzar resultats"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg><span>Actualitzar</span></button>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="#inici" aria-label="Ribes Club Patí, inici"><img src="img/escut-128.png" alt="Escut del Ribes Club Patí" width="42" height="42"><b>Ribes Club Patí</b></a>
+      <a class="btn btn-red" href="#apuntat">Apunta't</a>
     </div>
-    <nav class="teams" id="teams" aria-label="Equips del Ribes"></nav>
-    <div class="meta" id="meta"></div>
-    <div id="status" class="pill"><span class="dot"></span><span>Carregant…</span></div>
-  </header>
-
-  <nav class="tabs" role="tablist" aria-label="Seccions">
-    <button role="tab" id="t-resum" data-tab="resum" aria-selected="true">Resum</button>
-    <button role="tab" id="t-jornades" data-tab="jornades" aria-selected="false">Jornades</button>
-    <button role="tab" id="t-simulador" data-tab="simulador" aria-selected="false"><span class="lg">Què passaria si…</span><span class="sm">I si…?</span></button>
-    <button role="tab" id="t-classificacio" data-tab="classificacio" aria-selected="false"><span class="lg">Classificació</span><span class="sm">Taula</span></button>
-  </nav>
-
-  <div class="panel on" data-panel="resum" role="tabpanel" aria-labelledby="t-resum">
-    <div class="goal"><label for="goal">Objectiu: acabar entre els</label><select id="goal"></select><span>primers</span></div>
-    <div class="tiles" id="tiles"></div>
-    <section class="card">
-      <div class="cardhead">
-        <h2>Anem pel bon camí?</h2>
-        <p id="pathnote">La línia grisa és el que esperava el model el 10 de novembre. La vermella són els punts reals. Si la vermella va per sobre, rendim més del previst.</p>
-      </div>
-      <div class="legend"><span><i style="background:var(--loss)"></i>Previsió 10 nov</span><span><i style="background:var(--accent)"></i>Punts reals</span><span><i style="background:var(--accent);opacity:.5"></i>Projecció actual</span></div>
-      <div id="pathchart"></div>
-    </section>
-    <section class="card">
-      <div class="cardhead">
-        <h2>On acabarem?</h2>
-        <p>Probabilitat de cada posició final. Toca una columna per veure-la en detall.</p>
-      </div>
-      <div class="legend"><span><i style="background:var(--loss);opacity:.45;height:10px"></i>Previsió 10 nov</span><span><i style="background:var(--accent);height:10px"></i>Ara</span></div>
-      <div class="posbars" id="posbars"></div>
-      <p class="posinfo" id="posinfo"></p>
-    </section>
-    <section class="card">
-      <div class="cardhead">
-        <h2>Partits del Ribes</h2>
-        <p>Com han anat els jugats i quina probabilitat tenim ara de guanyar, empatar o perdre els que queden.</p>
-      </div>
-      <div class="games" id="ribesgames"></div>
-    </section>
+    <nav class="nav" aria-label="Seccions">
+      <a href="#club">El club</a>
+      <a href="#historia">Història</a>
+      <a href="#equips">Equips</a>
+      <a href="#resultats">Resultats</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#apuntat">Apunta't</a>
+      <a class="btn btn-red cta-desk" href="#apuntat">Vine a provar-ho</a>
+    </nav>
   </div>
+</header>
 
-  <div class="panel" data-panel="jornades" role="tabpanel" aria-labelledby="t-jornades">
-    <section class="card">
-      <div class="jnav"><button type="button" id="jprev" aria-label="Jornada anterior">‹</button><select id="jsel" aria-label="Tria la jornada"></select><button type="button" id="jnext" aria-label="Jornada següent">›</button></div>
-      <div id="jmatches"></div>
-    </section>
-    <section class="card">
-      <div class="cardhead"><h2 id="jtabletitle">Classificació després de la jornada</h2><p>Només compta els partits d'aquesta jornada i les anteriors que ja s'han jugat.</p></div>
-      <div class="scroll" id="jtable"></div>
-    </section>
-  </div>
-
-  <div class="panel" data-panel="simulador" role="tabpanel" aria-labelledby="t-simulador">
-    <section class="card">
-      <div class="cardhead">
-        <h2>Què passaria si…</h2>
-        <p>Tria què passa en els partits que queden i mira on acabaria el Ribes. És només una prova: no canvia res.</p>
+<main>
+  <section class="hero" id="inici" style="padding-top:0">
+    <div class="wrap hero-grid">
+      <div class="hero-photo">
+        <img src="img/pinya-hero-943.jpg" srcset="img/pinya-hero-600.jpg 600w, img/pinya-hero-943.jpg 943w" sizes="(min-width:960px) 520px, 100vw" alt="Els jugadors del Ribes fent pinya al centre de la pista abans d'un partit" width="943" height="600" fetchpriority="high">
       </div>
-      <p class="answer" id="answer">Calculant…</p>
-      <div class="tiles" id="wtiles"></div>
-      <div>
-        <div class="legend" style="margin-bottom:6px"><span><i style="background:var(--loss);opacity:.45;height:10px"></i>Ara</span><span><i style="background:var(--accent);height:10px"></i>Amb aquest escenari</span></div>
-        <div class="posbars" id="wposbars"></div>
-      </div>
-    </section>
-    <section class="card">
-      <div class="cardhead">
-        <h2>Partits del Ribes que queden</h2>
-        <div class="chips" id="presets">
-          <button class="chip" type="button" data-preset="open">Tot obert</button>
-          <button class="chip" type="button" data-preset="easy">Guanyem els assequibles</button>
-          <button class="chip" type="button" data-preset="all">Guanyem tot</button>
-          <button class="chip" type="button" data-preset="lose">Perdem tot</button>
+      <div class="hero-copy">
+        <div class="stripes" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="eyebrow">Hoquei patins · Sant Pere de Ribes · des de 1989</p>
+        <h1>Som una <span>pinya.</span></h1>
+        <p class="lead">Al Ribes aprens a patinar, a passar la bola i a guanyar i perdre en equip. Dels més petits del prebenjamí fins a la 3a Catalana, aquí tothom hi té lloc.</p>
+        <div class="ctas">
+          <a class="btn btn-red" href="#apuntat">Vine a provar-ho <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#resultats">Resultats del cap de setmana</a>
         </div>
       </div>
-      <div id="wribes"></div>
-      <details class="others">
-        <summary id="otherssum">Altres partits de la lliga</summary>
-        <div class="inner" id="wothers"></div>
-      </details>
-    </section>
-    <section class="card">
-      <div class="cardhead">
-        <h2>Quants punts calen?</h2>
-        <p id="ptsnote">Amb aquests punts finals, probabilitat d'aconseguir l'objectiu.</p>
-      </div>
-      <div class="ptsneed" id="ptsneed"></div>
-    </section>
-    <div class="simbar" id="simbar" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="stats" aria-label="El club en xifres">
+    <div class="wrap">
+      <div class="stat"><b>1989</b><span>any de fundació</span></div>
+      <div class="stat"><b id="s-teams">9</b><span>equips en competició</span></div>
+      <div class="stat"><b id="s-played">—</b><span>partits jugats aquesta temporada</span></div>
+      <div class="stat"><b id="s-wins">—</b><span>victòries aquesta temporada</span></div>
+    </div>
   </div>
 
-  <div class="panel" data-panel="classificacio" role="tabpanel" aria-labelledby="t-classificacio">
-    <section class="card">
-      <div class="cardhead">
-        <h2>Classificació</h2>
-        <p>Amb tots els resultats publicats, i els punts que el model espera per a cada equip a final de lliga.</p>
+  <section id="club">
+    <div class="wrap mqc-grid">
+      <div>
+        <div class="phone">
+          <video controls playsinline preload="none" poster="img/mes-que-un-club-poster.jpg" aria-label="Reportatge sobre el Ribes Club Patí">
+            <source src="img/mes-que-un-club.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="credit">Reportatge: La Xarxa · Aixeca i pica</p>
       </div>
-      <div class="scroll" id="standings"></div>
-    </section>
-    <section class="card">
-      <div class="cardhead">
-        <h2>Probabilitat de cada posició (%)</h2>
-        <p>Llisca cap al costat per veure totes les posicions.</p>
+      <div class="mqc-copy">
+        <p class="eyebrow">El club</p>
+        <h2>Més que un club</h2>
+        <p class="lead">Som un club de poble, fet per famílies, entrenadors i jugadors que viuen l'hoquei cada setmana al Pavelló de Ribes.</p>
+        <p class="quote">«Que tothom sigui una pinya i que estiguem molt units.»<small>Així defineixen el club els qui el fan cada dia.</small></p>
+        <ul class="values">
+          <li><svg aria-hidden="true"><use href="#i-heart"/></svg><div><b>Proper</b><span>Un club on tothom es coneix i on les famílies hi tenen lloc.</span></div></li>
+          <li><svg aria-hidden="true"><use href="#i-users"/></svg><div><b>Pinya</b><span>Guanyem i perdem junts, des del primer patí fins al sènior.</span></div></li>
+          <li><svg aria-hidden="true"><use href="#i-up"/></svg><div><b>Pedrera</b><span>L'objectiu és que la canalla es quedi i que el club tingui equip a totes les categories.</span></div></li>
+        </ul>
       </div>
-      <div class="scroll" id="heat"></div>
-    </section>
-    <section class="card">
-      <h2>Com es calcula</h2>
-      <p class="note">Els resultats es llegeixen automàticament de hoquei.info: cada 20 minuts els caps de setmana i tres cops al dia entre setmana. Cada equip té una força calculada a partir de la diferència de gols de tots els seus partits, tenint en compte contra qui ha jugat (rating de Massey amb regularització). Amb aquestes forces es juga la resta de la lliga milers de vegades, sumant l'atzar de cada partit i la incertesa del mateix rating. Els empats a punts es desfan per enfrontament directe i després per diferència de gols. La previsió del 10 de novembre és el mateix càlcul fet només amb els partits jugats fins aquell dia. Al simulador, els resultats triats es fixen però no canvien la força dels equips.</p>
-    </section>
-  </div>
+    </div>
+  </section>
 
-  <footer>Dades: <a href="https://hoquei.info/" rel="noopener">hoquei.info</a> · Federació Catalana de Patinatge. Pàgina no oficial feta per famílies del Ribes CP.</footer>
-</div>
+  <section class="hist" id="historia">
+    <div class="wrap cols">
+      <div>
+        <p class="eyebrow">Història</p>
+        <h2>D'on venim</h2>
+        <p class="lead" style="margin-top:14px">Una història de poble, de parròquia i de pavelló, que ja suma més de tres dècades d'hoquei a Ribes.</p>
+        <div class="crest-band">
+          <img src="img/escut-256.png" alt="Escut del Ribes Club Patí" width="88" height="88">
+          <p>L'escut ho explica tot: les quatre barres, el castell de Ribes, dos sticks creuats amb la bola i la corona de llorer.</p>
+        </div>
+      </div>
+      <ol class="timeline">
+        <li><p class="when">Els inicis</p><h3>Tot comença a la parròquia</h3><p>Fa gairebé cinquanta anys, l'esport a Ribes es feia a la parròquia, compartit amb altres entitats i altres esports.</p></li>
+        <li><p class="when">Després</p><h3>Arriba el patinatge</h3><p>Més endavant el projecte es va unir amb el patinatge, i els patins es van fer un lloc al poble.</p></li>
+        <li class="key"><p class="when">1989</p><h3>Neix el Ribes Club Patí</h3><p>El patinatge va crear el Club Patinatge Artístic Ribes i l'hoquei va fer el seu propi camí: així va néixer el Ribes Club Patí.</p></li>
+        <li><p class="when">Festa Major</p><h3>El Torneig Montgròs</h3><p>Pel juny, durant la Festa Major de Sant Pere, el club organitza el Torneig Montgròs d'hoquei patins al pavelló. El 2015 ja en celebrava la 29a edició.</p></li>
+        <li><p class="when">2026</p><h3>El júnior, a la final</h3><p>L'equip júnior va arribar a la final de la Copa Catalana Plata, disputada a Roda de Ter el 14 de juny.</p></li>
+        <li class="key"><p class="when">Avui</p><h3><span id="h-teams">9</span> equips i un repte</h3><p>Competim del prebenjamí a la 3a Catalana, amb equip femení i els veterans. El repte és l'espai al pavelló, i l'objectiu, tenir equip a totes les categories.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="equips">
+    <div class="wrap">
+      <p class="eyebrow">Temporada 2026-27</p>
+      <h2>Els nostres equips</h2>
+      <p class="lead" style="margin-top:14px">Classificació actual, últim resultat i proper partit de cada equip. Toca'n un per veure'n la classificació completa i les previsions.</p>
+      <div class="teams" id="teams">
+        <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="res" id="resultats">
+    <div class="wrap">
+      <p class="eyebrow">Resultats</p>
+      <h2>Cap de setmana</h2>
+      <p class="lead" style="margin-top:14px" id="res-lead">Tots els partits del Ribes, de totes les categories.</p>
+      <div class="seg" role="group" aria-label="Tria què vols veure">
+        <button type="button" id="b-last" aria-pressed="true">Últims resultats</button>
+        <button type="button" id="b-next" aria-pressed="false">Propers partits</button>
+      </div>
+      <div class="games" id="games"><p class="note">Carregant resultats…</p></div>
+
+      <h3 style="margin-top:44px;font-size:28px;text-transform:uppercase">El club aquesta temporada</h3>
+      <div class="season" id="season"></div>
+      <div class="foot">
+        <a class="btn btn-red" href="resultats/">Classificacions i previsions <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="note" id="updated">Dades de la Federació Catalana de Patinatge via hoquei.info, actualitzades automàticament.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="wrap">
+      <p class="eyebrow">Fotos</p>
+      <h2>A pista</h2>
+      <div class="gallery">
+        <figure><img src="img/partit-1024.jpg" srcset="img/partit-600.jpg 600w, img/partit-1024.jpg 1024w" sizes="(min-width:720px) 560px, 100vw" alt="Jugadors del Ribes atacant la porteria rival en un partit de base" width="1024" height="1057" loading="lazy"><figcaption>La base, a l'atac</figcaption></figure>
+        <figure><img src="img/pinya-943.jpg" srcset="img/pinya-600.jpg 600w, img/pinya-943.jpg 943w" sizes="(min-width:720px) 440px, 100vw" alt="Pinya de l'equip abans del partit al Pavelló de Ribes" width="943" height="720" loading="lazy"><figcaption>Pinya abans del partit</figcaption></figure>
+        <figure><img src="img/veterans-984.jpg" srcset="img/veterans-600.jpg 600w, img/veterans-984.jpg 984w" sizes="(min-width:720px) 440px, 100vw" alt="Foto de grup dels veterans del Ribes amb la samarreta groga" width="984" height="654" loading="lazy"><figcaption>Els veterans, que no pengen els patins</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="apuntat">
+    <div class="wrap">
+      <p class="eyebrow">Apunta't</p>
+      <h2>Vine a fer hoquei amb el Ribes</h2>
+      <p class="lead" style="margin-top:14px">No cal haver patinat mai. Si tens ganes de passar-t'ho bé, de fer amics i d'aprendre un esport d'equip, aquí hi ha un lloc per a tu.</p>
+      <ol class="steps">
+        <li><div><b>Escriu-nos</b><span>Envia'ns un missatge per Instagram amb el nom i l'any de naixement.</span></div></li>
+        <li><div><b>Et diem el teu equip</b><span>Segons l'edat, et direm amb quin grup entrenaràs i quan.</span></div></li>
+        <li><div><b>Vine al pavelló</b><span>Coneixeràs els entrenadors i l'equip. La resta ve sola.</span></div></li>
+      </ol>
+      <p style="font-weight:700">Categories on competim:</p>
+      <div class="cats"><span>Prebenjamí</span><span>Benjamí</span><span>Aleví</span><span>Infantil</span><span>Femení</span><span>Sènior</span><span>Veterans</span></div>
+      <div class="ctas" style="margin-top:28px">
+        <a class="btn btn-red" href="https://ig.me/m/ribesclubpati" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg> Envia'ns un missatge</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/ribesclubpati/" rel="noopener">Segueix-nos @ribesclubpati</a>
+      </div>
+      <p class="where"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Juguem a casa al <a href="https://www.google.com/maps/search/?api=1&amp;query=Pavell%C3%B3+Municipal+Sant+Pere+de+Ribes" rel="noopener">Pavelló de Ribes</a>, Sant Pere de Ribes (Garraf).</span></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><img src="img/escut-128.png" alt="" width="56" height="56"><div><b>Ribes Club Patí</b><br>Hoquei patins des de 1989</div></div>
+    <nav aria-label="Enllaços del peu">
+      <a href="resultats/">Classificacions i previsions</a>
+      <a href="https://www.instagram.com/ribesclubpati/" rel="noopener">Instagram</a>
+      <a href="https://hoquei.info/" rel="noopener">Dades: hoquei.info</a>
+    </nav>
+    <p>© <span id="yr">2026</span> Ribes Club Patí · Sant Pere de Ribes</p>
+  </div>
+</footer>
+
 <script src="model.js"></script>
 <script>
 (function(){
 "use strict";
 var $=function(id){return document.getElementById(id);};
-var CFG=null, TEAM=null, D=null, SIM=null, REF=null, WSIM=null, FORCE={}, POSSEL=null, J=null, GOAL=null, wTimer=null, simToken=0;
-var DEFAULT_TEAM='prebenjami-b';
-var LS={get:function(k){try{return localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{localStorage.setItem(k,v);}catch(e){}}};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+var ord=function(n){return n===1?'1r':n===2?'2n':n===3?'3r':n===4?'4t':n+'è';};
+var DAYS=['Dg','Dl','Dt','Dc','Dj','Dv','Ds'],MON=['gen.','febr.','març','abr.','maig','juny','jul.','ag.','set.','oct.','nov.','des.'];
+function fmtDay(d){if(!d)return 'Data per confirmar';var p=d.split('-'),dt=new Date(+p[0],+p[1]-1,+p[2],12);return DAYS[dt.getDay()]+' '+(+p[2])+' '+MON[+p[1]-1];}
+function iso(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');}
+$('yr').textContent=new Date().getFullYear();
 
-// ---------- noms ----------
-var UP={CP:1,HC:1,CH:1,PHC:1,HF:1,UE:1,CE:1,CN:1,AE:1,SH:1,CEH:1,CHP:1,HCP:1,CPA:1,UD:1,CD:1,CF:1,FC:1,CHC:1,AECS:1,SAD:1};
-var CLUBW={CP:1,HC:1,CH:1,PHC:1,HF:1,UE:1,CE:1,CN:1,AE:1,SH:1,CEH:1,CLUB:1,HOQUEI:1,PATI:1,'PATÍ':1,UNIÓ:1,ESPORTIVA:1,'HOQUEI-CLUB':1};
-var LOW={DE:1,DEL:1,LA:1,LES:1,I:1,EL:1,DELS:1};
+/* noms curts dels rivals */
+var CLUBW={CP:1,HC:1,CH:1,PHC:1,HF:1,UE:1,CE:1,CN:1,AE:1,SH:1,CEH:1,CLUB:1,HOQUEI:1,PATI:1,'PATÍ':1,'UNIÓ':1,ESPORTIVA:1};
 var SHORTFIX={"JOIERIA MONER SANT RAMON B":"Sant Ramon B","UNIÓ ESPORTIVA D'HORTA A":"Horta A"};
 function capw(w){return w.split('-').map(function(p){return p.charAt(0).toUpperCase()+p.slice(1);}).join('-');}
-function words(n){var w=n.trim().split(/\s+/);if(w.length>2&&w[w.length-1]===w[w.length-2]&&/^[A-D]$/.test(w[w.length-1]))w.pop();return w;}
-function nice(n){var w=words(n);return w.map(function(x,i){if(UP[x]||(/^[A-D]$/.test(x)&&i===w.length-1))return x;var l=x.toLowerCase();if(i>0&&LOW[x])return l;var m=l.match(/^([dl])['’](.+)$/);if(m)return m[1]+"'"+capw(m[2]);return capw(l);}).join(' ');}
-function short(n){if(SHORTFIX[n])return SHORTFIX[n];var w=words(n),k=-1;for(var i=0;i<w.length;i++)if(CLUBW[w[i]])k=i;
-  var rest=k>=0?w.slice(k+1):w;
-  if(!rest.length||(rest.length===1&&/^[A-D]$/.test(rest[0])))rest=w.slice(0,Math.max(k,0)).filter(function(x){return !CLUBW[x];}).concat(rest);
-  if(!rest.length)rest=w;if(rest.length>3&&!/^[A-D]$/.test(rest[rest.length-1]))rest=rest.slice(0,3);
-  return nice(rest.join(' '));}
-function abbr(n){var s=short(n).replace(/^(Sant|Santa|St\.)\s+/,'S').normalize('NFD').replace(/[̀-ͯ]/g,'');var w=s.split(' ');var a=(w[0].length<=2&&w[1]?w[0]+w[1]:w[0]).replace(/[^A-Za-z]/g,'').slice(0,3).toUpperCase();var last=w[w.length-1];if(/^[A-D]$/.test(last)&&w.length>1)a=a.slice(0,3)+last;return a;}
+function short(n){if(SHORTFIX[n])return SHORTFIX[n];var w=n.trim().split(/\s+/);if(w.length>2&&w[w.length-1]===w[w.length-2]&&/^[A-D]$/.test(w[w.length-1]))w.pop();
+  var k=-1;for(var i=0;i<w.length;i++)if(CLUBW[w[i]])k=i;var r=k>=0?w.slice(k+1):w;if(!r.length||(r.length===1&&/^[A-D]$/.test(r[0])))r=w.filter(function(x){return !CLUBW[x];});if(!r.length)r=w;if(r.length>3&&!/^[A-D]$/.test(r[r.length-1]))r=r.slice(0,3);
+  return r.map(function(x,i){if(/^[A-D]$/.test(x)&&i===r.length-1)return x;var l=x.toLowerCase();if(i>0&&/^(de|del|la|les|i|el)$/.test(l))return l;var m=l.match(/^([dl])['’](.+)$/);return m?m[1]+"'"+capw(m[2]):capw(l);}).join(' ');}
 
-// ---------- utilitats ----------
-var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
-var pct=function(v){return v<0.5&&v>0?'<1':String(Math.round(v));};
-var dec=function(v,d){return v.toFixed(d===undefined?1:d).replace('.',',');};
-var ord=function(n){return n===1?'1r':n===2?'2n':n===3?'3r':n===4?'4t':n+'è';};
-var listCa=function(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' i '+a[a.length-1];};
-var DAYS=['dg.','dl.','dt.','dc.','dj.','dv.','ds.'],MON=['gen.','febr.','març','abr.','maig','juny','jul.','ag.','set.','oct.','nov.','des.'];
-function fmtDay(d){if(!d)return 'Data per confirmar';var p=d.split('-'),dt=new Date(+p[0],+p[1]-1,+p[2],12);return DAYS[dt.getDay()]+' '+(+p[2])+' '+MON[+p[1]-1];}
-function hexToRgb(h){h=h.trim();if(h.charAt(0)!=='#')return [44,90,135];if(h.length===4)h='#'+h[1]+h[1]+h[2]+h[2]+h[3]+h[3];return [parseInt(h.substr(1,2),16),parseInt(h.substr(3,2),16),parseInt(h.substr(5,2),16)];}
-function tint(v,a){var c=hexToRgb(getComputedStyle(document.documentElement).getPropertyValue(v));return 'rgba('+c[0]+','+c[1]+','+c[2]+','+a.toFixed(3)+')';}
-function ago(iso){var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(isNaN(m))return '';if(m<1)return 'ara mateix';if(m<60)return 'fa '+m+' min';var h=Math.round(m/60);if(h<24)return 'fa '+h+' h';var dd=new Date(iso);return 'el '+dd.getDate()+' '+MON[dd.getMonth()];}
+/* navegació: marca la secció visible */
+var links=[].slice.call(document.querySelectorAll('.nav a[href^="#"]:not(.cta-desk)'));
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.setAttribute('aria-current',String(a.getAttribute('href')==='#'+e.target.id));});}});},{rootMargin:'-45% 0px -50% 0px'});
+  ['club','historia','equips','resultats','galeria','apuntat'].forEach(function(id){var el=$(id);if(el)io.observe(el);});}
 
-// ---------- dades ----------
-function prep(raw){
-  var names={};raw.matches.forEach(function(m){names[m.home]=1;names[m.away]=1;});
-  var K=Object.keys(names).sort(),IX={};K.forEach(function(k,i){IX[k]=i;});
-  var ms=raw.matches.map(function(m,i){return {i:i,j:m.j,date:m.date,time:m.time,status:m.status,h:IX[m.home],a:IX[m.away],hg:m.hg,ag:m.ag,done:m.status==='ft'&&m.hg!==null&&m.ag!==null};});
-  var maxg=0;ms.forEach(function(m){if(m.done)maxg=Math.max(maxg,m.hg,m.ag);});
-  var js={};ms.forEach(function(m){js[m.j]=1;});
-  return {raw:raw,K:K,IX:IX,n:K.length,us:IX[TEAM.ribes],ms:ms,cap:maxg<=4?4:20,jornades:Object.keys(js).map(Number).sort(function(a,b){return a-b;})};
-}
-var played=function(pred){return D.ms.filter(function(m){return m.done&&(!pred||pred(m));}).map(function(m){return [m.h,m.a,m.hg,m.ag];});};
-var pendingMs=function(){return D.ms.filter(function(m){return !m.done;});};
-function isUs(m){return m.h===D.us||m.a===D.us;}
-function nmHTML(i,fn){var s=esc((fn||short)(D.K[i]));return i===D.us?'<span class="team-ribes">'+s+'</span>':s;}
-function NAMEFN(){return window.innerWidth>=700?nice:short;}
-function simN(p){return Math.max(1500,Math.min(10000,Math.round(700000/Math.max(1,p))));}
-
-// ---------- worker ----------
-var worker=null,wcb={},wid=0;
-try{worker=new Worker('model.js');worker.onmessage=function(e){var cb=wcb[e.data.id];delete wcb[e.data.id];if(cb)cb(e.data.out);};worker.onerror=function(){worker=null;};}catch(e){worker=null;}
-function runSim(args,cb){if(worker){var id=++wid;wcb[id]=cb;worker.postMessage({id:id,args:args});}else setTimeout(function(){cb(Model.simulate(args));},20);}
-
-function computeAll(){
-  var tok=++simToken;SIM=null;REF=null;WSIM=null;renderAll();
-  var pend=pendingMs();
-  runSim({n:D.n,us:D.us,played:played(),pending:pend.map(function(m){return [m.h,m.a];}),N:simN(pend.length),cap:D.cap},function(o){if(tok!==simToken)return;o.pend=pend;SIM=o;renderAll();if(Object.keys(FORCE).length)scheduleWhatIf();});
-  var ref=CFG.refDate,rp=D.ms.filter(function(m){return !(m.done&&m.date&&m.date<ref);});
-  var refPlayed=played(function(m){return m.date&&m.date<ref;});
-  runSim({n:D.n,us:D.us,played:refPlayed,pending:rp.map(function(m){return [m.h,m.a];}),N:simN(rp.length),cap:D.cap},function(o){if(tok!==simToken)return;o.pend=rp;REF=o;renderAll();});
-}
-
-function loadTeam(id,force){
-  TEAM=CFG.teams.filter(function(t){return t.id===id;})[0]||CFG.teams[0];
-  LS.set('ribes-team',TEAM.id);FORCE={};POSSEL=null;J=null;
-  try{history.replaceState(null,'','?equip='+TEAM.id+location.hash);}catch(e){}
-  renderTeams();$('subtitle').textContent=TEAM.label+' · '+TEAM.group;
-  $('status').className='pill';$('status').innerHTML='<span class="dot"></span><span>Carregant resultats…</span>';
-  $('refresh').classList.add('spin');
-  fetch('data/'+TEAM.id+'.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(raw){
-    $('refresh').classList.remove('spin');D=prep(raw);
-    var g=+LS.get('ribes-goal-'+TEAM.id);GOAL=g>=1&&g<=D.n?g:Math.max(1,Math.round(D.n*0.6));
-    renderGoal();computeAll();
-  }).catch(function(){
-    $('refresh').classList.remove('spin');D=null;
-    $('status').className='pill down';$('status').innerHTML='<span class="dot"></span><span>Encara no hi ha dades d\'aquest equip. Torna-ho a provar d\'aquí a una estona.</span>';
-    ['tiles','pathchart','posbars','ribesgames','jmatches','jtable','standings','heat','wribes','wothers','ptsneed','wtiles','wposbars'].forEach(function(x){$(x).innerHTML='';});
-    $('meta').textContent='';
+/* dades de tots els equips */
+var TEAMS=[],MODE='last';
+function load(){
+  fetch('teams.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json();}).then(function(cfg){
+    $('s-teams').textContent=cfg.teams.length;$('h-teams').textContent=cfg.teams.length;
+    return Promise.all(cfg.teams.map(function(t){return fetch('data/'+t.id+'.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}).then(function(d){return {t:t,d:d};});}));
+  }).then(function(list){TEAMS=list.filter(function(x){return x.d;}).map(prep);render();}).catch(function(){
+    $('games').innerHTML='<p class="note">No s\'han pogut carregar els resultats. Torna-ho a provar d\'aquí a una estona.</p>';$('teams').innerHTML='';
   });
 }
-
-// ---------- capçalera ----------
-function renderTeams(){$('teams').innerHTML=CFG.teams.map(function(t){return '<button type="button" data-team="'+t.id+'" aria-pressed="'+(TEAM&&t.id===TEAM.id)+'">'+esc(t.label)+'</button>';}).join('');
-  var b=$('teams').querySelector('[aria-pressed="true"]');if(b&&b.scrollIntoView)try{b.scrollIntoView({block:'nearest',inline:'center'});}catch(e){}}
-function renderGoal(){var h='';for(var i=1;i<=D.n;i++)h+='<option value="'+i+'"'+(i===GOAL?' selected':'')+'>'+i+'</option>';$('goal').innerHTML=h;}
-function topOf(S){return S.pos[D.us].slice(0,GOAL).reduce(function(a,b){return a+b;},0);}
-function expPosOf(S){return S.pos[D.us].reduce(function(s,v,p){return s+v*(p+1);},0)/100;}
-function modeOf(S){var p=S.pos[D.us],b=0;p.forEach(function(v,i){if(v>p[b])b=i;});return b;}
-function dTxt(v,b,d,inv,ref){var x=v-b;if(Math.abs(x)<(d?0.05:0.5))return '<span>igual que '+ref+'</span>';var good=inv?x<0:x>0;return '<span class="'+(good?'delta-up':'delta-down')+'">'+(x>0?'+':'')+dec(x,d)+'</span> vs '+ref;}
-
-// ---------- calendari del Ribes ----------
-function probFor(S,m){if(!S)return null;var k=S.pend.indexOf(m);if(k<0)return null;return S.mres[k];}
-function usView(p,m){return m.h===D.us?[p[0],p[1],p[2]]:[p[2],p[1],p[0]];}
-function ribesSchedule(){
-  return D.ms.filter(isUs).slice().sort(function(a,b){return (a.date||'9').localeCompare(b.date||'9')||a.j-b.j;}).map(function(m){
-    var home=m.h===D.us,o={m:m,opp:home?m.a:m.h,home:home};
-    if(m.done){o.gf=home?m.hg:m.ag;o.gc=home?m.ag:m.hg;o.pts=o.gf>o.gc?3:o.gf===o.gc?1:0;o.res=o.gf>o.gc?'w':o.gf===o.gc?'d':'l';}
-    var rp=probFor(REF,m);o.bwdl=rp?usView(rp,m):null;
-    o.bexp=o.bwdl?(3*o.bwdl[0]+o.bwdl[1])/100:(m.done?o.pts:0);o.afterRef=!!o.bwdl;
-    return o;});
+function prep(x){
+  var t=x.t,ms=x.d.matches,names={};ms.forEach(function(m){names[m.home]=1;names[m.away]=1;});
+  var K=Object.keys(names).sort(),IX={};K.forEach(function(k,i){IX[k]=i;});
+  var done=ms.filter(function(m){return m.status==='ft'&&m.hg!==null;});
+  var res=done.map(function(m){return [IX[m.home],IX[m.away],m.hg,m.ag];});
+  var tb=Model.table(K.length,res),ord_=Model.rankOrder(K.length,res,tb,null),us=IX[t.ribes];
+  var ours=ms.filter(function(m){return m.home===t.ribes||m.away===t.ribes;}).map(function(m){
+    var home=m.home===t.ribes,o={team:t,m:m,home:home,opp:home?m.away:m.home,date:m.date,time:m.time,done:m.status==='ft'&&m.hg!==null};
+    if(o.done){o.gf=home?m.hg:m.ag;o.gc=home?m.ag:m.hg;o.r=o.gf>o.gc?'w':o.gf===o.gc?'d':'l';}return o;});
+  ours.sort(function(a,b){return ((a.date||'9')+(a.time||'')).localeCompare((b.date||'9')+(b.time||''));});
+  return {t:t,n:K.length,pos:ord_.indexOf(us)+1,row:tb[us],ours:ours,updated:x.d.updated};
 }
-
-// ---------- RESUM ----------
-function renderSummary(){
-  var res=played(),t=Model.table(D.n,res),o=Model.rankOrder(D.n,res,t,null),ri=D.us,S=SIM,R=REF;
-  var curPos=o.indexOf(ri)+1,sched=ribesSchedule();
-  var newP=sched.filter(function(x){return x.afterRef&&x.res;}),delta=newP.reduce(function(s,x){return s+x.pts-x.bexp;},0),st=$('status');
-  if(!R){st.className='pill';st.innerHTML='<span class="dot"></span><span>Calculant previsions…</span>';}
-  else if(!newP.length){st.className='pill';st.innerHTML='<span class="dot"></span><span>Encara no hi ha partits nous des del 10 de novembre</span>';}
-  else if(delta>=0.5){st.className='pill up';st.innerHTML='<span class="dot"></span><span>Per sobre de la previsió: +'+dec(delta)+' pts</span>';}
-  else if(delta<=-0.5){st.className='pill down';st.innerHTML='<span class="dot"></span><span>Per sota de la previsió: '+dec(delta)+' pts</span>';}
-  else{st.className='pill up';st.innerHTML='<span class="dot"></span><span>En línia amb la previsió</span>';}
-  var REFL='el 10 nov',n=D.n;
-  $('tiles').innerHTML=
-   '<div class="tile"><span class="lab">Posició ara</span><span class="val">'+ord(curPos)+' <small>de '+n+'</small></span><span class="cmp">'+t[ri].pts+' pts en '+t[ri].pj+' partits</span></div>'+
-   '<div class="tile key"><span class="lab">Posició final esperada</span><span class="val">'+(S?dec(expPosOf(S)):'…')+'</span><span class="cmp">'+(S&&R?dTxt(expPosOf(S),expPosOf(R),1,true,REFL):'calculant')+'</span></div>'+
-   '<div class="tile key"><span class="lab">Punts finals esperats</span><span class="val">'+(S?dec(S.expPts[ri]):'…')+'</span><span class="cmp">'+(S&&R?dTxt(S.expPts[ri],R.expPts[ri],1,false,REFL):'calculant')+'</span></div>'+
-   '<div class="tile"><span class="lab">Acabar entre els '+GOAL+' primers</span><span class="val">'+(S?Math.round(topOf(S)):'…')+'<small>%</small></span><span class="cmp">'+(S&&R?dTxt(topOf(S),topOf(R),0,false,REFL):'calculant')+'</span></div>';
-  renderPath(sched,S);renderPos();renderRibesGames(sched,S);
+function render(){
+  var tot={pj:0,pg:0,pe:0,pp:0,gf:0,gc:0},leaders=[],best=null,upd=null;
+  TEAMS.forEach(function(x){['pj','pg','pe','pp','gf','gc'].forEach(function(k){tot[k]+=x.row[k];});if(x.pos===1&&x.row.pj)leaders.push(x.t.label);
+    var gpm=x.row.pj?x.row.gf/x.row.pj:0;if(!best||gpm>best.v)best={v:gpm,l:x.t.label};if(!upd||x.updated>upd)upd=x.updated;});
+  $('s-played').textContent=tot.pj;$('s-wins').textContent=tot.pg;
+  // equips
+  $('teams').innerHTML=TEAMS.map(function(x){
+    var last=x.ours.filter(function(o){return o.done;}).pop(),next=x.ours.filter(function(o){return !o.done;})[0];
+    return '<a class="team" href="resultats/?equip='+x.t.id+'"><div class="head"><div><h3>'+esc(x.t.label)+'</h3><span class="grp">'+esc(x.t.group)+'</span></div>'+
+      '<div class="pos'+(x.pos===1?' lead':'')+'"><b>'+ord(x.pos)+'</b><span>de '+x.n+'</span></div></div>'+
+      '<div class="row"><span>Punts</span><b>'+x.row.pts+' pts · '+x.row.pg+'G '+x.row.pe+'E '+x.row.pp+'P</b></div>'+
+      (last?'<div class="row"><span>Últim</span><b><span class="chip '+last.r+'">'+last.gf+'-'+last.gc+'</span>'+(last.home?'vs ':'a ')+esc(short(last.opp))+'</b></div>':'')+
+      (next?'<div class="row"><span>Proper</span><b>'+fmtDay(next.date)+(next.time?' · '+next.time:'')+'<br>'+(next.home?'vs ':'a ')+esc(short(next.opp))+'</b></div>':'')+
+      '<span class="more">Classificació i previsions →</span></a>';}).join('');
+  // temporada
+  var pct=function(a){return tot.pj?Math.round(100*a/tot.pj):0;};
+  $('season').innerHTML=
+    '<div class="card"><div class="k">Partits jugats</div><div class="v">'+tot.pj+'</div><div class="wdl" aria-hidden="true"><span class="w" style="width:'+pct(tot.pg)+'%"></span><span class="d" style="width:'+pct(tot.pe)+'%"></span><span class="l" style="width:'+pct(tot.pp)+'%"></span></div><div class="legend"><span>'+tot.pg+' victòries</span><span>'+tot.pe+' empats</span><span>'+tot.pp+' derrotes</span></div></div>'+
+    '<div class="card"><div class="k">Gols</div><div class="v">'+tot.gf+' <small>a favor</small></div><div class="legend" style="margin-top:6px"><span>'+tot.gc+' en contra</span><span>'+(tot.gf-tot.gc>0?'+':'')+(tot.gf-tot.gc)+' de diferència</span></div></div>'+
+    '<div class="card"><div class="k">'+(leaders.length?'Líders de la seva lliga':'Equip més golejador')+'</div>'+(leaders.length?'<div class="leaders">'+leaders.map(function(l){return '<span>'+esc(l)+'</span>';}).join('')+'</div>':'')+
+      (best?'<div class="legend" style="margin-top:12px"><span>Més golejador: <b>'+esc(best.l)+'</b></span><span>'+best.v.toFixed(1).replace('.',',')+' gols/partit</span></div>':'')+'</div>';
+  if(upd){var d=new Date(upd);$('updated').textContent='Dades de la Federació Catalana de Patinatge via hoquei.info. Últim canvi: '+d.getDate()+' '+MON[d.getMonth()]+' a les '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')+'.';}
+  renderGames();
 }
-function renderPath(sched,S){
-  var box=$('pathchart'),cw=box.clientWidth;if(!cw||!D)return;
-  var narrow=cw<520,W=Math.max(300,cw),H=narrow?220:250,ml=30,mr=12,mt=16,mb=narrow?46:58,nM=sched.length;
-  var cb=0,base=[0];sched.forEach(function(x){cb+=x.bexp;base.push(cb);});
-  var real=[{x:0,y:0}],cr=0;sched.forEach(function(x,i){if(x.res){cr+=x.pts;real.push({x:i+1,y:cr});}});
-  var proj=S?S.expPts[D.us]:null;
-  var ymax=Math.ceil(Math.max(9,cb,cr,proj||0)/3)*3+3,ystep=ymax>45?9:ymax>24?6:3;
-  var X=function(i){return ml+(W-ml-mr)*i/nM;},Y=function(v){return mt+(H-mt-mb)*(1-v/ymax);};
-  var every=Math.max(1,Math.ceil(nM*(narrow?16:22)/(W-ml-mr)));
-  var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="display:block;max-width:100%;height:auto" role="img" aria-label="Punts acumulats del Ribes comparats amb la previsió">';
-  for(var v=0;v<=ymax;v+=ystep)s+='<line x1="'+ml+'" x2="'+(W-mr)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--line)"/><text x="'+(ml-6)+'" y="'+(Y(v)+4)+'" font-size="11" text-anchor="end">'+v+'</text>';
-  sched.forEach(function(x,i){if(i%every)return;var lab=narrow?abbr(D.K[x.opp]):(x.home?'':'@ ')+short(D.K[x.opp]);
-    s+='<text transform="translate('+X(i+1)+','+(H-mb+12)+') rotate(-45)" font-size="'+(narrow?10:11)+'" text-anchor="end"'+(x.home?' style="fill:var(--ink)"':'')+'>'+esc(lab)+'</text>';});
-  if(REF)s+='<polyline fill="none" stroke="var(--loss)" stroke-width="2" stroke-dasharray="5 4" points="'+base.map(function(v,i){return X(i)+','+Y(v);}).join(' ')+'"/>';
-  var pts=real.map(function(p){return X(p.x)+','+Y(p.y);}).join(' '),lp=real[real.length-1];
-  if(real.length>1)s+='<polygon fill="var(--accent)" opacity=".08" points="'+X(0)+','+Y(0)+' '+pts+' '+X(lp.x)+','+Y(0)+'"/>';
-  s+='<polyline fill="none" stroke="var(--accent)" stroke-width="2.5" points="'+pts+'"/>';
-  real.slice(1).forEach(function(p,k){s+='<circle cx="'+X(p.x)+'" cy="'+Y(p.y)+'" r="'+(k===real.length-2?5:3.5)+'" fill="var(--accent)" stroke="var(--surface)" stroke-width="1.5"/>';});
-  if(proj!==null&&lp.x<nM){s+='<line x1="'+X(lp.x)+'" y1="'+Y(lp.y)+'" x2="'+X(nM)+'" y2="'+Y(proj)+'" stroke="var(--accent)" stroke-width="2" stroke-dasharray="2 4" opacity=".7"/><circle cx="'+X(nM)+'" cy="'+Y(proj)+'" r="4" fill="var(--surface)" stroke="var(--accent)" stroke-width="2"/>';
-    s+='<text x="'+(X(nM)-8)+'" y="'+(Y(proj)-10)+'" font-size="12" text-anchor="end" style="fill:var(--accent);font-weight:700">'+dec(proj)+' pts</text>';}
-  if(REF&&(proj===null||Math.abs(proj-cb)>=0.3*ystep))s+='<text x="'+(X(nM)-8)+'" y="'+(Y(cb)+(proj!==null&&proj>cb?18:-8))+'" font-size="11" text-anchor="end">previst '+dec(cb)+'</text>';
-  s+='<text x="'+(X(lp.x)+8)+'" y="'+(Y(lp.y)+16)+'" font-size="12" style="fill:var(--ink);font-weight:600">'+lp.y+' pts</text></svg>';
-  box.innerHTML=s;
+function renderGames(){
+  var all=[];TEAMS.forEach(function(x){all=all.concat(x.ours);});
+  var today=iso(new Date()),list;
+  if(MODE==='last'){
+    var done=all.filter(function(o){return o.done&&o.date;});var lastD=done.reduce(function(m,o){return o.date>m?o.date:m;},'');
+    var from=lastD?iso(new Date(new Date(lastD+'T12:00:00').getTime()-3*864e5)):'';
+    list=done.filter(function(o){return o.date>=from;}).sort(function(a,b){return (b.date+(b.time||'')).localeCompare(a.date+(a.time||''));});
+    $('res-lead').textContent=list.length?'Els resultats de tots els equips del Ribes, l\'últim cap de setmana amb partits.':'Encara no hi ha resultats aquesta temporada.';
+  }else{
+    var pend=all.filter(function(o){return !o.done&&o.date&&o.date>=today;});var first=pend.reduce(function(m,o){return !m||o.date<m?o.date:m;},'');
+    var to=first?iso(new Date(new Date(first+'T12:00:00').getTime()+3*864e5)):'';
+    list=pend.filter(function(o){return o.date<=to;}).sort(function(a,b){return (a.date+(a.time||'')).localeCompare(b.date+(b.time||''));});
+    $('res-lead').textContent=list.length?'On i quan juga cada equip del Ribes el proper cap de setmana. Vine a animar!':'No hi ha partits programats properament.';
+  }
+  $('games').innerHTML=list.map(function(o){
+    var vs=o.home?'<span class="us">Ribes</span> – '+esc(short(o.opp)):esc(short(o.opp))+' – <span class="us">Ribes</span>';
+    var right=o.done?'<span class="score '+o.r+'">'+(o.home?o.gf+'-'+o.gc:o.gc+'-'+o.gf)+'</span>':'<span class="tag'+(o.home?' home':'')+'">'+(o.home?'A casa':'Fora')+'</span>';
+    return '<div class="game"><div><div class="cat">'+esc(o.team.label)+'</div><div class="vs">'+vs+'</div><div class="when">'+fmtDay(o.date)+(o.time?' · '+o.time:'')+'</div></div>'+right+'</div>';}).join('')||'';
 }
-function posBars(el,ref,cur,refLab,curLab,clickable){
-  var mx=Math.max.apply(null,ref.concat(cur).concat([1]));
-  el.innerHTML=cur.map(function(v,p){return '<button type="button" class="pcol" data-p="'+p+'" aria-pressed="'+(clickable&&POSSEL===p)+'" aria-label="'+ord(p+1)+': '+curLab+' '+pct(v)+'%, '+refLab+' '+pct(ref[p])+'%"'+(clickable?'':' tabindex="-1"')+'>'+
-    '<span class="pv">'+(v>=0.5?Math.round(v):'')+'</span><div class="pbars"><span class="b0" style="height:'+(100*ref[p]/mx)+'%"></span><span class="b1" style="height:'+(100*v/mx)+'%"></span></div><span class="pl">'+(p+1)+'</span></button>';}).join('');
-}
-function renderPos(){
-  var z=new Array(D.n).fill(0),cur=SIM?SIM.pos[D.us]:z,ref=REF?REF.pos[D.us]:z;
-  posBars($('posbars'),ref,cur,'previsió 10 nov','ara',true);
-  if(!SIM){$('posinfo').textContent='';return;}
-  var p=POSSEL;
-  if(p===null){var m=modeOf(SIM);$('posinfo').innerHTML='La posició més probable és la <b>'+ord(m+1)+'</b> ('+Math.round(cur[m])+'%). Opcions de quedar entre els '+GOAL+' primers: '+Math.round(topOf(SIM))+'%.';return;}
-  var up=cur.slice(0,p+1).reduce(function(a,b){return a+b;},0);
-  $('posinfo').innerHTML='<b>'+ord(p+1)+'</b>: '+pct(cur[p])+'% ara ('+pct(ref[p])+'% el 10 nov). Acabar '+ord(p+1)+' o millor: '+pct(up)+'%.';
-}
-function wdlBar(w,d,l,labs){labs=labs||['Guanyem','Empat','Perdem'];return '<div class="wdl" aria-hidden="true"><span class="w" style="width:'+w+'%"></span><span class="d" style="width:'+d+'%"></span><span class="l" style="width:'+l+'%"></span></div><div class="wdltxt"><span>'+labs[0]+' '+pct(w)+'%</span><span>'+labs[1]+' '+pct(d)+'%</span><span>'+labs[2]+' '+pct(l)+'%</span></div>';}
-function renderRibesGames(sched,S){
-  $('ribesgames').innerHTML=sched.map(function(x){var m=x.m;
-    var tag=x.home?'<span class="tag casa">Casa</span>':'<span class="tag fora">Fora</span>',body;
-    if(x.res){body='<div class="right"><span class="res '+x.res+'">'+x.gf+'–'+x.gc+'</span>'+(x.afterRef?'<div class="was"><span class="'+(x.pts-x.bexp>=0?'delta-up':'delta-down')+'">'+(x.pts-x.bexp>=0?'+':'')+dec(x.pts-x.bexp)+' pts</span> vs previsió</div>':'')+'</div>';}
-    else{var p=probFor(S,m);body='<div class="prob">'+(p?(function(q){return wdlBar(q[0],q[1],q[2]);})(usView(p,m))+(x.bwdl?'<div class="was">10 nov: '+x.bwdl.map(Math.round).join(' / ')+'</div>':''):'<span class="was">calculant…</span>')+'</div>';}
-    return '<div class="game"><div><div class="when">J'+m.j+' · '+fmtDay(m.date)+(m.time?' · '+m.time:'')+'</div><div class="opp">'+esc(nice(D.K[x.opp]))+tag+'</div></div>'+body+'</div>';}).join('')||'<p class="empty">No hi ha partits.</p>';
-}
-
-// ---------- JORNADES ----------
-function defaultJ(){var last=null;D.ms.forEach(function(m){if(m.done&&(last===null||m.j>last))last=m.j;});return last||D.jornades[0];}
-function renderJornades(){
-  if(J===null||D.jornades.indexOf(J)<0)J=defaultJ();
-  $('jsel').innerHTML=D.jornades.map(function(j){var ms=D.ms.filter(function(m){return m.j===j;});var ds=ms.map(function(m){return m.date;}).filter(Boolean).sort();var done=ms.filter(function(m){return m.done;}).length;
-    return '<option value="'+j+'"'+(j===J?' selected':'')+'>Jornada '+j+(ds.length?' · '+fmtDay(ds[0]).replace(/^\S+ /,''):'')+(done===ms.length?' ✓':done?' ('+done+'/'+ms.length+')':'')+'</option>';}).join('');
-  var k=D.jornades.indexOf(J);$('jprev').disabled=k<=0;$('jnext').disabled=k>=D.jornades.length-1;
-  var ms=D.ms.filter(function(m){return m.j===J;}).sort(function(a,b){return ((a.date||'9')+(a.time||'')).localeCompare((b.date||'9')+(b.time||''));});
-  var last=null,h='';
-  ms.forEach(function(m){if(m.date!==last){h+='<div class="dsep">'+fmtDay(m.date)+'</div>';last=m.date;}
-    var sc,pr='';
-    if(m.done){sc='<span class="sc">'+m.hg+'–'+m.ag+'</span>';}
-    else{sc='<span class="sc pend">'+(m.status==='live'?'en joc':'')+'</span>';var p=probFor(SIM,m);if(p)pr='<div class="pr">'+wdlBar(p[0],p[1],p[2],[esc(short(D.K[m.h])),'Empat',esc(short(D.K[m.a]))])+'</div>';}
-    var hw=m.done&&m.hg>m.ag,aw=m.done&&m.ag>m.hg;
-    h+='<div class="mrow'+(isUs(m)?' ours':'')+'"><span class="st">'+(m.done?'Final':(m.time||'—'))+'</span><span class="h'+(hw?' w8':'')+'">'+nmHTML(m.h,NAMEFN())+'</span>'+sc+'<span class="a'+(aw?' w8':'')+'">'+nmHTML(m.a,NAMEFN())+'</span>'+pr+'</div>';});
-  $('jmatches').innerHTML=h||'<p class="empty">No hi ha partits en aquesta jornada.</p>';
-  $('jtabletitle').textContent='Classificació després de la jornada '+J;
-  var res=played(function(m){return m.j<=J;}),t=Model.table(D.n,res),o=Model.rankOrder(D.n,res,t,null);
-  var tt='<table class="std"><thead><tr><th>#</th><th>Equip</th><th class="num">PJ</th><th class="num">Dif</th><th class="num">Pts</th></tr></thead><tbody>';
-  o.forEach(function(i,p){var x=t[i],d=x.gf-x.gc;tt+='<tr class="'+(i===D.us?'ribes':'')+'"><td class="pos">'+(p+1)+'</td><td class="team">'+esc(nice(D.K[i]))+'</td><td class="num">'+x.pj+'</td><td class="num">'+(d>0?'+':'')+d+'</td><td class="num"><b>'+x.pts+'</b></td></tr>';});
-  $('jtable').innerHTML=tt+'</tbody></table>';
-}
-
-// ---------- SIMULADOR ----------
-function ribesPending(){return pendingMs().filter(isUs).sort(function(a,b){return (a.date||'9').localeCompare(b.date||'9');});}
-function ourOutcome(m){var v=FORCE[m.i];if(!v)return 'O';if(v==='D')return 'D';return (v==='H')===(m.h===D.us)?'W':'L';}
-function setOur(m,o){if(o==='O'){delete FORCE[m.i];return;}if(o==='D'){FORCE[m.i]='D';return;}FORCE[m.i]=(o==='W')===(m.h===D.us)?'H':'A';}
-function renderWhatIfInputs(){
-  $('wribes').innerHTML=ribesPending().map(function(m){var opp=m.h===D.us?m.a:m.h,o=ourOutcome(m),p=probFor(SIM,m),q=p?usView(p,m):null;
-    var b=function(c,l){return '<button type="button" class="'+c+'" data-wk="'+m.i+'" data-o="'+c+'" aria-pressed="'+(o===c)+'">'+l+'</button>';};
-    return '<div class="wif"><div class="top"><span><b>'+esc(nice(D.K[opp]))+'</b>'+(m.h===D.us?'<span class="tag casa">Casa</span>':'<span class="tag fora">Fora</span>')+'</span><span class="was">'+fmtDay(m.date)+(q?' · ara '+Math.round(q[0])+'/'+Math.round(q[1])+'/'+Math.round(q[2]):'')+'</span></div>'+
-      '<div class="seg" role="group" aria-label="Resultat contra '+esc(nice(D.K[opp]))+'">'+b('W','Guanyem')+b('D','Empat')+b('L','Perdem')+b('O','Obert')+'</div></div>';}).join('')||'<p class="empty">No queden partits del Ribes.</p>';
-  var others=pendingMs().filter(function(m){return !isUs(m);}),nf=others.filter(function(m){return FORCE[m.i];}).length;
-  $('otherssum').textContent='Altres partits de la lliga ('+(nf?nf+' fixats':others.length)+')';
-  var by={},keys=[];others.forEach(function(m){var k=m.j;if(!by[k]){by[k]=[];keys.push(k);}by[k].push(m);});
-  keys.sort(function(a,b){return a-b;});
-  $('wothers').innerHTML=keys.map(function(k){return '<div class="dsep">Jornada '+k+'</div>'+by[k].map(function(m){var v=FORCE[m.i]||'O';
-    var b=function(c,cls,l){return '<button type="button" class="'+cls+'" data-ok="'+m.i+'" data-v="'+c+'" aria-pressed="'+(v===c)+'">'+esc(l)+'</button>';};
-    return '<div class="seg" role="group" aria-label="'+esc(nice(D.K[m.h]))+' contra '+esc(nice(D.K[m.a]))+'">'+b('H','W',short(D.K[m.h]))+b('D','D','Empat')+b('A','W',short(D.K[m.a]))+b('O','O','Obert')+'</div>';}).join('');}).join('');
-}
-function scheduleWhatIf(){
-  renderWhatIfInputs();clearTimeout(wTimer);
-  if(!Object.keys(FORCE).length||!SIM){WSIM=null;renderWhatIfResult();return;}
-  $('simbar').innerHTML='<span>Calculant…</span>';
-  var tok=simToken;
-  wTimer=setTimeout(function(){var pend=pendingMs();
-    runSim({n:D.n,us:D.us,played:played(),pending:pend.map(function(m){return [m.h,m.a];}),forced:pend.map(function(m){return FORCE[m.i]||null;}),N:Math.round(simN(pend.length)*0.6),cap:D.cap},function(o){if(tok!==simToken)return;o.pend=pend;WSIM=o;renderWhatIfResult();});},180);
-}
-function renderWhatIfResult(){
-  var S=SIM,W=WSIM||SIM,ri=D.us;
-  if(!S){$('answer').textContent='Calculant…';$('wtiles').innerHTML='';$('simbar').innerHTML='<span>Calculant…</span>';return;}
-  var g={W:[],D:[],L:[]};ribesPending().forEach(function(m){var o=ourOutcome(m);if(o!=='O')g[o].push(short(D.K[m.h===D.us?m.a:m.h]));});
-  var nOther=pendingMs().filter(function(m){return !isUs(m)&&FORCE[m.i];}).length;
-  var parts=[];if(g.W.length)parts.push('guanyem contra '+listCa(g.W));if(g.D.length)parts.push('empatem contra '+listCa(g.D));if(g.L.length)parts.push('perdem contra '+listCa(g.L));
-  var now=Model.table(D.n,played())[ri].pts,sure=now+g.W.length*3+g.D.length;
-  if(!WSIM){$('answer').innerHTML='Tria un resultat en algun partit per veure què passaria. Ara mateix, el més probable és acabar <b>'+ord(modeOf(S)+1)+'</b> amb '+dec(S.expPts[ri])+' punts de mitjana, i hi ha un '+Math.round(topOf(S))+'% d\'opcions de ser entre els '+GOAL+' primers.';}
-  else{$('answer').innerHTML=(parts.length?'Si '+listCa(parts):'Amb aquests resultats dels altres partits')+(parts.length&&nOther?' (i '+nOther+' resultats d\'altres partits fixats)':'')+', el més probable és acabar <b>'+ord(modeOf(W)+1)+'</b> ('+Math.round(W.pos[ri][modeOf(W)])+'%), amb <b>'+dec(W.expPts[ri])+' punts</b> de mitjana'+(parts.length?' ('+sure+' assegurats)':'')+'. Opcions de ser entre els '+GOAL+' primers: <b>'+Math.round(topOf(W))+'%</b> (ara '+Math.round(topOf(S))+'%).';}
-  $('wtiles').innerHTML=
-    '<div class="tile key"><span class="lab">Posició més probable</span><span class="val">'+ord(modeOf(W)+1)+'</span><span class="cmp">'+Math.round(W.pos[ri][modeOf(W)])+'% de probabilitat</span></div>'+
-    '<div class="tile key"><span class="lab">Punts finals</span><span class="val">'+dec(W.expPts[ri])+'</span><span class="cmp">'+dTxt(W.expPts[ri],S.expPts[ri],1,false,'ara')+'</span></div>'+
-    '<div class="tile"><span class="lab">Posició mitjana</span><span class="val">'+dec(expPosOf(W))+'</span><span class="cmp">'+dTxt(expPosOf(W),expPosOf(S),1,true,'ara')+'</span></div>'+
-    '<div class="tile"><span class="lab">Entre els '+GOAL+' primers</span><span class="val">'+Math.round(topOf(W))+'<small>%</small></span><span class="cmp">'+dTxt(topOf(W),topOf(S),0,false,'ara')+'</span></div>';
-  posBars($('wposbars'),S.pos[ri],W.pos[ri],'ara','escenari',false);
-  $('simbar').innerHTML=WSIM?'<div class="sp"><span><b>'+ord(modeOf(W)+1)+'</b> més probable</span><span><b>'+dec(W.expPts[ri])+'</b> pts</span><span><b>'+Math.round(topOf(W))+'%</b> top '+GOAL+'</span></div><button class="btn" type="button" data-preset="open">Esborrar</button>':'<span>Tria resultats a sota per provar escenaris</span>';
-}
-function renderPtsNeed(){
-  if(!SIM){$('ptsneed').innerHTML='';return;}
-  $('ptsnote').textContent='Segons la simulació actual: amb aquests punts finals, probabilitat d\'acabar entre els '+GOAL+' primers.';
-  var c={},tp={};for(var i=0;i<SIM.N;i++){var p=SIM.ribPts[i];c[p]=(c[p]||0)+1;if(SIM.ribPos[i]<=GOAL)tp[p]=(tp[p]||0)+1;}
-  var keys=Object.keys(c).map(Number).filter(function(p){return c[p]>=SIM.N*0.004;}).sort(function(a,b){return a-b;});
-  $('ptsneed').innerHTML=keys.map(function(p){var v=100*(tp[p]||0)/c[p];return '<div class="pn" style="background:'+tint('--win',v/100*0.55)+'"><b>'+p+' pts</b><span>'+pct(v)+'%</span></div>';}).join('');
-}
-
-// ---------- CLASSIFICACIÓ ----------
-function renderStandings(){
-  var res=played(),t=Model.table(D.n,res),o=Model.rankOrder(D.n,res,t,null),S=SIM;
-  var form=D.K.map(function(){return [];});
-  D.ms.filter(function(m){return m.done;}).sort(function(a,b){return (a.date||'').localeCompare(b.date||'');}).forEach(function(m){var x=m.hg>m.ag?['W','L']:m.hg<m.ag?['L','W']:['D','D'];form[m.h].push(x[0]);form[m.a].push(x[1]);});
-  var lab={W:'G',D:'E',L:'P'};
-  var h='<table class="std"><thead><tr><th>#</th><th>Equip</th><th class="num">PJ</th><th class="num hide-sm">G</th><th class="num hide-sm">E</th><th class="num hide-sm">P</th><th class="num hide-sm">GF</th><th class="num hide-sm">GC</th><th class="num">Dif</th><th class="num">Pts</th><th class="hide-sm">Últims 5</th><th class="num">Final</th></tr></thead><tbody>';
-  o.forEach(function(i,p){var x=t[i],d=x.gf-x.gc;
-    h+='<tr class="'+(i===D.us?'ribes':'')+'"><td class="pos">'+(p+1)+'</td><td class="team">'+esc(nice(D.K[i]))+'</td><td class="num">'+x.pj+'</td><td class="num hide-sm">'+x.pg+'</td><td class="num hide-sm">'+x.pe+'</td><td class="num hide-sm">'+x.pp+'</td><td class="num hide-sm">'+x.gf+'</td><td class="num hide-sm">'+x.gc+'</td><td class="num">'+(d>0?'+':'')+d+'</td><td class="num"><b>'+x.pts+'</b></td>'+
-      '<td class="hide-sm"><div class="form">'+form[i].slice(-5).map(function(r){return '<b class="'+r+'">'+lab[r]+'</b>';}).join('')+'</div></td><td class="num">'+(S?dec(S.expPts[i]):'…')+'</td></tr>';});
-  $('standings').innerHTML=h+'</tbody></table><p class="note" style="margin-top:8px">Final = punts esperats a final de lliga. G guanyats, E empatats, P perduts.</p>';
-  if(!S){$('heat').innerHTML='<p class="loading">Calculant…</p>';return;}
-  var oo=D.K.map(function(_,i){return i;}).sort(function(a,b){return S.expPts[b]-S.expPts[a];});
-  var hh='<table class="heat"><thead><tr><th>Equip</th>';for(var p=1;p<=D.n;p++)hh+='<th class="h">'+p+'</th>';hh+='</tr></thead><tbody>';
-  oo.forEach(function(i){hh+='<tr class="'+(i===D.us?'ribes':'')+'"><td class="team">'+esc(short(D.K[i]))+'</td>';
-    for(var q=0;q<D.n;q++){var v=S.pos[i][q];hh+='<td class="h" style="background:'+tint(i===D.us?'--accent':'--heat',Math.min(0.85,v*0.009))+';'+(v>45?'color:#fff;font-weight:600':'')+'">'+(v>=0.5?Math.round(v):'')+'</td>';}
-    hh+='</tr>';});
-  $('heat').innerHTML=hh+'</tbody></table>';
-}
-
-// ---------- general ----------
-function renderMeta(){var u=D.raw.updated;$('meta').innerHTML='<span>Últim canvi a hoquei.info: '+(u?ago(u):'—')+'</span><a href="'+esc(TEAM.url)+'" rel="noopener">Veure-ho a hoquei.info</a>';}
-function renderAll(){if(!D)return;renderMeta();renderSummary();renderJornades();renderWhatIfInputs();renderWhatIfResult();renderPtsNeed();renderStandings();}
-
-var TABS=['resum','jornades','simulador','classificacio'];
-function showTab(t){if(TABS.indexOf(t)<0)t='resum';
-  Array.prototype.forEach.call(document.querySelectorAll('.tabs [role=tab]'),function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-tab')===t));});
-  Array.prototype.forEach.call(document.querySelectorAll('.panel'),function(p){p.classList.toggle('on',p.getAttribute('data-panel')===t);});
-  if(t==='resum'&&D)renderPath(ribesSchedule(),SIM);}
-
-document.addEventListener('click',function(e){
-  var el=e.target.closest?e.target.closest('[data-tab],[data-team],[data-wk],[data-ok],[data-preset],#posbars .pcol'):null;if(!el)return;
-  if(el.hasAttribute('data-tab')){var t=el.getAttribute('data-tab');showTab(t);try{history.replaceState(null,'','?equip='+TEAM.id+'#'+t);}catch(x){}window.scrollTo(0,0);return;}
-  if(el.hasAttribute('data-team')){if(el.getAttribute('data-team')!==TEAM.id)loadTeam(el.getAttribute('data-team'));return;}
-  if(!D)return;
-  if(el.hasAttribute('data-wk')){var m=D.ms[+el.getAttribute('data-wk')];setOur(m,el.getAttribute('data-o'));scheduleWhatIf();return;}
-  if(el.hasAttribute('data-ok')){var k=+el.getAttribute('data-ok'),v=el.getAttribute('data-v');if(v==='O')delete FORCE[k];else FORCE[k]=v;scheduleWhatIf();return;}
-  if(el.hasAttribute('data-preset')){var p=el.getAttribute('data-preset');
-    if(p==='open')FORCE={};
-    else ribesPending().forEach(function(m){var q=probFor(SIM,m),u=q?usView(q,m):null;if(p==='all')setOur(m,'W');else if(p==='lose')setOur(m,'L');else setOur(m,u&&u[0]>=35?'W':'O');});
-    scheduleWhatIf();return;}
-  if(el.classList.contains('pcol')){var pp=+el.getAttribute('data-p');POSSEL=POSSEL===pp?null:pp;renderPos();}
-});
-$('refresh').addEventListener('click',function(){if(TEAM)loadTeam(TEAM.id,true);});
-$('goal').addEventListener('change',function(){GOAL=+this.value;LS.set('ribes-goal-'+TEAM.id,String(GOAL));renderAll();});
-$('jsel').addEventListener('change',function(){J=+this.value;renderJornades();});
-$('jprev').addEventListener('click',function(){var k=D.jornades.indexOf(J);if(k>0){J=D.jornades[k-1];renderJornades();}});
-$('jnext').addEventListener('click',function(){var k=D.jornades.indexOf(J);if(k<D.jornades.length-1){J=D.jornades[k+1];renderJornades();}});
-var rz=null;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(D)renderPath(ribesSchedule(),SIM);},150);});
-document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible'&&D&&D.raw.updated&&Date.now()-new Date(D.raw.updated).getTime()>0)renderMeta();});
-
-showTab((location.hash||'').slice(1));
-fetch('teams.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json();}).then(function(c){CFG=c;
-  var q=(location.search.match(/[?&]equip=([\w-]+)/)||[])[1];loadTeam(q||LS.get('ribes-team')||DEFAULT_TEAM);
-}).catch(function(){$('status').className='pill down';$('status').innerHTML='<span class="dot"></span><span>No s\'han pogut carregar les dades. Comprova la connexió i prem Actualitzar.</span>';});
+$('b-last').addEventListener('click',function(){MODE='last';this.setAttribute('aria-pressed','true');$('b-next').setAttribute('aria-pressed','false');renderGames();});
+$('b-next').addEventListener('click',function(){MODE='next';this.setAttribute('aria-pressed','true');$('b-last').setAttribute('aria-pressed','false');renderGames();});
+load();
 })();
 </script>
 </body>

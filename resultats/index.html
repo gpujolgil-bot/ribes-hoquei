@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resultats i previsions · Ribes Club Patí</title>
+<meta name="description" content="Resultats, classificació i previsions dels equips del Ribes CP d'hoquei patins">
+<meta name="theme-color" content="#c8102e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ribes CP">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Marcador de pista: superfícies fredes i netes, vermell Ribes només per al que és nostre. Mòbil primer, pestanyes fixes a dalt */
+  --bg:#f3f5f8; --surface:#ffffff; --ink:#18212c; --muted:#5f6b78; --line:#dde2e8;
+  --accent:#c8102e; --accent-soft:#fbe6ea; --heat:#2c5a87;
+  --win:#1f8a4c; --draw:#c48a1c; --loss:#7b8794; --good:#1f8a4c; --warn:#c2621a;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --sat:env(safe-area-inset-top,0px); --sab:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f141a; --surface:#171e27; --ink:#e7ecf1; --muted:#9aa6b3; --line:#2a3542;
+    --accent:#ff4b5c; --accent-soft:#3b1a21; --heat:#6aa3db;
+    --win:#41c47e; --draw:#e2a83c; --loss:#7d8996; --good:#41c47e; --warn:#f08a3c;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+button,select{font:inherit;color:inherit}
+button{touch-action:manipulation}
+.wrap{max-width:980px;margin:0 auto;padding:calc(14px + var(--sat)) max(16px,env(safe-area-inset-right)) calc(40px + var(--sab)) max(16px,env(safe-area-inset-left));display:flex;flex-direction:column;gap:14px}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:.01em;margin:0}
+h1{font-size:27px;line-height:1.05;display:flex;align-items:center;gap:10px}
+h1 .home{display:inline-flex;flex:none}h1 .home img{display:block;border-radius:50%}
+h2{font-size:21px}
+h3{font-size:16px}
+.sub{color:var(--muted);margin:3px 0 0;font-size:13px}
+header{display:flex;flex-direction:column;gap:10px}
+.toprow{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:flex;gap:12px;align-items:center;min-width:0}
+.stripe{display:none;flex:none;width:9px;height:42px;border-radius:3px;background:repeating-linear-gradient(180deg,var(--accent) 0 10px,var(--surface) 10px 14px);border:1px solid var(--line)}
+.refresh{flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 13px;font-weight:600;font-size:14px;cursor:pointer}
+.refresh svg{width:16px;height:16px}
+.refresh.spin svg{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.meta a{color:inherit}
+.teams{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:2px 16px}
+.teams::-webkit-scrollbar{display:none}
+.teams button{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap}
+.teams button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.pill{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid var(--line);background:var(--surface)}
+.pill .dot{width:9px;height:9px;border-radius:50%;background:var(--muted);flex:none}
+.pill.up{border-color:var(--good);color:var(--good)} .pill.up .dot{background:var(--good)}
+.pill.down{border-color:var(--warn);color:var(--warn)} .pill.down .dot{background:var(--warn)}
+/* pestanyes */
+.tabs{position:-webkit-sticky;position:sticky;top:0;z-index:6;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:calc(6px + var(--sat)) 6px 6px;margin:0 -16px;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports ((-webkit-backdrop-filter:blur(6px)) or (backdrop-filter:blur(6px))){
+  .tabs{background:rgba(243,245,248,.88);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  @media (prefers-color-scheme: dark){.tabs{background:rgba(15,20,26,.88)}}
+}
+.tabs button{border:0;background:transparent;padding:9px 4px;border-radius:8px;font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--surface)}
+.tabs .lg{display:none}
+.panel{display:none;flex-direction:column;gap:14px}
+.panel.on{display:flex}
+/* targetes */
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tile .lab{font-size:12.5px;color:var(--muted);line-height:1.25}
+.tile .val{font-family:var(--display);font-size:34px;font-weight:700;line-height:1.05}
+.tile .val small{font-size:16px;color:var(--muted);font-weight:600}
+.tile .cmp{font-size:12.5px;color:var(--muted)}
+.tile.key{border-color:var(--accent);box-shadow:inset 4px 0 0 var(--accent)}
+.delta-up{color:var(--good);font-weight:600} .delta-down{color:var(--warn);font-weight:600}
+section.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.cardhead{display:flex;flex-direction:column;gap:4px}
+.cardhead p,.note{margin:0;color:var(--muted);font-size:14px;max-width:65ch}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+svg text{fill:var(--muted);font-family:var(--body)}
+.goal{display:flex;align-items:center;gap:8px;font-size:14px;flex-wrap:wrap}
+select{font-size:16px;padding:7px 30px 7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235f6b78' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 10px center;-webkit-appearance:none;appearance:none;max-width:100%}
+/* posicions */
+.posbars{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:2px;align-items:end}
+.pcol{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;cursor:pointer;border-radius:4px;padding:2px 0;border:0;background:transparent}
+.pcol[aria-pressed="true"]{background:var(--accent-soft)}
+.pbars{height:110px;display:flex;align-items:flex-end;gap:1px;width:100%;justify-content:center;border-bottom:1px solid var(--line)}
+.pbars span{width:42%;border-radius:2px 2px 0 0;min-height:1px}
+.pbars .b0{background:var(--loss);opacity:.45}
+.pbars .b1{background:var(--accent)}
+.pcol .pv{font-size:10px;color:var(--ink);font-weight:600;min-height:14px}
+.pcol .pl{font-size:11px;color:var(--muted)}
+.posinfo{font-size:13.5px;min-height:1.4em;margin:0}
+/* partits */
+.games{display:flex;flex-direction:column}
+.game{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:10px 0;border-bottom:1px solid var(--line);align-items:center}
+.game:last-child{border-bottom:0}
+.game .when{font-size:12.5px;color:var(--muted)}
+.game .opp{font-weight:600}
+.game .right{text-align:right}
+.game .prob{grid-column:1/-1}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;padding:1px 6px;border-radius:4px;text-transform:uppercase;vertical-align:1px;margin-left:6px}
+.tag.casa{background:var(--ink);color:var(--surface)} .tag.fora{border:1px solid var(--ink);color:var(--ink)}
+.res{font-family:var(--display);font-size:20px;font-weight:700}
+.res.w{color:var(--win)} .res.d{color:var(--draw)} .res.l{color:var(--loss)}
+.was{font-size:12px;color:var(--muted)}
+.wdl{display:flex;height:10px;border-radius:3px;overflow:hidden;background:var(--line)}
+.wdl span{height:100%}
+.wdl .w{background:var(--win)} .wdl .d{background:var(--draw)} .wdl .l{background:var(--loss)}
+.wdltxt{font-size:12px;color:var(--muted);margin-top:3px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px}
+/* jornades */
+.jnav{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;align-items:center}
+.jnav button{height:40px;border:1px solid var(--line);background:var(--surface);border-radius:8px;font-size:20px;cursor:pointer}
+.jnav button:disabled{opacity:.35}
+.jnav select{width:100%}
+.mrow{display:grid;grid-template-columns:44px minmax(0,1fr) 54px minmax(0,1fr);gap:8px;align-items:center;padding:9px 6px;border-bottom:1px solid var(--line)}
+.mrow.ours{background:var(--accent-soft);border-radius:8px;border-bottom-color:transparent}
+.mrow .st{font-size:12px;color:var(--muted)}
+.mrow .h{text-align:right;font-weight:500;overflow-wrap:break-word;min-width:0}
+.mrow .a{font-weight:500;overflow-wrap:break-word;min-width:0}
+.mrow .sc{text-align:center;font-family:var(--display);font-size:19px;font-weight:700}
+.mrow .sc.pend{font-family:var(--body);font-size:12px;color:var(--muted);font-weight:500}
+.mrow .w8{font-weight:700}
+.mrow .pr{grid-column:2/-1}
+.dsep{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:12px 6px 4px}
+/* xips i segments */
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:14px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);cursor:pointer}
+.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--bg)}
+.seg button{border:0;border-left:1px solid var(--line);background:transparent;padding:10px 2px;font-size:13.5px;font-weight:600;cursor:pointer;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.seg button:first-child{border-left:0}
+.seg button[aria-pressed="true"].W{background:var(--win);color:#fff}
+.seg button[aria-pressed="true"].D{background:var(--draw);color:#fff}
+.seg button[aria-pressed="true"].L{background:var(--loss);color:#fff}
+.seg button[aria-pressed="true"].O{background:var(--surface)}
+.seg button.O{color:var(--muted);font-weight:500}
+.wif{display:flex;flex-direction:column;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}
+.wif:last-child{border-bottom:0}
+.wif .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.answer{font-size:15.5px;line-height:1.5;margin:0;padding:12px 14px;border-radius:10px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.answer b{color:var(--accent)}
+.simbar{position:-webkit-sticky;position:sticky;bottom:calc(10px + var(--sab));z-index:5;display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--ink);color:var(--surface);padding:10px 14px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.25);font-size:14px}
+.simbar b{font-family:var(--display);font-size:20px}
+.simbar .sp{display:flex;gap:14px;flex-wrap:wrap}
+.simbar .sp span{white-space:nowrap}
+.simbar .btn{background:var(--surface);color:var(--ink);border:0;border-radius:8px;padding:6px 11px;font-weight:600;font-size:13px;cursor:pointer}
+details.others{border:1px solid var(--line);border-radius:10px}
+details.others summary{padding:12px 14px;cursor:pointer;font-weight:600}
+details.others .inner{padding:0 14px 8px;display:flex;flex-direction:column;gap:8px}
+.ptsneed{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:6px}
+.pn{border:1px solid var(--line);border-radius:8px;padding:6px;text-align:center}
+.pn b{display:block;font-family:var(--display);font-size:19px;white-space:nowrap}
+.pn span{font-size:12px;font-weight:600}
+.team-ribes{color:var(--accent);font-weight:700}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.empty{color:var(--muted);font-size:14px;margin:0}
+.loading{padding:30px 0;text-align:center;color:var(--muted)}
+/* taules */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%}
+th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
+th{font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+td.num,th.num{text-align:right}
+.std td.pos{font-family:var(--display);font-weight:700;font-size:17px;width:26px}
+.std tr.ribes td,.heat tr.ribes td.team{background:var(--accent-soft)}
+.std tr.ribes td.team,.heat tr.ribes td.team{color:var(--accent);font-weight:700}
+.std td.team{font-weight:500;min-width:120px}
+.form{display:flex;gap:3px}
+.form b{width:18px;height:18px;border-radius:50%;font-size:10px;display:grid;place-items:center;color:#fff}
+.form .W{background:var(--win)} .form .D{background:var(--draw)} .form .L{background:var(--loss)}
+.hide-sm{display:none}
+.heat td.team{position:-webkit-sticky;position:sticky;left:0;background:var(--surface);z-index:1;font-size:13px;padding-right:8px;white-space:nowrap}
+.heat td.h{min-width:30px;text-align:center;font-size:12px;padding:6px 1px}
+.heat th.h{text-align:center;padding:6px 1px}
+.heat th:first-child{position:-webkit-sticky;position:sticky;left:0;background:var(--surface);z-index:1}
+footer{font-size:12.5px;color:var(--muted);text-align:center}
+footer a{color:inherit}
+@media (min-width:700px){
+  .wrap{padding-top:calc(22px + var(--sat));gap:18px}
+  h1{font-size:34px}
+  .teams{margin:0;padding:2px 0}
+  .tabs{margin:0;border:1px solid var(--line);border-radius:12px;top:8px;padding:6px}
+  .tabs .lg{display:inline} .tabs .sm{display:none}
+  .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tile .val{font-size:38px}
+  .hide-sm{display:table-cell}
+  .pbars{height:130px}
+  .game{grid-template-columns:150px minmax(0,1fr) minmax(200px,260px)}
+  .game .prob{grid-column:auto}
+  .game .right{grid-column:3}
+  .mrow{grid-template-columns:60px minmax(0,1fr) 64px minmax(0,1fr) 200px}
+  .mrow .pr{grid-column:auto}
+}
+@media (prefers-reduced-motion: reduce){.refresh.spin svg{animation:none}}
+@media (prefers-reduced-motion: no-preference){.pbars span,.wdl span{transition:height .3s,width .3s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="toprow">
+      <div class="brand">
+        <div class="stripe" aria-hidden="true"></div>
+        <div>
+          <h1><a href="../" class="home" aria-label="Tornar a la web del club"><img src="../img/escut-128.png" alt="" width="34" height="34"></a>Resultats i previsions</h1>
+          <p class="sub" id="subtitle">Hoquei patins · temporada 2026-27</p>
+        </div>
+      </div>
+      <button class="refresh" id="refresh" type="button" aria-label="Actualitzar resultats"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg><span>Actualitzar</span></button>
+    </div>
+    <nav class="teams" id="teams" aria-label="Equips del Ribes"></nav>
+    <div class="meta" id="meta"></div>
+    <div id="status" class="pill"><span class="dot"></span><span>Carregant…</span></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Seccions">
+    <button role="tab" id="t-resum" data-tab="resum" aria-selected="true">Resum</button>
+    <button role="tab" id="t-jornades" data-tab="jornades" aria-selected="false">Jornades</button>
+    <button role="tab" id="t-simulador" data-tab="simulador" aria-selected="false"><span class="lg">Què passaria si…</span><span class="sm">I si…?</span></button>
+    <button role="tab" id="t-classificacio" data-tab="classificacio" aria-selected="false"><span class="lg">Classificació</span><span class="sm">Taula</span></button>
+  </nav>
+
+  <div class="panel on" data-panel="resum" role="tabpanel" aria-labelledby="t-resum">
+    <div class="goal"><label for="goal">Objectiu: acabar entre els</label><select id="goal"></select><span>primers</span></div>
+    <div class="tiles" id="tiles"></div>
+    <section class="card">
+      <div class="cardhead">
+        <h2>Anem pel bon camí?</h2>
+        <p id="pathnote">La línia grisa és el que esperava el model el 10 de novembre. La vermella són els punts reals. Si la vermella va per sobre, rendim més del previst.</p>
+      </div>
+      <div class="legend"><span><i style="background:var(--loss)"></i>Previsió 10 nov</span><span><i style="background:var(--accent)"></i>Punts reals</span><span><i style="background:var(--accent);opacity:.5"></i>Projecció actual</span></div>
+      <div id="pathchart"></div>
+    </section>
+    <section class="card">
+      <div class="cardhead">
+        <h2>On acabarem?</h2>
+        <p>Probabilitat de cada posició final. Toca una columna per veure-la en detall.</p>
+      </div>
+      <div class="legend"><span><i style="background:var(--loss);opacity:.45;height:10px"></i>Previsió 10 nov</span><span><i style="background:var(--accent);height:10px"></i>Ara</span></div>
+      <div class="posbars" id="posbars"></div>
+      <p class="posinfo" id="posinfo"></p>
+    </section>
+    <section class="card">
+      <div class="cardhead">
+        <h2>Partits del Ribes</h2>
+        <p>Com han anat els jugats i quina probabilitat tenim ara de guanyar, empatar o perdre els que queden.</p>
+      </div>
+      <div class="games" id="ribesgames"></div>
+    </section>
+  </div>
+
+  <div class="panel" data-panel="jornades" role="tabpanel" aria-labelledby="t-jornades">
+    <section class="card">
+      <div class="jnav"><button type="button" id="jprev" aria-label="Jornada anterior">‹</button><select id="jsel" aria-label="Tria la jornada"></select><button type="button" id="jnext" aria-label="Jornada següent">›</button></div>
+      <div id="jmatches"></div>
+    </section>
+    <section class="card">
+      <div class="cardhead"><h2 id="jtabletitle">Classificació després de la jornada</h2><p>Només compta els partits d'aquesta jornada i les anteriors que ja s'han jugat.</p></div>
+      <div class="scroll" id="jtable"></div>
+    </section>
+  </div>
+
+  <div class="panel" data-panel="simulador" role="tabpanel" aria-labelledby="t-simulador">
+    <section class="card">
+      <div class="cardhead">
+        <h2>Què passaria si…</h2>
+        <p>Tria què passa en els partits que queden i mira on acabaria el Ribes. És només una prova: no canvia res.</p>
+      </div>
+      <p class="answer" id="answer">Calculant…</p>
+      <div class="tiles" id="wtiles"></div>
+      <div>
+        <div class="legend" style="margin-bottom:6px"><span><i style="background:var(--loss);opacity:.45;height:10px"></i>Ara</span><span><i style="background:var(--accent);height:10px"></i>Amb aquest escenari</span></div>
+        <div class="posbars" id="wposbars"></div>
+      </div>
+    </section>
+    <section class="card">
+      <div class="cardhead">
+        <h2>Partits del Ribes que queden</h2>
+        <div class="chips" id="presets">
+          <button class="chip" type="button" data-preset="open">Tot obert</button>
+          <button class="chip" type="button" data-preset="easy">Guanyem els assequibles</button>
+          <button class="chip" type="button" data-preset="all">Guanyem tot</button>
+          <button class="chip" type="button" data-preset="lose">Perdem tot</button>
+        </div>
+      </div>
+      <div id="wribes"></div>
+      <details class="others">
+        <summary id="otherssum">Altres partits de la lliga</summary>
+        <div class="inner" id="wothers"></div>
+      </details>
+    </section>
+    <section class="card">
+      <div class="cardhead">
+        <h2>Quants punts calen?</h2>
+        <p id="ptsnote">Amb aquests punts finals, probabilitat d'aconseguir l'objectiu.</p>
+      </div>
+      <div class="ptsneed" id="ptsneed"></div>
+    </section>
+    <div class="simbar" id="simbar" aria-live="polite"></div>
+  </div>
+
+  <div class="panel" data-panel="classificacio" role="tabpanel" aria-labelledby="t-classificacio">
+    <section class="card">
+      <div class="cardhead">
+        <h2>Classificació</h2>
+        <p>Amb tots els resultats publicats, i els punts que el model espera per a cada equip a final de lliga.</p>
+      </div>
+      <div class="scroll" id="standings"></div>
+    </section>
+    <section class="card">
+      <div class="cardhead">
+        <h2>Probabilitat de cada posició (%)</h2>
+        <p>Llisca cap al costat per veure totes les posicions.</p>
+      </div>
+      <div class="scroll" id="heat"></div>
+    </section>
+    <section class="card">
+      <h2>Com es calcula</h2>
+      <p class="note">Els resultats es llegeixen automàticament de hoquei.info: cada 20 minuts els caps de setmana i tres cops al dia entre setmana. Cada equip té una força calculada a partir de la diferència de gols de tots els seus partits, tenint en compte contra qui ha jugat (rating de Massey amb regularització). Amb aquestes forces es juga la resta de la lliga milers de vegades, sumant l'atzar de cada partit i la incertesa del mateix rating. Els empats a punts es desfan per enfrontament directe i després per diferència de gols. La previsió del 10 de novembre és el mateix càlcul fet només amb els partits jugats fins aquell dia. Al simulador, els resultats triats es fixen però no canvien la força dels equips.</p>
+    </section>
+  </div>
+
+  <footer>Dades: <a href="https://hoquei.info/" rel="noopener">hoquei.info</a> · Federació Catalana de Patinatge. <a href="../">Ribes Club Patí</a></footer>
+</div>
+<script src="../model.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id);};
+var CFG=null, TEAM=null, D=null, SIM=null, REF=null, WSIM=null, FORCE={}, POSSEL=null, J=null, GOAL=null, wTimer=null, simToken=0;
+var DEFAULT_TEAM='prebenjami-b';
+var LS={get:function(k){try{return localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{localStorage.setItem(k,v);}catch(e){}}};
+
+// ---------- noms ----------
+var UP={CP:1,HC:1,CH:1,PHC:1,HF:1,UE:1,CE:1,CN:1,AE:1,SH:1,CEH:1,CHP:1,HCP:1,CPA:1,UD:1,CD:1,CF:1,FC:1,CHC:1,AECS:1,SAD:1};
+var CLUBW={CP:1,HC:1,CH:1,PHC:1,HF:1,UE:1,CE:1,CN:1,AE:1,SH:1,CEH:1,CLUB:1,HOQUEI:1,PATI:1,'PATÍ':1,UNIÓ:1,ESPORTIVA:1,'HOQUEI-CLUB':1};
+var LOW={DE:1,DEL:1,LA:1,LES:1,I:1,EL:1,DELS:1};
+var SHORTFIX={"JOIERIA MONER SANT RAMON B":"Sant Ramon B","UNIÓ ESPORTIVA D'HORTA A":"Horta A"};
+function capw(w){return w.split('-').map(function(p){return p.charAt(0).toUpperCase()+p.slice(1);}).join('-');}
+function words(n){var w=n.trim().split(/\s+/);if(w.length>2&&w[w.length-1]===w[w.length-2]&&/^[A-D]$/.test(w[w.length-1]))w.pop();return w;}
+function nice(n){var w=words(n);return w.map(function(x,i){if(UP[x]||(/^[A-D]$/.test(x)&&i===w.length-1))return x;var l=x.toLowerCase();if(i>0&&LOW[x])return l;var m=l.match(/^([dl])['’](.+)$/);if(m)return m[1]+"'"+capw(m[2]);return capw(l);}).join(' ');}
+function short(n){if(SHORTFIX[n])return SHORTFIX[n];var w=words(n),k=-1;for(var i=0;i<w.length;i++)if(CLUBW[w[i]])k=i;
+  var rest=k>=0?w.slice(k+1):w;
+  if(!rest.length||(rest.length===1&&/^[A-D]$/.test(rest[0])))rest=w.slice(0,Math.max(k,0)).filter(function(x){return !CLUBW[x];}).concat(rest);
+  if(!rest.length)rest=w;if(rest.length>3&&!/^[A-D]$/.test(rest[rest.length-1]))rest=rest.slice(0,3);
+  return nice(rest.join(' '));}
+function abbr(n){var s=short(n).replace(/^(Sant|Santa|St\.)\s+/,'S').normalize('NFD').replace(/[̀-ͯ]/g,'');var w=s.split(' ');var a=(w[0].length<=2&&w[1]?w[0]+w[1]:w[0]).replace(/[^A-Za-z]/g,'').slice(0,3).toUpperCase();var last=w[w.length-1];if(/^[A-D]$/.test(last)&&w.length>1)a=a.slice(0,3)+last;return a;}
+
+// ---------- utilitats ----------
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+var pct=function(v){return v<0.5&&v>0?'<1':String(Math.round(v));};
+var dec=function(v,d){return v.toFixed(d===undefined?1:d).replace('.',',');};
+var ord=function(n){return n===1?'1r':n===2?'2n':n===3?'3r':n===4?'4t':n+'è';};
+var listCa=function(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' i '+a[a.length-1];};
+var DAYS=['dg.','dl.','dt.','dc.','dj.','dv.','ds.'],MON=['gen.','febr.','març','abr.','maig','juny','jul.','ag.','set.','oct.','nov.','des.'];
+function fmtDay(d){if(!d)return 'Data per confirmar';var p=d.split('-'),dt=new Date(+p[0],+p[1]-1,+p[2],12);return DAYS[dt.getDay()]+' '+(+p[2])+' '+MON[+p[1]-1];}
+function hexToRgb(h){h=h.trim();if(h.charAt(0)!=='#')return [44,90,135];if(h.length===4)h='#'+h[1]+h[1]+h[2]+h[2]+h[3]+h[3];return [parseInt(h.substr(1,2),16),parseInt(h.substr(3,2),16),parseInt(h.substr(5,2),16)];}
+function tint(v,a){var c=hexToRgb(getComputedStyle(document.documentElement).getPropertyValue(v));return 'rgba('+c[0]+','+c[1]+','+c[2]+','+a.toFixed(3)+')';}
+function ago(iso){var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(isNaN(m))return '';if(m<1)return 'ara mateix';if(m<60)return 'fa '+m+' min';var h=Math.round(m/60);if(h<24)return 'fa '+h+' h';var dd=new Date(iso);return 'el '+dd.getDate()+' '+MON[dd.getMonth()];}
+
+// ---------- dades ----------
+function prep(raw){
+  var names={};raw.matches.forEach(function(m){names[m.home]=1;names[m.away]=1;});
+  var K=Object.keys(names).sort(),IX={};K.forEach(function(k,i){IX[k]=i;});
+  var ms=raw.matches.map(function(m,i){return {i:i,j:m.j,date:m.date,time:m.time,status:m.status,h:IX[m.home],a:IX[m.away],hg:m.hg,ag:m.ag,done:m.status==='ft'&&m.hg!==null&&m.ag!==null};});
+  var maxg=0;ms.forEach(function(m){if(m.done)maxg=Math.max(maxg,m.hg,m.ag);});
+  var js={};ms.forEach(function(m){js[m.j]=1;});
+  return {raw:raw,K:K,IX:IX,n:K.length,us:IX[TEAM.ribes],ms:ms,cap:maxg<=4?4:20,jornades:Object.keys(js).map(Number).sort(function(a,b){return a-b;})};
+}
+var played=function(pred){return D.ms.filter(function(m){return m.done&&(!pred||pred(m));}).map(function(m){return [m.h,m.a,m.hg,m.ag];});};
+var pendingMs=function(){return D.ms.filter(function(m){return !m.done;});};
+function isUs(m){return m.h===D.us||m.a===D.us;}
+function nmHTML(i,fn){var s=esc((fn||short)(D.K[i]));return i===D.us?'<span class="team-ribes">'+s+'</span>':s;}
+function NAMEFN(){return window.innerWidth>=700?nice:short;}
+function simN(p){return Math.max(1500,Math.min(10000,Math.round(700000/Math.max(1,p))));}
+
+// ---------- worker ----------
+var worker=null,wcb={},wid=0;
+try{worker=new Worker('../model.js');worker.onmessage=function(e){var cb=wcb[e.data.id];delete wcb[e.data.id];if(cb)cb(e.data.out);};worker.onerror=function(){worker=null;};}catch(e){worker=null;}
+function runSim(args,cb){if(worker){var id=++wid;wcb[id]=cb;worker.postMessage({id:id,args:args});}else setTimeout(function(){cb(Model.simulate(args));},20);}
+
+function computeAll(){
+  var tok=++simToken;SIM=null;REF=null;WSIM=null;renderAll();
+  var pend=pendingMs();
+  runSim({n:D.n,us:D.us,played:played(),pending:pend.map(function(m){return [m.h,m.a];}),N:simN(pend.length),cap:D.cap},function(o){if(tok!==simToken)return;o.pend=pend;SIM=o;renderAll();if(Object.keys(FORCE).length)scheduleWhatIf();});
+  var ref=CFG.refDate,rp=D.ms.filter(function(m){return !(m.done&&m.date&&m.date<ref);});
+  var refPlayed=played(function(m){return m.date&&m.date<ref;});
+  runSim({n:D.n,us:D.us,played:refPlayed,pending:rp.map(function(m){return [m.h,m.a];}),N:simN(rp.length),cap:D.cap},function(o){if(tok!==simToken)return;o.pend=rp;REF=o;renderAll();});
+}
+
+function loadTeam(id,force){
+  TEAM=CFG.teams.filter(function(t){return t.id===id;})[0]||CFG.teams[0];
+  LS.set('ribes-team',TEAM.id);FORCE={};POSSEL=null;J=null;
+  try{history.replaceState(null,'','?equip='+TEAM.id+location.hash);}catch(e){}
+  renderTeams();$('subtitle').textContent=TEAM.label+' · '+TEAM.group;
+  $('status').className='pill';$('status').innerHTML='<span class="dot"></span><span>Carregant resultats…</span>';
+  $('refresh').classList.add('spin');
+  fetch('../data/'+TEAM.id+'.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(raw){
+    $('refresh').classList.remove('spin');D=prep(raw);
+    var g=+LS.get('ribes-goal-'+TEAM.id);GOAL=g>=1&&g<=D.n?g:Math.max(1,Math.round(D.n*0.6));
+    renderGoal();computeAll();
+  }).catch(function(){
+    $('refresh').classList.remove('spin');D=null;
+    $('status').className='pill down';$('status').innerHTML='<span class="dot"></span><span>Encara no hi ha dades d\'aquest equip. Torna-ho a provar d\'aquí a una estona.</span>';
+    ['tiles','pathchart','posbars','ribesgames','jmatches','jtable','standings','heat','wribes','wothers','ptsneed','wtiles','wposbars'].forEach(function(x){$(x).innerHTML='';});
+    $('meta').textContent='';
+  });
+}
+
+// ---------- capçalera ----------
+function renderTeams(){$('teams').innerHTML=CFG.teams.map(function(t){return '<button type="button" data-team="'+t.id+'" aria-pressed="'+(TEAM&&t.id===TEAM.id)+'">'+esc(t.label)+'</button>';}).join('');
+  var b=$('teams').querySelector('[aria-pressed="true"]');if(b&&b.scrollIntoView)try{b.scrollIntoView({block:'nearest',inline:'center'});}catch(e){}}
+function renderGoal(){var h='';for(var i=1;i<=D.n;i++)h+='<option value="'+i+'"'+(i===GOAL?' selected':'')+'>'+i+'</option>';$('goal').innerHTML=h;}
+function topOf(S){return S.pos[D.us].slice(0,GOAL).reduce(function(a,b){return a+b;},0);}
+function expPosOf(S){return S.pos[D.us].reduce(function(s,v,p){return s+v*(p+1);},0)/100;}
+function modeOf(S){var p=S.pos[D.us],b=0;p.forEach(function(v,i){if(v>p[b])b=i;});return b;}
+function dTxt(v,b,d,inv,ref){var x=v-b;if(Math.abs(x)<(d?0.05:0.5))return '<span>igual que '+ref+'</span>';var good=inv?x<0:x>0;return '<span class="'+(good?'delta-up':'delta-down')+'">'+(x>0?'+':'')+dec(x,d)+'</span> vs '+ref;}
+
+// ---------- calendari del Ribes ----------
+function probFor(S,m){if(!S)return null;var k=S.pend.indexOf(m);if(k<0)return null;return S.mres[k];}
+function usView(p,m){return m.h===D.us?[p[0],p[1],p[2]]:[p[2],p[1],p[0]];}
+function ribesSchedule(){
+  return D.ms.filter(isUs).slice().sort(function(a,b){return (a.date||'9').localeCompare(b.date||'9')||a.j-b.j;}).map(function(m){
+    var home=m.h===D.us,o={m:m,opp:home?m.a:m.h,home:home};
+    if(m.done){o.gf=home?m.hg:m.ag;o.gc=home?m.ag:m.hg;o.pts=o.gf>o.gc?3:o.gf===o.gc?1:0;o.res=o.gf>o.gc?'w':o.gf===o.gc?'d':'l';}
+    var rp=probFor(REF,m);o.bwdl=rp?usView(rp,m):null;
+    o.bexp=o.bwdl?(3*o.bwdl[0]+o.bwdl[1])/100:(m.done?o.pts:0);o.afterRef=!!o.bwdl;
+    return o;});
+}
+
+// ---------- RESUM ----------
+function renderSummary(){
+  var res=played(),t=Model.table(D.n,res),o=Model.rankOrder(D.n,res,t,null),ri=D.us,S=SIM,R=REF;
+  var curPos=o.indexOf(ri)+1,sched=ribesSchedule();
+  var newP=sched.filter(function(x){return x.afterRef&&x.res;}),delta=newP.reduce(function(s,x){return s+x.pts-x.bexp;},0),st=$('status');
+  if(!R){st.className='pill';st.innerHTML='<span class="dot"></span><span>Calculant previsions…</span>';}
+  else if(!newP.length){st.className='pill';st.innerHTML='<span class="dot"></span><span>Encara no hi ha partits nous des del 10 de novembre</span>';}
+  else if(delta>=0.5){st.className='pill up';st.innerHTML='<span class="dot"></span><span>Per sobre de la previsió: +'+dec(delta)+' pts</span>';}
+  else if(delta<=-0.5){st.className='pill down';st.innerHTML='<span class="dot"></span><span>Per sota de la previsió: '+dec(delta)+' pts</span>';}
+  else{st.className='pill up';st.innerHTML='<span class="dot"></span><span>En línia amb la previsió</span>';}
+  var REFL='el 10 nov',n=D.n;
+  $('tiles').innerHTML=
+   '<div class="tile"><span class="lab">Posició ara</span><span class="val">'+ord(curPos)+' <small>de '+n+'</small></span><span class="cmp">'+t[ri].pts+' pts en '+t[ri].pj+' partits</span></div>'+
+   '<div class="tile key"><span class="lab">Posició final esperada</span><span class="val">'+(S?dec(expPosOf(S)):'…')+'</span><span class="cmp">'+(S&&R?dTxt(expPosOf(S),expPosOf(R),1,true,REFL):'calculant')+'</span></div>'+
+   '<div class="tile key"><span class="lab">Punts finals esperats</span><span class="val">'+(S?dec(S.expPts[ri]):'…')+'</span><span class="cmp">'+(S&&R?dTxt(S.expPts[ri],R.expPts[ri],1,false,REFL):'calculant')+'</span></div>'+
+   '<div class="tile"><span class="lab">Acabar entre els '+GOAL+' primers</span><span class="val">'+(S?Math.round(topOf(S)):'…')+'<small>%</small></span><span class="cmp">'+(S&&R?dTxt(topOf(S),topOf(R),0,false,REFL):'calculant')+'</span></div>';
+  renderPath(sched,S);renderPos();renderRibesGames(sched,S);
+}
+function renderPath(sched,S){
+  var box=$('pathchart'),cw=box.clientWidth;if(!cw||!D)return;
+  var narrow=cw<520,W=Math.max(300,cw),H=narrow?220:250,ml=30,mr=12,mt=16,mb=narrow?46:58,nM=sched.length;
+  var cb=0,base=[0];sched.forEach(function(x){cb+=x.bexp;base.push(cb);});
+  var real=[{x:0,y:0}],cr=0;sched.forEach(function(x,i){if(x.res){cr+=x.pts;real.push({x:i+1,y:cr});}});
+  var proj=S?S.expPts[D.us]:null;
+  var ymax=Math.ceil(Math.max(9,cb,cr,proj||0)/3)*3+3,ystep=ymax>45?9:ymax>24?6:3;
+  var X=function(i){return ml+(W-ml-mr)*i/nM;},Y=function(v){return mt+(H-mt-mb)*(1-v/ymax);};
+  var every=Math.max(1,Math.ceil(nM*(narrow?16:22)/(W-ml-mr)));
+  var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="display:block;max-width:100%;height:auto" role="img" aria-label="Punts acumulats del Ribes comparats amb la previsió">';
+  for(var v=0;v<=ymax;v+=ystep)s+='<line x1="'+ml+'" x2="'+(W-mr)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--line)"/><text x="'+(ml-6)+'" y="'+(Y(v)+4)+'" font-size="11" text-anchor="end">'+v+'</text>';
+  sched.forEach(function(x,i){if(i%every)return;var lab=narrow?abbr(D.K[x.opp]):(x.home?'':'@ ')+short(D.K[x.opp]);
+    s+='<text transform="translate('+X(i+1)+','+(H-mb+12)+') rotate(-45)" font-size="'+(narrow?10:11)+'" text-anchor="end"'+(x.home?' style="fill:var(--ink)"':'')+'>'+esc(lab)+'</text>';});
+  if(REF)s+='<polyline fill="none" stroke="var(--loss)" stroke-width="2" stroke-dasharray="5 4" points="'+base.map(function(v,i){return X(i)+','+Y(v);}).join(' ')+'"/>';
+  var pts=real.map(function(p){return X(p.x)+','+Y(p.y);}).join(' '),lp=real[real.length-1];
+  if(real.length>1)s+='<polygon fill="var(--accent)" opacity=".08" points="'+X(0)+','+Y(0)+' '+pts+' '+X(lp.x)+','+Y(0)+'"/>';
+  s+='<polyline fill="none" stroke="var(--accent)" stroke-width="2.5" points="'+pts+'"/>';
+  real.slice(1).forEach(function(p,k){s+='<circle cx="'+X(p.x)+'" cy="'+Y(p.y)+'" r="'+(k===real.length-2?5:3.5)+'" fill="var(--accent)" stroke="var(--surface)" stroke-width="1.5"/>';});
+  if(proj!==null&&lp.x<nM){s+='<line x1="'+X(lp.x)+'" y1="'+Y(lp.y)+'" x2="'+X(nM)+'" y2="'+Y(proj)+'" stroke="var(--accent)" stroke-width="2" stroke-dasharray="2 4" opacity=".7"/><circle cx="'+X(nM)+'" cy="'+Y(proj)+'" r="4" fill="var(--surface)" stroke="var(--accent)" stroke-width="2"/>';
+    s+='<text x="'+(X(nM)-8)+'" y="'+(Y(proj)-10)+'" font-size="12" text-anchor="end" style="fill:var(--accent);font-weight:700">'+dec(proj)+' pts</text>';}
+  if(REF&&(proj===null||Math.abs(proj-cb)>=0.3*ystep))s+='<text x="'+(X(nM)-8)+'" y="'+(Y(cb)+(proj!==null&&proj>cb?18:-8))+'" font-size="11" text-anchor="end">previst '+dec(cb)+'</text>';
+  s+='<text x="'+(X(lp.x)+8)+'" y="'+(Y(lp.y)+16)+'" font-size="12" style="fill:var(--ink);font-weight:600">'+lp.y+' pts</text></svg>';
+  box.innerHTML=s;
+}
+function posBars(el,ref,cur,refLab,curLab,clickable){
+  var mx=Math.max.apply(null,ref.concat(cur).concat([1]));
+  el.innerHTML=cur.map(function(v,p){return '<button type="button" class="pcol" data-p="'+p+'" aria-pressed="'+(clickable&&POSSEL===p)+'" aria-label="'+ord(p+1)+': '+curLab+' '+pct(v)+'%, '+refLab+' '+pct(ref[p])+'%"'+(clickable?'':' tabindex="-1"')+'>'+
+    '<span class="pv">'+(v>=0.5?Math.round(v):'')+'</span><div class="pbars"><span class="b0" style="height:'+(100*ref[p]/mx)+'%"></span><span class="b1" style="height:'+(100*v/mx)+'%"></span></div><span class="pl">'+(p+1)+'</span></button>';}).join('');
+}
+function renderPos(){
+  var z=new Array(D.n).fill(0),cur=SIM?SIM.pos[D.us]:z,ref=REF?REF.pos[D.us]:z;
+  posBars($('posbars'),ref,cur,'previsió 10 nov','ara',true);
+  if(!SIM){$('posinfo').textContent='';return;}
+  var p=POSSEL;
+  if(p===null){var m=modeOf(SIM);$('posinfo').innerHTML='La posició més probable és la <b>'+ord(m+1)+'</b> ('+Math.round(cur[m])+'%). Opcions de quedar entre els '+GOAL+' primers: '+Math.round(topOf(SIM))+'%.';return;}
+  var up=cur.slice(0,p+1).reduce(function(a,b){return a+b;},0);
+  $('posinfo').innerHTML='<b>'+ord(p+1)+'</b>: '+pct(cur[p])+'% ara ('+pct(ref[p])+'% el 10 nov). Acabar '+ord(p+1)+' o millor: '+pct(up)+'%.';
+}
+function wdlBar(w,d,l,labs){labs=labs||['Guanyem','Empat','Perdem'];return '<div class="wdl" aria-hidden="true"><span class="w" style="width:'+w+'%"></span><span class="d" style="width:'+d+'%"></span><span class="l" style="width:'+l+'%"></span></div><div class="wdltxt"><span>'+labs[0]+' '+pct(w)+'%</span><span>'+labs[1]+' '+pct(d)+'%</span><span>'+labs[2]+' '+pct(l)+'%</span></div>';}
+function renderRibesGames(sched,S){
+  $('ribesgames').innerHTML=sched.map(function(x){var m=x.m;
+    var tag=x.home?'<span class="tag casa">Casa</span>':'<span class="tag fora">Fora</span>',body;
+    if(x.res){body='<div class="right"><span class="res '+x.res+'">'+x.gf+'–'+x.gc+'</span>'+(x.afterRef?'<div class="was"><span class="'+(x.pts-x.bexp>=0?'delta-up':'delta-down')+'">'+(x.pts-x.bexp>=0?'+':'')+dec(x.pts-x.bexp)+' pts</span> vs previsió</div>':'')+'</div>';}
+    else{var p=probFor(S,m);body='<div class="prob">'+(p?(function(q){return wdlBar(q[0],q[1],q[2]);})(usView(p,m))+(x.bwdl?'<div class="was">10 nov: '+x.bwdl.map(Math.round).join(' / ')+'</div>':''):'<span class="was">calculant…</span>')+'</div>';}
+    return '<div class="game"><div><div class="when">J'+m.j+' · '+fmtDay(m.date)+(m.time?' · '+m.time:'')+'</div><div class="opp">'+esc(nice(D.K[x.opp]))+tag+'</div></div>'+body+'</div>';}).join('')||'<p class="empty">No hi ha partits.</p>';
+}
+
+// ---------- JORNADES ----------
+function defaultJ(){var last=null;D.ms.forEach(function(m){if(m.done&&(last===null||m.j>last))last=m.j;});return last||D.jornades[0];}
+function renderJornades(){
+  if(J===null||D.jornades.indexOf(J)<0)J=defaultJ();
+  $('jsel').innerHTML=D.jornades.map(function(j){var ms=D.ms.filter(function(m){return m.j===j;});var ds=ms.map(function(m){return m.date;}).filter(Boolean).sort();var done=ms.filter(function(m){return m.done;}).length;
+    return '<option value="'+j+'"'+(j===J?' selected':'')+'>Jornada '+j+(ds.length?' · '+fmtDay(ds[0]).replace(/^\S+ /,''):'')+(done===ms.length?' ✓':done?' ('+done+'/'+ms.length+')':'')+'</option>';}).join('');
+  var k=D.jornades.indexOf(J);$('jprev').disabled=k<=0;$('jnext').disabled=k>=D.jornades.length-1;
+  var ms=D.ms.filter(function(m){return m.j===J;}).sort(function(a,b){return ((a.date||'9')+(a.time||'')).localeCompare((b.date||'9')+(b.time||''));});
+  var last=null,h='';
+  ms.forEach(function(m){if(m.date!==last){h+='<div class="dsep">'+fmtDay(m.date)+'</div>';last=m.date;}
+    var sc,pr='';
+    if(m.done){sc='<span class="sc">'+m.hg+'–'+m.ag+'</span>';}
+    else{sc='<span class="sc pend">'+(m.status==='live'?'en joc':'')+'</span>';var p=probFor(SIM,m);if(p)pr='<div class="pr">'+wdlBar(p[0],p[1],p[2],[esc(short(D.K[m.h])),'Empat',esc(short(D.K[m.a]))])+'</div>';}
+    var hw=m.done&&m.hg>m.ag,aw=m.done&&m.ag>m.hg;
+    h+='<div class="mrow'+(isUs(m)?' ours':'')+'"><span class="st">'+(m.done?'Final':(m.time||'—'))+'</span><span class="h'+(hw?' w8':'')+'">'+nmHTML(m.h,NAMEFN())+'</span>'+sc+'<span class="a'+(aw?' w8':'')+'">'+nmHTML(m.a,NAMEFN())+'</span>'+pr+'</div>';});
+  $('jmatches').innerHTML=h||'<p class="empty">No hi ha partits en aquesta jornada.</p>';
+  $('jtabletitle').textContent='Classificació després de la jornada '+J;
+  var res=played(function(m){return m.j<=J;}),t=Model.table(D.n,res),o=Model.rankOrder(D.n,res,t,null);
+  var tt='<table class="std"><thead><tr><th>#</th><th>Equip</th><th class="num">PJ</th><th class="num">Dif</th><th class="num">Pts</th></tr></thead><tbody>';
+  o.forEach(function(i,p){var x=t[i],d=x.gf-x.gc;tt+='<tr class="'+(i===D.us?'ribes':'')+'"><td class="pos">'+(p+1)+'</td><td class="team">'+esc(nice(D.K[i]))+'</td><td class="num">'+x.pj+'</td><td class="num">'+(d>0?'+':'')+d+'</td><td class="num"><b>'+x.pts+'</b></td></tr>';});
+  $('jtable').innerHTML=tt+'</tbody></table>';
+}
+
+// ---------- SIMULADOR ----------
+function ribesPending(){return pendingMs().filter(isUs).sort(function(a,b){return (a.date||'9').localeCompare(b.date||'9');});}
+function ourOutcome(m){var v=FORCE[m.i];if(!v)return 'O';if(v==='D')return 'D';return (v==='H')===(m.h===D.us)?'W':'L';}
+function setOur(m,o){if(o==='O'){delete FORCE[m.i];return;}if(o==='D'){FORCE[m.i]='D';return;}FORCE[m.i]=(o==='W')===(m.h===D.us)?'H':'A';}
+function renderWhatIfInputs(){
+  $('wribes').innerHTML=ribesPending().map(function(m){var opp=m.h===D.us?m.a:m.h,o=ourOutcome(m),p=probFor(SIM,m),q=p?usView(p,m):null;
+    var b=function(c,l){return '<button type="button" class="'+c+'" data-wk="'+m.i+'" data-o="'+c+'" aria-pressed="'+(o===c)+'">'+l+'</button>';};
+    return '<div class="wif"><div class="top"><span><b>'+esc(nice(D.K[opp]))+'</b>'+(m.h===D.us?'<span class="tag casa">Casa</span>':'<span class="tag fora">Fora</span>')+'</span><span class="was">'+fmtDay(m.date)+(q?' · ara '+Math.round(q[0])+'/'+Math.round(q[1])+'/'+Math.round(q[2]):'')+'</span></div>'+
+      '<div class="seg" role="group" aria-label="Resultat contra '+esc(nice(D.K[opp]))+'">'+b('W','Guanyem')+b('D','Empat')+b('L','Perdem')+b('O','Obert')+'</div></div>';}).join('')||'<p class="empty">No queden partits del Ribes.</p>';
+  var others=pendingMs().filter(function(m){return !isUs(m);}),nf=others.filter(function(m){return FORCE[m.i];}).length;
+  $('otherssum').textContent='Altres partits de la lliga ('+(nf?nf+' fixats':others.length)+')';
+  var by={},keys=[];others.forEach(function(m){var k=m.j;if(!by[k]){by[k]=[];keys.push(k);}by[k].push(m);});
+  keys.sort(function(a,b){return a-b;});
+  $('wothers').innerHTML=keys.map(function(k){return '<div class="dsep">Jornada '+k+'</div>'+by[k].map(function(m){var v=FORCE[m.i]||'O';
+    var b=function(c,cls,l){return '<button type="button" class="'+cls+'" data-ok="'+m.i+'" data-v="'+c+'" aria-pressed="'+(v===c)+'">'+esc(l)+'</button>';};
+    return '<div class="seg" role="group" aria-label="'+esc(nice(D.K[m.h]))+' contra '+esc(nice(D.K[m.a]))+'">'+b('H','W',short(D.K[m.h]))+b('D','D','Empat')+b('A','W',short(D.K[m.a]))+b('O','O','Obert')+'</div>';}).join('');}).join('');
+}
+function scheduleWhatIf(){
+  renderWhatIfInputs();clearTimeout(wTimer);
+  if(!Object.keys(FORCE).length||!SIM){WSIM=null;renderWhatIfResult();return;}
+  $('simbar').innerHTML='<span>Calculant…</span>';
+  var tok=simToken;
+  wTimer=setTimeout(function(){var pend=pendingMs();
+    runSim({n:D.n,us:D.us,played:played(),pending:pend.map(function(m){return [m.h,m.a];}),forced:pend.map(function(m){return FORCE[m.i]||null;}),N:Math.round(simN(pend.length)*0.6),cap:D.cap},function(o){if(tok!==simToken)return;o.pend=pend;WSIM=o;renderWhatIfResult();});},180);
+}
+function renderWhatIfResult(){
+  var S=SIM,W=WSIM||SIM,ri=D.us;
+  if(!S){$('answer').textContent='Calculant…';$('wtiles').innerHTML='';$('simbar').innerHTML='<span>Calculant…</span>';return;}
+  var g={W:[],D:[],L:[]};ribesPending().forEach(function(m){var o=ourOutcome(m);if(o!=='O')g[o].push(short(D.K[m.h===D.us?m.a:m.h]));});
+  var nOther=pendingMs().filter(function(m){return !isUs(m)&&FORCE[m.i];}).length;
+  var parts=[];if(g.W.length)parts.push('guanyem contra '+listCa(g.W));if(g.D.length)parts.push('empatem contra '+listCa(g.D));if(g.L.length)parts.push('perdem contra '+listCa(g.L));
+  var now=Model.table(D.n,played())[ri].pts,sure=now+g.W.length*3+g.D.length;
+  if(!WSIM){$('answer').innerHTML='Tria un resultat en algun partit per veure què passaria. Ara mateix, el més probable és acabar <b>'+ord(modeOf(S)+1)+'</b> amb '+dec(S.expPts[ri])+' punts de mitjana, i hi ha un '+Math.round(topOf(S))+'% d\'opcions de ser entre els '+GOAL+' primers.';}
+  else{$('answer').innerHTML=(parts.length?'Si '+listCa(parts):'Amb aquests resultats dels altres partits')+(parts.length&&nOther?' (i '+nOther+' resultats d\'altres partits fixats)':'')+', el més probable és acabar <b>'+ord(modeOf(W)+1)+'</b> ('+Math.round(W.pos[ri][modeOf(W)])+'%), amb <b>'+dec(W.expPts[ri])+' punts</b> de mitjana'+(parts.length?' ('+sure+' assegurats)':'')+'. Opcions de ser entre els '+GOAL+' primers: <b>'+Math.round(topOf(W))+'%</b> (ara '+Math.round(topOf(S))+'%).';}
+  $('wtiles').innerHTML=
+    '<div class="tile key"><span class="lab">Posició més probable</span><span class="val">'+ord(modeOf(W)+1)+'</span><span class="cmp">'+Math.round(W.pos[ri][modeOf(W)])+'% de probabilitat</span></div>'+
+    '<div class="tile key"><span class="lab">Punts finals</span><span class="val">'+dec(W.expPts[ri])+'</span><span class="cmp">'+dTxt(W.expPts[ri],S.expPts[ri],1,false,'ara')+'</span></div>'+
+    '<div class="tile"><span class="lab">Posició mitjana</span><span class="val">'+dec(expPosOf(W))+'</span><span class="cmp">'+dTxt(expPosOf(W),expPosOf(S),1,true,'ara')+'</span></div>'+
+    '<div class="tile"><span class="lab">Entre els '+GOAL+' primers</span><span class="val">'+Math.round(topOf(W))+'<small>%</small></span><span class="cmp">'+dTxt(topOf(W),topOf(S),0,false,'ara')+'</span></div>';
+  posBars($('wposbars'),S.pos[ri],W.pos[ri],'ara','escenari',false);
+  $('simbar').innerHTML=WSIM?'<div class="sp"><span><b>'+ord(modeOf(W)+1)+'</b> més probable</span><span><b>'+dec(W.expPts[ri])+'</b> pts</span><span><b>'+Math.round(topOf(W))+'%</b> top '+GOAL+'</span></div><button class="btn" type="button" data-preset="open">Esborrar</button>':'<span>Tria resultats a sota per provar escenaris</span>';
+}
+function renderPtsNeed(){
+  if(!SIM){$('ptsneed').innerHTML='';return;}
+  $('ptsnote').textContent='Segons la simulació actual: amb aquests punts finals, probabilitat d\'acabar entre els '+GOAL+' primers.';
+  var c={},tp={};for(var i=0;i<SIM.N;i++){var p=SIM.ribPts[i];c[p]=(c[p]||0)+1;if(SIM.ribPos[i]<=GOAL)tp[p]=(tp[p]||0)+1;}
+  var keys=Object.keys(c).map(Number).filter(function(p){return c[p]>=SIM.N*0.004;}).sort(function(a,b){return a-b;});
+  $('ptsneed').innerHTML=keys.map(function(p){var v=100*(tp[p]||0)/c[p];return '<div class="pn" style="background:'+tint('--win',v/100*0.55)+'"><b>'+p+' pts</b><span>'+pct(v)+'%</span></div>';}).join('');
+}
+
+// ---------- CLASSIFICACIÓ ----------
+function renderStandings(){
+  var res=played(),t=Model.table(D.n,res),o=Model.rankOrder(D.n,res,t,null),S=SIM;
+  var form=D.K.map(function(){return [];});
+  D.ms.filter(function(m){return m.done;}).sort(function(a,b){return (a.date||'').localeCompare(b.date||'');}).forEach(function(m){var x=m.hg>m.ag?['W','L']:m.hg<m.ag?['L','W']:['D','D'];form[m.h].push(x[0]);form[m.a].push(x[1]);});
+  var lab={W:'G',D:'E',L:'P'};
+  var h='<table class="std"><thead><tr><th>#</th><th>Equip</th><th class="num">PJ</th><th class="num hide-sm">G</th><th class="num hide-sm">E</th><th class="num hide-sm">P</th><th class="num hide-sm">GF</th><th class="num hide-sm">GC</th><th class="num">Dif</th><th class="num">Pts</th><th class="hide-sm">Últims 5</th><th class="num">Final</th></tr></thead><tbody>';
+  o.forEach(function(i,p){var x=t[i],d=x.gf-x.gc;
+    h+='<tr class="'+(i===D.us?'ribes':'')+'"><td class="pos">'+(p+1)+'</td><td class="team">'+esc(nice(D.K[i]))+'</td><td class="num">'+x.pj+'</td><td class="num hide-sm">'+x.pg+'</td><td class="num hide-sm">'+x.pe+'</td><td class="num hide-sm">'+x.pp+'</td><td class="num hide-sm">'+x.gf+'</td><td class="num hide-sm">'+x.gc+'</td><td class="num">'+(d>0?'+':'')+d+'</td><td class="num"><b>'+x.pts+'</b></td>'+
+      '<td class="hide-sm"><div class="form">'+form[i].slice(-5).map(function(r){return '<b class="'+r+'">'+lab[r]+'</b>';}).join('')+'</div></td><td class="num">'+(S?dec(S.expPts[i]):'…')+'</td></tr>';});
+  $('standings').innerHTML=h+'</tbody></table><p class="note" style="margin-top:8px">Final = punts esperats a final de lliga. G guanyats, E empatats, P perduts.</p>';
+  if(!S){$('heat').innerHTML='<p class="loading">Calculant…</p>';return;}
+  var oo=D.K.map(function(_,i){return i;}).sort(function(a,b){return S.expPts[b]-S.expPts[a];});
+  var hh='<table class="heat"><thead><tr><th>Equip</th>';for(var p=1;p<=D.n;p++)hh+='<th class="h">'+p+'</th>';hh+='</tr></thead><tbody>';
+  oo.forEach(function(i){hh+='<tr class="'+(i===D.us?'ribes':'')+'"><td class="team">'+esc(short(D.K[i]))+'</td>';
+    for(var q=0;q<D.n;q++){var v=S.pos[i][q];hh+='<td class="h" style="background:'+tint(i===D.us?'--accent':'--heat',Math.min(0.85,v*0.009))+';'+(v>45?'color:#fff;font-weight:600':'')+'">'+(v>=0.5?Math.round(v):'')+'</td>';}
+    hh+='</tr>';});
+  $('heat').innerHTML=hh+'</tbody></table>';
+}
+
+// ---------- general ----------
+function renderMeta(){var u=D.raw.updated;$('meta').innerHTML='<span>Últim canvi a hoquei.info: '+(u?ago(u):'—')+'</span><a href="'+esc(TEAM.url)+'" rel="noopener">Veure-ho a hoquei.info</a>';}
+function renderAll(){if(!D)return;renderMeta();renderSummary();renderJornades();renderWhatIfInputs();renderWhatIfResult();renderPtsNeed();renderStandings();}
+
+var TABS=['resum','jornades','simulador','classificacio'];
+function showTab(t){if(TABS.indexOf(t)<0)t='resum';
+  Array.prototype.forEach.call(document.querySelectorAll('.tabs [role=tab]'),function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-tab')===t));});
+  Array.prototype.forEach.call(document.querySelectorAll('.panel'),function(p){p.classList.toggle('on',p.getAttribute('data-panel')===t);});
+  if(t==='resum'&&D)renderPath(ribesSchedule(),SIM);}
+
+document.addEventListener('click',function(e){
+  var el=e.target.closest?e.target.closest('[data-tab],[data-team],[data-wk],[data-ok],[data-preset],#posbars .pcol'):null;if(!el)return;
+  if(el.hasAttribute('data-tab')){var t=el.getAttribute('data-tab');showTab(t);try{history.replaceState(null,'','?equip='+TEAM.id+'#'+t);}catch(x){}window.scrollTo(0,0);return;}
+  if(el.hasAttribute('data-team')){if(el.getAttribute('data-team')!==TEAM.id)loadTeam(el.getAttribute('data-team'));return;}
+  if(!D)return;
+  if(el.hasAttribute('data-wk')){var m=D.ms[+el.getAttribute('data-wk')];setOur(m,el.getAttribute('data-o'));scheduleWhatIf();return;}
+  if(el.hasAttribute('data-ok')){var k=+el.getAttribute('data-ok'),v=el.getAttribute('data-v');if(v==='O')delete FORCE[k];else FORCE[k]=v;scheduleWhatIf();return;}
+  if(el.hasAttribute('data-preset')){var p=el.getAttribute('data-preset');
+    if(p==='open')FORCE={};
+    else ribesPending().forEach(function(m){var q=probFor(SIM,m),u=q?usView(q,m):null;if(p==='all')setOur(m,'W');else if(p==='lose')setOur(m,'L');else setOur(m,u&&u[0]>=35?'W':'O');});
+    scheduleWhatIf();return;}
+  if(el.classList.contains('pcol')){var pp=+el.getAttribute('data-p');POSSEL=POSSEL===pp?null:pp;renderPos();}
+});
+$('refresh').addEventListener('click',function(){if(TEAM)loadTeam(TEAM.id,true);});
+$('goal').addEventListener('change',function(){GOAL=+this.value;LS.set('ribes-goal-'+TEAM.id,String(GOAL));renderAll();});
+$('jsel').addEventListener('change',function(){J=+this.value;renderJornades();});
+$('jprev').addEventListener('click',function(){var k=D.jornades.indexOf(J);if(k>0){J=D.jornades[k-1];renderJornades();}});
+$('jnext').addEventListener('click',function(){var k=D.jornades.indexOf(J);if(k<D.jornades.length-1){J=D.jornades[k+1];renderJornades();}});
+var rz=null;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(D)renderPath(ribesSchedule(),SIM);},150);});
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible'&&D&&D.raw.updated&&Date.now()-new Date(D.raw.updated).getTime()>0)renderMeta();});
+
+showTab((location.hash||'').slice(1));
+fetch('../teams.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json();}).then(function(c){CFG=c;
+  var q=(location.search.match(/[?&]equip=([\w-]+)/)||[])[1];loadTeam(q||LS.get('ribes-team')||DEFAULT_TEAM);
+}).catch(function(){$('status').className='pill down';$('status').innerHTML='<span class="dot"></span><span>No s\'han pogut carregar les dades. Comprova la connexió i prem Actualitzar.</span>';});
+})();
+</script>
+</body>
+</html>

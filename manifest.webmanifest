@@ -1,16 +1,29 @@
 {
-  "name": "Seguiment Ribes CP",
+  "name": "Ribes Club Patí",
   "short_name": "Ribes CP",
-  "description": "Resultats, classificació i previsions dels equips del Ribes CP d'hoquei patins",
+  "description": "Hoquei patins a Sant Pere de Ribes des de 1989: equips, resultats, classificacions i previsions",
   "lang": "ca",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f3f5f8",
-  "theme_color": "#c8102e",
+  "background_color": "#14204a",
+  "theme_color": "#14204a",
   "icons": [
-    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
-    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
