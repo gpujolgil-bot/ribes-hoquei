@@ -1,0 +1,25 @@
+{
+ "season": "2026-2027",
+ "seasonStartYear": 2026,
+ "refDate": "2026-11-10",
+ "teams": [
+  {"id": "prebenjami-a", "label": "Prebenjamí A", "group": "BCN Prebenjamí Plata 2", "ribes": "RIBES CP A",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/"},
+  {"id": "prebenjami-b", "label": "Prebenjamí B", "group": "BCN Prebenjamí Plata 4", "ribes": "RIBES CP B",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/"},
+  {"id": "benjami-a", "label": "Benjamí A", "group": "BCN Benjamí Or 5", "ribes": "RIBES CP A A",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-or-barcelona-2026-2027/grup/bcn-benjami-or-5/results/"},
+  {"id": "benjami-b", "label": "Benjamí B", "group": "BCN Benjamí Plata 5", "ribes": "RIBES CP B B",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-plata-barcelona-2026-2027/grup/bcn-benjami-plata-5/results/"},
+  {"id": "alevi", "label": "Aleví", "group": "Aleví Plata 2", "ribes": "RIBES CP",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/alevi-plata-2026-2027/grup/alevi-plata-2/results/"},
+  {"id": "infantil", "label": "Infantil", "group": "Infantil Plata 6", "ribes": "RIBES CP",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/"},
+  {"id": "fem13", "label": "Femení 13", "group": "Fem 13 Plata", "ribes": "RIBES CP",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/"},
+  {"id": "tercera-a", "label": "3a Catalana A", "group": "3a Catalana grup B", "ribes": "RIBES CP A A",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/"},
+  {"id": "tercera-b", "label": "3a Catalana B", "group": "3a Catalana grup E", "ribes": "RIBES CP B B",
+   "url": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-e/results/"}
+ ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Seguiment Ribes CP",
+  "short_name": "Ribes CP",
+  "description": "Resultats, classificació i previsions dels equips del Ribes CP d'hoquei patins",
+  "lang": "ca",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f8",
+  "theme_color": "#c8102e",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

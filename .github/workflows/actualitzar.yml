@@ -1,0 +1,62 @@
+name: Actualitzar resultats i publicar
+
+on:
+  schedule:
+    # Hores en UTC. Caps de setmana (dies de partit): cada 20 minuts de 8:00 a 22:00 hora catalana.
+    - cron: "*/20 7-21 * * 6,0"
+    # Entre setmana: tres comprovacions al dia (partits ajornats, divendres al vespre).
+    - cron: "17 6,13,20 * * 1-5"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: actualitzar
+  cancel-in-progress: false
+
+jobs:
+  actualitzar:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Llegir hoquei.info
+        run: python3 scripts/update.py
+      - name: Desar canvis
+        id: commit
+        run: |
+          if git diff --quiet -- data; then
+            echo "Sense resultats nous"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "Resultats actualitzats $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  publicar:
+    needs: actualitzar
+    if: needs.actualitzar.outputs.changed == 'true' || github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
