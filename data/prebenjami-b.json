@@ -1,10 +1,10 @@
 {
 "id": "prebenjami-b",
-"updated": "2026-11-10T21:30:00+00:00",
+"updated": "2026-11-10T21:34:51+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/",
 "matches": [
 {
-"id": null,
+"id": "156462",
 "j": 1,
 "date": "2026-09-26",
 "time": null,
@@ -15,7 +15,7 @@
 "ag": 2
 },
 {
-"id": null,
+"id": "156459",
 "j": 1,
 "date": "2026-09-26",
 "time": null,
@@ -26,7 +26,7 @@
 "ag": 3
 },
 {
-"id": null,
+"id": "156461",
 "j": 1,
 "date": "2026-09-26",
 "time": null,
@@ -37,7 +37,7 @@
 "ag": 0
 },
 {
-"id": null,
+"id": "156463",
 "j": 1,
 "date": "2026-09-26",
 "time": null,
@@ -48,7 +48,7 @@
 "ag": 0
 },
 {
-"id": null,
+"id": "156464",
 "j": 1,
 "date": "2026-09-27",
 "time": null,
@@ -59,7 +59,7 @@
 "ag": 3
 },
 {
-"id": null,
+"id": "156474",
 "j": 2,
 "date": "2026-10-03",
 "time": null,
@@ -70,7 +70,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "156468",
 "j": 2,
 "date": "2026-10-03",
 "time": null,
@@ -81,7 +81,7 @@
 "ag": 0
 },
 {
-"id": null,
+"id": "156472",
 "j": 2,
 "date": "2026-10-04",
 "time": null,
@@ -92,7 +92,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "156470",
 "j": 2,
 "date": "2026-10-04",
 "time": null,
@@ -103,7 +103,7 @@
 "ag": 3
 },
 {
-"id": null,
+"id": "156471",
 "j": 2,
 "date": "2026-10-11",
 "time": null,
@@ -114,7 +114,7 @@
 "ag": 3
 },
 {
-"id": null,
+"id": "156479",
 "j": 3,
 "date": "2026-10-10",
 "time": null,
@@ -125,7 +125,7 @@
 "ag": 1
 },
 {
-"id": null,
+"id": "156475",
 "j": 3,
 "date": "2026-10-10",
 "time": null,
@@ -136,7 +136,7 @@
 "ag": 3
 },
 {
-"id": null,
+"id": "156478",
 "j": 3,
 "date": "2026-10-10",
 "time": null,
@@ -147,7 +147,7 @@
 "ag": 1
 },
 {
-"id": null,
+"id": "156476",
 "j": 3,
 "date": "2026-10-11",
 "time": null,
@@ -158,7 +158,7 @@
 "ag": 1
 },
 {
-"id": null,
+"id": "156481",
 "j": 3,
 "date": "2026-10-11",
 "time": null,
@@ -169,7 +169,7 @@
 "ag": 2
 },
 {
-"id": null,
+"id": "156487",
 "j": 4,
 "date": "2026-10-17",
 "time": null,
@@ -180,7 +180,7 @@
 "ag": 2
 },
 {
-"id": null,
+"id": "156485",
 "j": 4,
 "date": "2026-10-17",
 "time": null,
@@ -191,7 +191,7 @@
 "ag": 3
 },
 {
-"id": null,
+"id": "156489",
 "j": 4,
 "date": "2026-10-17",
 "time": null,
@@ -202,7 +202,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "156490",
 "j": 4,
 "date": "2026-10-17",
 "time": null,
@@ -213,7 +213,7 @@
 "ag": 0
 },
 {
-"id": null,
+"id": "156484",
 "j": 4,
 "date": "2026-10-17",
 "time": null,
@@ -224,7 +224,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "156496",
 "j": 5,
 "date": "2026-10-24",
 "time": null,
@@ -235,7 +235,7 @@
 "ag": 2
 },
 {
-"id": null,
+"id": "156493",
 "j": 5,
 "date": "2026-10-24",
 "time": null,
@@ -246,7 +246,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "156492",
 "j": 5,
 "date": "2026-10-24",
 "time": null,
@@ -257,7 +257,7 @@
 "ag": 2
 },
 {
-"id": null,
+"id": "156491",
 "j": 5,
 "date": "2026-10-24",
 "time": null,
@@ -268,7 +268,7 @@
 "ag": 1
 },
 {
-"id": null,
+"id": "156497",
 "j": 5,
 "date": "2026-10-24",
 "time": null,
@@ -279,7 +279,7 @@
 "ag": 2
 },
 {
-"id": null,
+"id": "match-73a7a084594b1793",
 "j": 6,
 "date": "2026-10-31",
 "time": null,
@@ -290,7 +290,7 @@
 "ag": 0
 },
 {
-"id": null,
+"id": "match-2ed20837e1659dc6",
 "j": 6,
 "date": "2026-10-31",
 "time": null,
@@ -301,7 +301,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "match-d7f1c4544e8fac98",
 "j": 6,
 "date": "2026-10-31",
 "time": null,
@@ -312,7 +312,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "match-4c4c576800ac1ad7",
 "j": 6,
 "date": "2026-10-31",
 "time": null,
@@ -323,7 +323,7 @@
 "ag": 2
 },
 {
-"id": null,
+"id": "match-4ad874ce5cfd6594",
 "j": 6,
 "date": "2026-10-31",
 "time": null,
@@ -334,7 +334,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "match-d2a6a89c78dc8a08",
 "j": 6,
 "date": "2026-11-01",
 "time": null,
@@ -345,7 +345,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "match-598593b71cd4793c",
 "j": 7,
 "date": "2026-11-07",
 "time": null,
@@ -356,7 +356,7 @@
 "ag": 0
 },
 {
-"id": null,
+"id": "match-7fa0d026dd8f9880",
 "j": 7,
 "date": "2026-11-07",
 "time": null,
@@ -367,7 +367,7 @@
 "ag": 3
 },
 {
-"id": null,
+"id": "match-b1c6d964b1fe2e4e",
 "j": 7,
 "date": "2026-11-07",
 "time": null,
@@ -378,7 +378,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "match-aa0eb5d6d1a1f6ed",
 "j": 7,
 "date": "2026-11-07",
 "time": null,
@@ -389,7 +389,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "match-6d4b40edfbe80522",
 "j": 7,
 "date": "2026-11-08",
 "time": null,
@@ -400,7 +400,7 @@
 "ag": 4
 },
 {
-"id": null,
+"id": "match-17d748d18ddbd3b6",
 "j": 8,
 "date": "2026-11-14",
 "time": "12:45",
@@ -411,7 +411,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-88acc0eaf304d0b6",
 "j": 8,
 "date": "2026-11-14",
 "time": "15:15",
@@ -422,7 +422,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-0f4ffabe3ff85464",
 "j": 8,
 "date": "2026-11-15",
 "time": "10:00",
@@ -433,7 +433,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-737e01271e217c4a",
 "j": 8,
 "date": "2026-11-15",
 "time": "13:15",
@@ -444,7 +444,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-24e6f11a9717aa54",
 "j": 8,
 "date": "2026-11-15",
 "time": "14:30",
@@ -455,7 +455,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-4f40b148fd4296f3",
 "j": 9,
 "date": "2026-11-21",
 "time": "10:00",
@@ -466,7 +466,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-f82a4186bd4a782c",
 "j": 9,
 "date": "2026-11-21",
 "time": "11:00",
@@ -477,7 +477,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-e3f353162f06f9e0",
 "j": 9,
 "date": "2026-11-21",
 "time": "13:00",
@@ -488,7 +488,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-f101a1cf18bc85ff",
 "j": 9,
 "date": "2026-11-21",
 "time": "15:50",
@@ -499,7 +499,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-eae7d06be256c465",
 "j": 9,
 "date": "2026-11-22",
 "time": "13:45",
@@ -510,7 +510,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-f54249dd8d8dc9be",
 "j": 10,
 "date": "2026-11-28",
 "time": "10:00",
@@ -521,7 +521,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-ba95f67f54913259",
 "j": 10,
 "date": "2026-11-28",
 "time": "10:15",
@@ -532,7 +532,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-a7badba9c17b24d0",
 "j": 10,
 "date": "2026-11-28",
 "time": "10:15",
@@ -543,7 +543,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-317f20f7749c993c",
 "j": 10,
 "date": "2026-11-28",
 "time": "15:00",
@@ -554,7 +554,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-6a663bdb4e1fbfbd",
 "j": 10,
 "date": "2026-11-29",
 "time": "11:15",
@@ -565,7 +565,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-847169c02110c486",
 "j": 11,
 "date": "2026-12-12",
 "time": "10:00",
@@ -576,7 +576,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-0e45f8bfe60013df",
 "j": 11,
 "date": "2026-12-12",
 "time": "11:00",
@@ -587,7 +587,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-44608e484a2a62c6",
 "j": 11,
 "date": "2026-12-12",
 "time": "12:00",
@@ -598,7 +598,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-b1b486a8a8d57d66",
 "j": 11,
 "date": "2026-12-12",
 "time": "13:00",
@@ -609,7 +609,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-a25d147154b962ca",
 "j": 11,
 "date": "2026-12-12",
 "time": "15:30",
@@ -620,7 +620,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-01911d7b03c05287",
 "j": 12,
 "date": "2026-12-19",
 "time": "10:00",
@@ -631,7 +631,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-55b29d932e1164b3",
 "j": 12,
 "date": "2026-12-19",
 "time": "10:15",
@@ -642,7 +642,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-427a6eb8ac619986",
 "j": 12,
 "date": "2026-12-19",
 "time": "11:15",
@@ -653,7 +653,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-dda5f7ab30737006",
 "j": 12,
 "date": "2026-12-19",
 "time": "16:00",
@@ -664,7 +664,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-d74a48bd492ce499",
 "j": 12,
 "date": "2026-12-20",
 "time": "17:15",
@@ -675,7 +675,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-0ac89b3eee45f1dd",
 "j": 13,
 "date": "2027-01-09",
 "time": "10:00",
@@ -686,7 +686,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-9efc2713e586bd31",
 "j": 13,
 "date": "2027-01-09",
 "time": "11:00",
@@ -697,7 +697,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-f57112e9624d6182",
 "j": 13,
 "date": "2027-01-09",
 "time": "12:00",
@@ -708,7 +708,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-c697c1dc361a47ea",
 "j": 13,
 "date": "2027-01-09",
 "time": "13:00",
@@ -719,7 +719,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-71d28c0d5bbec7dd",
 "j": 13,
 "date": "2027-01-09",
 "time": "13:55",
@@ -730,7 +730,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-169cf885a5e0c168",
 "j": 13,
 "date": "2027-01-09",
 "time": "16:00",
@@ -741,7 +741,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-98d29c2a43fc44e2",
 "j": 14,
 "date": "2027-01-16",
 "time": "10:00",
@@ -752,7 +752,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-16c05d411b4944c7",
 "j": 14,
 "date": "2027-01-16",
 "time": "10:00",
@@ -763,7 +763,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-d6ebcfcff1460f15",
 "j": 14,
 "date": "2027-01-16",
 "time": "10:15",
@@ -774,7 +774,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-f38f6d68a817155b",
 "j": 14,
 "date": "2027-01-16",
 "time": "11:15",
@@ -785,7 +785,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-a4d65d4bb605e329",
 "j": 14,
 "date": "2027-01-16",
 "time": "16:00",
@@ -796,7 +796,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-6b1898f0ae3824c7",
 "j": 14,
 "date": "2027-01-17",
 "time": "16:00",
@@ -807,7 +807,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-e4b85d9af347fd8d",
 "j": 15,
 "date": "2027-01-23",
 "time": "10:00",
@@ -818,7 +818,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-561674043edcd845",
 "j": 15,
 "date": "2027-01-23",
 "time": "13:00",
@@ -829,7 +829,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-8c38399591bbb463",
 "j": 15,
 "date": "2027-01-23",
 "time": "13:55",
@@ -840,7 +840,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-1c197b587803dc69",
 "j": 15,
 "date": "2027-01-23",
 "time": "15:00",
@@ -851,7 +851,7 @@
 "ag": null
 },
 {
-"id": null,
+"id": "match-6a381357de38ffb3",
 "j": 15,
 "date": "2027-01-24",
 "time": "10:00",
