@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-a",
-"updated": "2026-11-10T21:34:49+00:00",
+"updated": "2026-11-11T14:26:18+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/",
 "matches": [
 {
@@ -664,17 +664,6 @@
 "ag": null
 },
 {
-"id": "match-02d3b08f6963967d",
-"j": 11,
-"date": "2026-12-12",
-"time": "13:00",
-"status": "sched",
-"home": "HF SANT JOSEP SANT SADURNÍ C",
-"away": "HOQUEI CLUB CASTELLAR A",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-90f3611fd229ae8f",
 "j": 11,
 "date": "2026-12-12",
@@ -715,6 +704,17 @@
 "status": "sched",
 "home": "ROTOTANK BIGUES I RIELLS A",
 "away": "AUTO VIGATANA PATÍ VIC A",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-02d3b08f6963967d",
+"j": 11,
+"date": "2026-12-13",
+"time": "12:30",
+"status": "sched",
+"home": "HF SANT JOSEP SANT SADURNÍ C",
+"away": "HOQUEI CLUB CASTELLAR A",
 "hg": null,
 "ag": null
 },

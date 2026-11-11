@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-b",
-"updated": "2026-11-10T21:34:51+00:00",
+"updated": "2026-11-11T14:26:20+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/",
 "matches": [
 {
@@ -576,17 +576,6 @@
 "ag": null
 },
 {
-"id": "match-0e45f8bfe60013df",
-"j": 11,
-"date": "2026-12-12",
-"time": "11:00",
-"status": "sched",
-"home": "HF SANT JOSEP SANT SADURNÍ D",
-"away": "CP VILANOVA A",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-44608e484a2a62c6",
 "j": 11,
 "date": "2026-12-12",
@@ -616,6 +605,17 @@
 "status": "sched",
 "home": "VICIO PHC SANT CUGAT D",
 "away": "CLUB HOQUEI PRAT",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-0e45f8bfe60013df",
+"j": 11,
+"date": "2026-12-13",
+"time": "11:15",
+"status": "sched",
+"home": "HF SANT JOSEP SANT SADURNÍ D",
+"away": "CP VILANOVA A",
 "hg": null,
 "ag": null
 },

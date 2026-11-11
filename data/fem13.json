@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-10T21:34:57+00:00",
+"updated": "2026-11-11T14:26:26+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -895,6 +895,17 @@
 "ag": null
 },
 {
+"id": "match-4ef63aedb6a3d061",
+"j": 11,
+"date": "2026-11-21",
+"time": "10:00",
+"status": "sched",
+"home": "HCSENTMENAT",
+"away": "CLUB PATI TORRELLES",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-05fad6da4d60fa57",
 "j": 11,
 "date": "2026-12-03",
@@ -924,17 +935,6 @@
 "status": "sched",
 "home": "FUTBOL CLUB MARTINENC",
 "away": "CLUB HOQUEI SANTA PERPÈTUA",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-4ef63aedb6a3d061",
-"j": 11,
-"date": "2026-12-05",
-"time": "10:00",
-"status": "sched",
-"home": "HCSENTMENAT",
-"away": "CLUB PATI TORRELLES",
 "hg": null,
 "ag": null
 },
