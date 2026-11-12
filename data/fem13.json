@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-11T14:26:26+00:00",
+"updated": "2026-11-12T15:18:12+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -994,6 +994,17 @@
 "ag": null
 },
 {
+"id": "match-79803471f6282439",
+"j": 12,
+"date": "2026-12-12",
+"time": "16:00",
+"status": "sched",
+"home": "AUTO VIGATANA PATÍ VIC",
+"away": "CLUB HOQUEI MOLLERUSSA",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-30075499c02a078e",
 "j": 12,
 "date": "2026-12-12",
@@ -1034,17 +1045,6 @@
 "status": "sched",
 "home": "CLUB HOQUEI MOLINS DE REI",
 "away": "HCSENTMENAT",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-79803471f6282439",
-"j": 12,
-"date": "2026-12-13",
-"time": "15:00",
-"status": "sched",
-"home": "AUTO VIGATANA PATÍ VIC",
-"away": "CLUB HOQUEI MOLLERUSSA",
 "hg": null,
 "ag": null
 },

@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-11T14:26:24+00:00",
+"updated": "2026-11-12T15:18:11+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -810,7 +810,7 @@
 "id": "match-3b2fee1340e9f525",
 "j": 11,
 "date": "2026-12-12",
-"time": "12:45",
+"time": "14:10",
 "status": "sched",
 "home": "HOQUEI CLUB ALPICAT D",
 "away": "CLUB HOQUEI MOLLERUSSA A",
@@ -821,7 +821,7 @@
 "id": "match-e2478d9b850c68d3",
 "j": 11,
 "date": "2026-12-12",
-"time": "15:30",
+"time": "15:15",
 "status": "sched",
 "home": "HC VALLS FM LOGISTIC",
 "away": "CP SUBUR SITGES B",
@@ -909,7 +909,7 @@
 "id": "match-2b01fa9abcc746d6",
 "j": 12,
 "date": "2026-12-20",
-"time": "15:00",
+"time": "17:00",
 "status": "sched",
 "home": "CLUB HOQUEI VILA-SECA B",
 "away": "CLUB PATI CUBELLES B B",

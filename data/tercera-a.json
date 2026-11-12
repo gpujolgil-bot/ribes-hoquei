@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-10T21:34:59+00:00",
+"updated": "2026-11-12T15:18:14+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -1038,6 +1038,17 @@
 "ag": null
 },
 {
+"id": "match-0f566951b2556340",
+"j": 12,
+"date": "2026-12-13",
+"time": "16:30",
+"status": "sched",
+"home": "CP RIUDOMS",
+"away": "TRANSLOP ALCAÑIZ CLUB PATIN",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-38fafb665c3a34c0",
 "j": 12,
 "date": "2026-12-13",
@@ -1056,17 +1067,6 @@
 "status": "sched",
 "home": "CP MANRESA",
 "away": "JOIERIA MONER SANT RAMON A",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-0f566951b2556340",
-"j": 12,
-"date": "2026-12-13",
-"time": "20:00",
-"status": "sched",
-"home": "CP RIUDOMS",
-"away": "TRANSLOP ALCAÑIZ CLUB PATIN",
 "hg": null,
 "ag": null
 },
