@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-12T15:18:11+00:00",
+"updated": "2026-11-13T14:37:58+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -150,12 +150,12 @@
 "id": "match-205e0b7f5d41e523",
 "j": 2,
 "date": "2026-11-12",
-"time": "20:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CAMBRILS CH",
 "away": "CLUB HOQUEI MONTBLANC",
-"hg": null,
-"ag": null
+"hg": 1,
+"ag": 7
 },
 {
 "id": "157875",
@@ -807,17 +807,6 @@
 "ag": null
 },
 {
-"id": "match-3b2fee1340e9f525",
-"j": 11,
-"date": "2026-12-12",
-"time": "14:10",
-"status": "sched",
-"home": "HOQUEI CLUB ALPICAT D",
-"away": "CLUB HOQUEI MOLLERUSSA A",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-e2478d9b850c68d3",
 "j": 11,
 "date": "2026-12-12",
@@ -825,6 +814,17 @@
 "status": "sched",
 "home": "HC VALLS FM LOGISTIC",
 "away": "CP SUBUR SITGES B",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-3b2fee1340e9f525",
+"j": 11,
+"date": "2026-12-12",
+"time": "16:15",
+"status": "sched",
+"home": "HOQUEI CLUB ALPICAT D",
+"away": "CLUB HOQUEI MOLLERUSSA A",
 "hg": null,
 "ag": null
 },
@@ -840,17 +840,6 @@
 "ag": null
 },
 {
-"id": "match-509d84f551c598ce",
-"j": 11,
-"date": "2026-12-13",
-"time": "11:15",
-"status": "sched",
-"home": "CLUB PATI CUBELLES B B",
-"away": "CLUB HOQUEI MONTBLANC",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-c57a0f6810bb9c14",
 "j": 11,
 "date": "2026-12-13",
@@ -858,6 +847,17 @@
 "status": "sched",
 "home": "CAMBRILS CH",
 "away": "PONS LLEIDA C",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-509d84f551c598ce",
+"j": 11,
+"date": "2026-12-13",
+"time": "17:00",
+"status": "sched",
+"home": "CLUB PATI CUBELLES B B",
+"away": "CLUB HOQUEI MONTBLANC",
 "hg": null,
 "ag": null
 },

@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-12T15:18:14+00:00",
+"updated": "2026-11-13T14:38:02+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -172,12 +172,12 @@
 "id": "match-75035ffc64e024ab",
 "j": 2,
 "date": "2026-11-12",
-"time": "21:30",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CH JUNEDA A",
 "away": "CLUB PATI TORRELLES A",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 3
 },
 {
 "id": "153380",
@@ -862,6 +862,17 @@
 "ag": null
 },
 {
+"id": "match-7de5a523278774ac",
+"j": 10,
+"date": "2026-11-29",
+"time": "18:00",
+"status": "sched",
+"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
+"away": "CP CORBERA",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-794b414ee2cfb221",
 "j": 10,
 "date": "2026-11-29",
@@ -880,17 +891,6 @@
 "status": "sched",
 "home": "HOQUEI CASAL ESPLUGA",
 "away": "CH JUNEDA A",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-7de5a523278774ac",
-"j": 10,
-"date": "2026-11-29",
-"time": "19:00",
-"status": "sched",
-"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
-"away": "CP CORBERA",
 "hg": null,
 "ag": null
 },
@@ -1005,17 +1005,6 @@
 "ag": null
 },
 {
-"id": "match-a2c76a3ec4fcbba8",
-"j": 12,
-"date": "2026-12-12",
-"time": "19:00",
-"status": "sched",
-"home": "CH JUNEDA A",
-"away": "CLUB PATI CUBELLES",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-c906fdd14dc1b040",
 "j": 12,
 "date": "2026-12-12",
@@ -1045,6 +1034,17 @@
 "status": "sched",
 "home": "CP RIUDOMS",
 "away": "TRANSLOP ALCAÑIZ CLUB PATIN",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-a2c76a3ec4fcbba8",
+"j": 12,
+"date": "2026-12-13",
+"time": "17:00",
+"status": "sched",
+"home": "CH JUNEDA A",
+"away": "CLUB PATI CUBELLES",
 "hg": null,
 "ag": null
 },
