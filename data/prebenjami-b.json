@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-b",
-"updated": "2026-11-12T15:18:04+00:00",
+"updated": "2026-11-14T13:51:15+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/",
 "matches": [
 {
@@ -403,8 +403,8 @@
 "id": "match-17d748d18ddbd3b6",
 "j": 8,
 "date": "2026-11-14",
-"time": "12:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "UNIÓ ESPORTIVA D'HORTA A",
 "away": "CP MONTESQUIU",
 "hg": null,
@@ -579,7 +579,7 @@
 "id": "match-44608e484a2a62c6",
 "j": 11,
 "date": "2026-12-12",
-"time": "12:15",
+"time": "11:30",
 "status": "sched",
 "home": "HC MONTBUI",
 "away": "RIBES CP B",
@@ -642,17 +642,6 @@
 "ag": null
 },
 {
-"id": "match-427a6eb8ac619986",
-"j": 12,
-"date": "2026-12-19",
-"time": "11:15",
-"status": "sched",
-"home": "CP VILANOVA A",
-"away": "JOIERIA MONER SANT RAMON B",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-dda5f7ab30737006",
 "j": 12,
 "date": "2026-12-19",
@@ -660,6 +649,17 @@
 "status": "sched",
 "home": "UNIÓ ESPORTIVA D'HORTA A",
 "away": "HC MONTBUI",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-427a6eb8ac619986",
+"j": 12,
+"date": "2026-12-20",
+"time": "10:15",
+"status": "sched",
+"home": "CP VILANOVA A",
+"away": "JOIERIA MONER SANT RAMON B",
 "hg": null,
 "ag": null
 },

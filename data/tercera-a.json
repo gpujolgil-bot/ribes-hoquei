@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-13T14:38:02+00:00",
+"updated": "2026-11-14T13:51:26+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -620,26 +620,26 @@
 "ag": 1
 },
 {
-"id": "match-b2721a7d3782c86a",
-"j": 8,
-"date": "2026-11-13",
-"time": "20:45",
-"status": "sched",
-"home": "VICIO PHC SANT CUGAT",
-"away": "CH NAVARCLES",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-374f77685b2bd4ba",
 "j": 8,
 "date": "2026-11-13",
-"time": "21:55",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CLUB HOQUEI CASTELLET",
 "away": "CLUB PATÍ MONJOS A",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 3
+},
+{
+"id": "match-b2721a7d3782c86a",
+"j": 8,
+"date": "2026-11-13",
+"time": null,
+"status": "ft",
+"home": "VICIO PHC SANT CUGAT",
+"away": "CH NAVARCLES",
+"hg": 6,
+"ag": 5
 },
 {
 "id": "match-3f37a417c4f26f81",
@@ -1027,6 +1027,17 @@
 "ag": null
 },
 {
+"id": "match-20df4ac053a62e02",
+"j": 12,
+"date": "2026-12-13",
+"time": "15:00",
+"status": "sched",
+"home": "CP MANRESA",
+"away": "JOIERIA MONER SANT RAMON A",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-0f566951b2556340",
 "j": 12,
 "date": "2026-12-13",
@@ -1056,17 +1067,6 @@
 "status": "sched",
 "home": "RIBES CP A A",
 "away": "HOQUEI CASAL ESPLUGA",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-20df4ac053a62e02",
-"j": 12,
-"date": "2026-12-13",
-"time": "19:00",
-"status": "sched",
-"home": "CP MANRESA",
-"away": "JOIERIA MONER SANT RAMON A",
 "hg": null,
 "ag": null
 },

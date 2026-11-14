@@ -1,6 +1,6 @@
 {
 "id": "tercera-b",
-"updated": "2026-11-13T14:38:04+00:00",
+"updated": "2026-11-14T13:51:28+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-e/results/",
 "matches": [
 {
@@ -414,12 +414,12 @@
 "id": "match-2215ee3fa994d044",
 "j": 7,
 "date": "2026-11-13",
-"time": "20:15",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP VILANOVA A",
 "away": "IGUALADA HC B",
-"hg": null,
-"ag": null
+"hg": 4,
+"ag": 4
 },
 {
 "id": "match-6cf4a2c4add9bf1c",
@@ -656,7 +656,7 @@
 "id": "match-23ec2a24d922d595",
 "j": 10,
 "date": "2026-12-13",
-"time": "18:00",
+"time": "20:00",
 "status": "sched",
 "home": "HC VILA-SANA ALPICAT",
 "away": "JOIERIA MONER SANT RAMON B",

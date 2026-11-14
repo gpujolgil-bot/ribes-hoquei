@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-a",
-"updated": "2026-11-12T15:18:02+00:00",
+"updated": "2026-11-14T13:51:14+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/",
 "matches": [
 {
@@ -466,24 +466,24 @@
 "ag": 0
 },
 {
-"id": "match-31a65070718833ec",
+"id": "match-543f6fdfe0f803fd",
 "j": 8,
 "date": "2026-11-14",
-"time": "10:00",
-"status": "sched",
-"home": "CH LES FRANQUESES B",
-"away": "CLUB PATÍ VILAFRANCA AKO C",
+"time": null,
+"status": "live",
+"home": "AUTO VIGATANA PATÍ VIC A",
+"away": "CP FOLGUEROLES B",
 "hg": null,
 "ag": null
 },
 {
-"id": "match-543f6fdfe0f803fd",
+"id": "match-31a65070718833ec",
 "j": 8,
 "date": "2026-11-14",
-"time": "11:45",
-"status": "sched",
-"home": "AUTO VIGATANA PATÍ VIC A",
-"away": "CP FOLGUEROLES B",
+"time": null,
+"status": "live",
+"home": "CH LES FRANQUESES B",
+"away": "CLUB PATÍ VILAFRANCA AKO C",
 "hg": null,
 "ag": null
 },
@@ -700,7 +700,7 @@
 "id": "match-7e5624d41047ac87",
 "j": 11,
 "date": "2026-12-13",
-"time": "11:15",
+"time": "11:30",
 "status": "sched",
 "home": "ROTOTANK BIGUES I RIELLS A",
 "away": "AUTO VIGATANA PATÍ VIC A",
@@ -741,6 +741,17 @@
 "ag": null
 },
 {
+"id": "match-e8ea5d7a3c657b1f",
+"j": 12,
+"date": "2026-12-19",
+"time": "10:00",
+"status": "sched",
+"home": "HOQUEI CLUB CASTELLAR A",
+"away": "CP FOLGUEROLES B",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-5ac6fc0e566f1ca1",
 "j": 12,
 "date": "2026-12-19",
@@ -759,17 +770,6 @@
 "status": "sched",
 "home": "AUTO VIGATANA PATÍ VIC A",
 "away": "CH RIPOLLET B",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-e8ea5d7a3c657b1f",
-"j": 12,
-"date": "2026-12-19",
-"time": "16:00",
-"status": "sched",
-"home": "HOQUEI CLUB CASTELLAR A",
-"away": "CP FOLGUEROLES B",
 "hg": null,
 "ag": null
 },
