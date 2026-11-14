@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-13T14:37:58+00:00",
+"updated": "2026-11-14T18:53:37+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -543,24 +543,24 @@
 "ag": null
 },
 {
-"id": "match-32929ece834ccfc8",
+"id": "match-00a7178530081776",
 "j": 8,
 "date": "2026-11-14",
-"time": "15:00",
-"status": "sched",
-"home": "CLUB PATI CALAFELL B",
-"away": "CLUB HOQUEI MOLLERUSSA A",
+"time": null,
+"status": "live",
+"home": "CAMBRILS CH",
+"away": "HC VALLS FM LOGISTIC",
 "hg": null,
 "ag": null
 },
 {
-"id": "match-00a7178530081776",
+"id": "match-32929ece834ccfc8",
 "j": 8,
 "date": "2026-11-14",
-"time": "16:30",
-"status": "sched",
-"home": "CAMBRILS CH",
-"away": "HC VALLS FM LOGISTIC",
+"time": null,
+"status": "live",
+"home": "CLUB PATI CALAFELL B",
+"away": "CLUB HOQUEI MOLLERUSSA A",
 "hg": null,
 "ag": null
 },
@@ -568,8 +568,8 @@
 "id": "match-e6ac7732e17a5d00",
 "j": 8,
 "date": "2026-11-14",
-"time": "17:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "HOQUEI CASAL ESPLUGA",
 "away": "HOQUEI CLUB ALPICAT D",
 "hg": null,

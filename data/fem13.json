@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-14T13:51:24+00:00",
+"updated": "2026-11-14T18:53:38+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -631,6 +631,17 @@
 "ag": 4
 },
 {
+"id": "match-1a2bb4887a0e5ddd",
+"j": 8,
+"date": "2026-11-14",
+"time": null,
+"status": "live",
+"home": "CLUB HOQUEI CASTELLET",
+"away": "CLUB HOQUEI MOLLERUSSA",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-8ab7d055470b6203",
 "j": 8,
 "date": "2026-11-14",
@@ -645,21 +656,10 @@
 "id": "match-70c83f805d8c91fd",
 "j": 8,
 "date": "2026-11-14",
-"time": "16:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATI TORRELLES",
 "away": "CLUB HOQUEI MOLINS DE REI",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-1a2bb4887a0e5ddd",
-"j": 8,
-"date": "2026-11-14",
-"time": "16:15",
-"status": "sched",
-"home": "CLUB HOQUEI CASTELLET",
-"away": "CLUB HOQUEI MOLLERUSSA",
 "hg": null,
 "ag": null
 },

@@ -1,6 +1,6 @@
 {
 "id": "alevi",
-"updated": "2026-11-14T13:51:20+00:00",
+"updated": "2026-11-14T18:53:36+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/alevi-plata-2026-2027/grup/alevi-plata-2/results/",
 "matches": [
 {
@@ -491,8 +491,8 @@
 "id": "match-3e745dd7cde6ea67",
 "j": 8,
 "date": "2026-11-14",
-"time": "15:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "HC VALLS FM LOGISTIC B",
 "away": "CLUB PATÍ VILAFRANCA AKO B B",
 "hg": null,

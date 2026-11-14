@@ -1,6 +1,6 @@
 {
 "id": "benjami-b",
-"updated": "2026-11-14T13:51:19+00:00",
+"updated": "2026-11-14T18:53:35+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-plata-barcelona-2026-2027/grup/bcn-benjami-plata-5/results/",
 "matches": [
 {
@@ -436,8 +436,8 @@
 "id": "match-0e36ef2daabcc9c1",
 "j": 8,
 "date": "2026-11-14",
-"time": "17:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CP VILANOVA A",
 "away": "CLUB PATI CUBELLES A A",
 "hg": null,
@@ -447,8 +447,8 @@
 "id": "match-65758cec9d3418de",
 "j": 8,
 "date": "2026-11-14",
-"time": "17:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "VICIO PHC SANT CUGAT E",
 "away": "CP CORBERA B",
 "hg": null,

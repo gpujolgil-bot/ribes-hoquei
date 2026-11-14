@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-b",
-"updated": "2026-11-14T13:51:15+00:00",
+"updated": "2026-11-14T18:53:33+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/",
 "matches": [
 {
@@ -414,8 +414,8 @@
 "id": "match-88acc0eaf304d0b6",
 "j": 8,
 "date": "2026-11-14",
-"time": "15:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "VICIO PHC SANT CUGAT D",
 "away": "JOIERIA MONER SANT RAMON B",
 "hg": null,

@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-a",
-"updated": "2026-11-14T13:51:14+00:00",
+"updated": "2026-11-14T18:53:32+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/",
 "matches": [
 {
@@ -491,8 +491,8 @@
 "id": "match-b5164aaf60cbbbfa",
 "j": 8,
 "date": "2026-11-14",
-"time": "15:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "MOLLET HC A",
 "away": "HOQUEI CLUB CASTELLAR A",
 "hg": null,
