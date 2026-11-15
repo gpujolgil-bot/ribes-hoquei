@@ -1,6 +1,6 @@
 {
 "id": "alevi",
-"updated": "2026-11-15T14:24:59+00:00",
+"updated": "2026-11-15T23:40:02+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/alevi-plata-2026-2027/grup/alevi-plata-2/results/",
 "matches": [
 {
@@ -499,24 +499,24 @@
 "ag": 10
 },
 {
-"id": "match-06606301620bf240",
+"id": "match-aa48f9359257a5b9",
 "j": 8,
 "date": "2026-11-15",
-"time": null,
-"status": "live",
-"home": "CHP MCDONALD'S AMPOSTA B",
-"away": "IGUALADA HC D",
+"time": "09:30",
+"status": "sched",
+"home": "RIBES CP",
+"away": "CLUB PATI CUBELLES B B",
 "hg": null,
 "ag": null
 },
 {
-"id": "match-aa48f9359257a5b9",
+"id": "match-06606301620bf240",
 "j": 8,
 "date": "2026-11-15",
-"time": null,
-"status": "live",
-"home": "RIBES CP",
-"away": "CLUB PATI CUBELLES B B",
+"time": "11:00",
+"status": "sched",
+"home": "CHP MCDONALD'S AMPOSTA B",
+"away": "IGUALADA HC D",
 "hg": null,
 "ag": null
 },
