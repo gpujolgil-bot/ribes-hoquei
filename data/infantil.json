@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-15T14:25:00+00:00",
+"updated": "2026-11-15T19:55:50+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -576,6 +576,17 @@
 "ag": null
 },
 {
+"id": "match-3d2942fd6281aa0d",
+"j": 8,
+"date": "2026-11-15",
+"time": null,
+"status": "live",
+"home": "CLUB HOQUEI MOLLERUSSA A",
+"away": "CLUB PATI CALAFELL B",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-148cd4317036ce0e",
 "j": 8,
 "date": "2026-11-15",
@@ -601,21 +612,10 @@
 "id": "match-33698f71aa8d04dd",
 "j": 8,
 "date": "2026-11-15",
-"time": "16:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "PONS LLEIDA C",
 "away": "CE NOIA FREIXENET C",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-3d2942fd6281aa0d",
-"j": 8,
-"date": "2026-11-15",
-"time": "17:00",
-"status": "sched",
-"home": "CLUB HOQUEI MOLLERUSSA A",
-"away": "CLUB PATI CALAFELL B",
 "hg": null,
 "ag": null
 },
@@ -623,8 +623,8 @@
 "id": "match-0f841086de71a887",
 "j": 8,
 "date": "2026-11-15",
-"time": "18:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "RIBES CP",
 "away": "CLUB PATI CUBELLES B B",
 "hg": null,
