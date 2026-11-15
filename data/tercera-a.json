@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-14T13:51:26+00:00",
+"updated": "2026-11-15T14:25:04+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -917,6 +917,17 @@
 "ag": null
 },
 {
+"id": "match-bbd05bd4d7d7e071",
+"j": 11,
+"date": "2026-12-05",
+"time": "17:00",
+"status": "sched",
+"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
+"away": "CP MANRESA",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-877f7fe4e68d666a",
 "j": 11,
 "date": "2026-12-05",
@@ -946,17 +957,6 @@
 "status": "sched",
 "home": "HOQUEI CASAL ESPLUGA",
 "away": "CLUB PATI TORRELLES A",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-bbd05bd4d7d7e071",
-"j": 11,
-"date": "2026-12-05",
-"time": "19:00",
-"status": "sched",
-"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
-"away": "CP MANRESA",
 "hg": null,
 "ag": null
 },

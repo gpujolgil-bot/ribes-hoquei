@@ -1,6 +1,6 @@
 {
 "id": "tercera-b",
-"updated": "2026-11-14T18:53:41+00:00",
+"updated": "2026-11-15T14:25:05+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-e/results/",
 "matches": [
 {
@@ -426,22 +426,22 @@
 "j": 7,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CH JUNEDA B",
 "away": "HOQUEI CLUB CASTELLAR",
-"hg": null,
-"ag": null
+"hg": 3,
+"ag": 4
 },
 {
 "id": "match-74dd4caca173b837",
 "j": 7,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "HC VALLS",
 "away": "CLUB PATÍ MONJOS B",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 4
 },
 {
 "id": "match-e306f3a45b9fada6",

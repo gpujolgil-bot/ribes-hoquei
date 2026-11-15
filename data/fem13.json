@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-14T18:53:38+00:00",
+"updated": "2026-11-15T14:25:02+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -635,31 +635,42 @@
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CLUB HOQUEI CASTELLET",
 "away": "CLUB HOQUEI MOLLERUSSA",
-"hg": null,
-"ag": null
+"hg": 11,
+"ag": 1
 },
 {
 "id": "match-8ab7d055470b6203",
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CLUB HOQUEI SANTA PERPÈTUA",
 "away": "CH MATARÓ",
-"hg": null,
-"ag": null
+"hg": 10,
+"ag": 0
 },
 {
 "id": "match-70c83f805d8c91fd",
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CLUB PATI TORRELLES",
 "away": "CLUB HOQUEI MOLINS DE REI",
+"hg": 6,
+"ag": 0
+},
+{
+"id": "match-8b2120cc69c683d3",
+"j": 8,
+"date": "2026-11-15",
+"time": null,
+"status": "live",
+"home": "CLUB PATI VILAFRANCA AKO",
+"away": "RIBES CP",
 "hg": null,
 "ag": null
 },
@@ -667,8 +678,8 @@
 "id": "match-7e8c2e64f5d1b587",
 "j": 8,
 "date": "2026-11-15",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATÍ RODA-FOLGUEROLES",
 "away": "FUTBOL CLUB MARTINENC",
 "hg": null,
@@ -678,21 +689,10 @@
 "id": "match-a916a400e26d5875",
 "j": 8,
 "date": "2026-11-15",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CP MASQUEFA",
 "away": "AUTO VIGATANA PATÍ VIC",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-8b2120cc69c683d3",
-"j": 8,
-"date": "2026-11-15",
-"time": "12:00",
-"status": "sched",
-"home": "CLUB PATI VILAFRANCA AKO",
-"away": "RIBES CP",
 "hg": null,
 "ag": null
 },

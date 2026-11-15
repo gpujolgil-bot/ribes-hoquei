@@ -1,6 +1,6 @@
 {
 "id": "benjami-b",
-"updated": "2026-11-14T18:53:35+00:00",
+"updated": "2026-11-15T14:24:57+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-plata-barcelona-2026-2027/grup/bcn-benjami-plata-5/results/",
 "matches": [
 {
@@ -337,8 +337,8 @@
 "id": "match-808b233ce6e098be",
 "j": 6,
 "date": "2026-11-15",
-"time": "13:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATÍ VILAFRANCA AKO B B",
 "away": "HC MONTBUI",
 "hg": null,
@@ -404,55 +404,55 @@
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CAPELLADES",
 "away": "HC MONTBUI",
-"hg": null,
-"ag": null
+"hg": 5,
+"ag": 4
 },
 {
 "id": "match-de61106e6c8faa5f",
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CHP MARTORELL",
 "away": "CLUB PATI TORRELLES",
-"hg": null,
-"ag": null
+"hg": 6,
+"ag": 9
 },
 {
 "id": "match-d442d3b79c9e94de",
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CP CONGRES E",
 "away": "CP MASQUEFA B",
-"hg": null,
-"ag": null
+"hg": 7,
+"ag": 1
 },
 {
 "id": "match-0e36ef2daabcc9c1",
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "CP VILANOVA A",
 "away": "CLUB PATI CUBELLES A A",
-"hg": null,
-"ag": null
+"hg": 1,
+"ag": 4
 },
 {
 "id": "match-65758cec9d3418de",
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "VICIO PHC SANT CUGAT E",
 "away": "CP CORBERA B",
-"hg": null,
-"ag": null
+"hg": 4,
+"ag": 6
 },
 {
 "id": "match-0dca6bd94477a476",

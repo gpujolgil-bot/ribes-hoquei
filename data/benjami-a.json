@@ -1,6 +1,6 @@
 {
 "id": "benjami-a",
-"updated": "2026-11-14T18:53:34+00:00",
+"updated": "2026-11-15T14:24:55+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-or-barcelona-2026-2027/grup/bcn-benjami-or-5/results/",
 "matches": [
 {
@@ -239,29 +239,29 @@
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "IGUALADA HC C",
 "away": "CLUB PATÍ VOLTREGÀ B",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 11
 },
 {
 "id": "match-2ea72008e3882031",
 "j": 8,
 "date": "2026-11-14",
 "time": null,
-"status": "live",
+"status": "ft",
 "home": "SANT CELONI",
 "away": "VICIO PHC SANT CUGAT C",
-"hg": null,
-"ag": null
+"hg": 1,
+"ag": 7
 },
 {
 "id": "match-30c7ea6fc618b3df",
 "j": 8,
 "date": "2026-11-15",
-"time": "10:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "RIBES CP A A",
 "away": "CE NOIA FREIXENET",
 "hg": null,
@@ -345,17 +345,6 @@
 "ag": null
 },
 {
-"id": "match-c9519a10cdd7e390",
-"j": 11,
-"date": "2026-12-13",
-"time": "10:00",
-"status": "sched",
-"home": "CLUB PATÍ VOLTREGÀ B",
-"away": "VICIO PHC SANT CUGAT C",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-59dcf96dca1b3c78",
 "j": 11,
 "date": "2026-12-13",
@@ -363,6 +352,17 @@
 "status": "sched",
 "home": "RIBES CP A A",
 "away": "SANT CELONI",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-c9519a10cdd7e390",
+"j": 11,
+"date": "2026-12-13",
+"time": "12:30",
+"status": "sched",
+"home": "CLUB PATÍ VOLTREGÀ B",
+"away": "VICIO PHC SANT CUGAT C",
 "hg": null,
 "ag": null
 },
