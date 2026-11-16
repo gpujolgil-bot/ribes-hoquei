@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-15T23:40:05+00:00",
+"updated": "2026-11-16T15:50:34+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -183,12 +183,12 @@
 "id": "match-cdf78d15e20f0ec8",
 "j": 2,
 "date": "2026-11-15",
-"time": "15:30",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "HCSENTMENAT",
 "away": "AUTO VIGATANA PATÍ VIC",
-"hg": null,
-"ag": null
+"hg": 7,
+"ag": 0
 },
 {
 "id": "157500",
@@ -664,59 +664,59 @@
 "ag": 0
 },
 {
+"id": "match-8b2120cc69c683d3",
+"j": 8,
+"date": "2026-11-15",
+"time": null,
+"status": "ft",
+"home": "CLUB PATI VILAFRANCA AKO",
+"away": "RIBES CP",
+"hg": 3,
+"ag": 0
+},
+{
 "id": "match-7e8c2e64f5d1b587",
 "j": 8,
 "date": "2026-11-15",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CLUB PATÍ RODA-FOLGUEROLES",
 "away": "FUTBOL CLUB MARTINENC",
-"hg": null,
-"ag": null
+"hg": 5,
+"ag": 6
 },
 {
 "id": "match-a916a400e26d5875",
 "j": 8,
 "date": "2026-11-15",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP MASQUEFA",
 "away": "AUTO VIGATANA PATÍ VIC",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-8b2120cc69c683d3",
-"j": 8,
-"date": "2026-11-15",
-"time": "12:00",
-"status": "sched",
-"home": "CLUB PATI VILAFRANCA AKO",
-"away": "RIBES CP",
-"hg": null,
-"ag": null
+"hg": 0,
+"ag": 2
 },
 {
 "id": "match-c7f7d7154f7469eb",
 "j": 8,
 "date": "2026-11-15",
-"time": "16:30",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP RIUDOMS",
 "away": "FITONATUR IGUALADA FEMENÍ HCP",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 2
 },
 {
 "id": "match-5d81c37595cf8ffc",
 "j": 8,
 "date": "2026-11-15",
-"time": "16:45",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "VICIO PHC SANT CUGAT",
 "away": "CP CONGRÉS",
-"hg": null,
-"ag": null
+"hg": 0,
+"ag": 1
 },
 {
 "id": "match-7c58627ce4553092",

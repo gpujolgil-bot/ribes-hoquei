@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-a",
-"updated": "2026-11-15T23:39:56+00:00",
+"updated": "2026-11-16T15:50:25+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/",
 "matches": [
 {
@@ -128,12 +128,12 @@
 "id": "match-70abb4011a12dd03",
 "j": 2,
 "date": "2026-11-15",
-"time": "17:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "RIBES CP A",
 "away": "MOLLET HC A",
-"hg": null,
-"ag": null
+"hg": 4,
+"ag": 1
 },
 {
 "id": "156241",
@@ -499,37 +499,37 @@
 "ag": 4
 },
 {
-"id": "match-5cdc03f127d5a0f4",
-"j": 8,
-"date": "2026-11-15",
-"time": "09:00",
-"status": "sched",
-"home": "CP MASQUEFA",
-"away": "ROTOTANK BIGUES I RIELLS A",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-8962719ffe7fd09b",
 "j": 8,
 "date": "2026-11-15",
-"time": "11:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CH MATARÓ B",
 "away": "HF SANT JOSEP SANT SADURNÍ C",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 2
+},
+{
+"id": "match-5cdc03f127d5a0f4",
+"j": 8,
+"date": "2026-11-15",
+"time": null,
+"status": "ft",
+"home": "CP MASQUEFA",
+"away": "ROTOTANK BIGUES I RIELLS A",
+"hg": 0,
+"ag": 4
 },
 {
 "id": "match-27fad7d5e1750ff3",
 "j": 8,
 "date": "2026-11-15",
-"time": "12:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "RIBES CP A",
 "away": "CLUB HOQUEI ARENYS DE MAR A",
-"hg": null,
-"ag": null
+"hg": 4,
+"ag": 4
 },
 {
 "id": "match-dc481970b727c72a",

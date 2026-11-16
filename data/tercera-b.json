@@ -1,6 +1,6 @@
 {
 "id": "tercera-b",
-"updated": "2026-11-15T23:40:08+00:00",
+"updated": "2026-11-16T15:50:37+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-e/results/",
 "matches": [
 {
@@ -447,34 +447,34 @@
 "id": "match-e306f3a45b9fada6",
 "j": 7,
 "date": "2026-11-15",
-"time": "17:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "HC VILA-SANA ALPICAT",
 "away": "CLUB PATI CALAFELL",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 5
 },
 {
 "id": "match-122aebb6e142df22",
 "j": 7,
 "date": "2026-11-15",
-"time": "17:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "JOIERIA MONER SANT RAMON B",
 "away": "CE NOIA FREIXENET",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 2
 },
 {
 "id": "match-2ea1b7fc2b027fad",
 "j": 7,
 "date": "2026-11-15",
-"time": "19:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "PONS LLEIDA A",
 "away": "RIBES CP B B",
-"hg": null,
-"ag": null
+"hg": 13,
+"ag": 2
 },
 {
 "id": "match-52b674019e44d76b",

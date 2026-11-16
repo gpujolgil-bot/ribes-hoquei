@@ -1,6 +1,6 @@
 {
 "id": "benjami-a",
-"updated": "2026-11-15T23:39:59+00:00",
+"updated": "2026-11-16T15:50:28+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-or-barcelona-2026-2027/grup/bcn-benjami-or-5/results/",
 "matches": [
 {
@@ -260,12 +260,12 @@
 "id": "match-30c7ea6fc618b3df",
 "j": 8,
 "date": "2026-11-15",
-"time": "10:45",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "RIBES CP A A",
 "away": "CE NOIA FREIXENET",
-"hg": null,
-"ag": null
+"hg": 1,
+"ag": 6
 },
 {
 "id": "match-33c2b20176311ea1",
