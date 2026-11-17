@@ -1,6 +1,6 @@
 {
 "id": "alevi",
-"updated": "2026-11-16T15:50:31+00:00",
+"updated": "2026-11-17T16:02:33+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/alevi-plata-2026-2027/grup/alevi-plata-2/results/",
 "matches": [
 {
@@ -818,6 +818,17 @@
 "ag": null
 },
 {
+"id": "match-2a3acd70c7b5bfd3",
+"j": 13,
+"date": "2027-01-09",
+"time": "15:30",
+"status": "sched",
+"home": "HC VALLS FM LOGISTIC B",
+"away": "CP RIUDEBITLLES B",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-33d5544cb91251d4",
 "j": 13,
 "date": "2027-01-09",
@@ -847,17 +858,6 @@
 "status": "sched",
 "home": "CLUB PATÍ VILAFRANCA AKO B B",
 "away": "HCPIERA B",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-2a3acd70c7b5bfd3",
-"j": 13,
-"date": "2027-01-10",
-"time": "10:45",
-"status": "sched",
-"home": "HC VALLS FM LOGISTIC B",
-"away": "CP RIUDEBITLLES B",
 "hg": null,
 "ag": null
 }
