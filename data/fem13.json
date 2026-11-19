@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-16T15:50:34+00:00",
+"updated": "2026-11-19T15:47:38+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -840,17 +840,6 @@
 "ag": null
 },
 {
-"id": "match-4dc7c8b05af1277c",
-"j": 10,
-"date": "2026-11-28",
-"time": "17:45",
-"status": "sched",
-"home": "CP MASQUEFA",
-"away": "CP CONGRÉS",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-460be1cd404b13c8",
 "j": 10,
 "date": "2026-11-29",
@@ -880,6 +869,17 @@
 "status": "sched",
 "home": "CP RIUDOMS",
 "away": "FUTBOL CLUB MARTINENC",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-4dc7c8b05af1277c",
+"j": 10,
+"date": "2026-11-29",
+"time": "16:00",
+"status": "sched",
+"home": "CP MASQUEFA",
+"away": "CP CONGRÉS",
 "hg": null,
 "ag": null
 },
@@ -1082,17 +1082,6 @@
 "ag": null
 },
 {
-"id": "match-9b483584e86506fa",
-"j": 13,
-"date": "2026-12-19",
-"time": "17:00",
-"status": "sched",
-"home": "CP CALDES",
-"away": "CP MASQUEFA",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-4d2d183603ce85bb",
 "j": 13,
 "date": "2026-12-19",
@@ -1126,6 +1115,17 @@
 "ag": null
 },
 {
+"id": "match-88e0ef6888b46208",
+"j": 13,
+"date": "2026-12-20",
+"time": "11:00",
+"status": "sched",
+"home": "CP RIUDOMS",
+"away": "CLUB PATI VILAFRANCA AKO",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-0750c2ea1debfd05",
 "j": 13,
 "date": "2026-12-20",
@@ -1148,13 +1148,13 @@
 "ag": null
 },
 {
-"id": "match-88e0ef6888b46208",
+"id": "match-9b483584e86506fa",
 "j": 13,
 "date": "2026-12-20",
-"time": "19:00",
+"time": "17:00",
 "status": "sched",
-"home": "CP RIUDOMS",
-"away": "CLUB PATI VILAFRANCA AKO",
+"home": "CP CALDES",
+"away": "CP MASQUEFA",
 "hg": null,
 "ag": null
 },

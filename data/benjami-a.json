@@ -1,6 +1,6 @@
 {
 "id": "benjami-a",
-"updated": "2026-11-16T15:50:28+00:00",
+"updated": "2026-11-19T15:47:30+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-or-barcelona-2026-2027/grup/bcn-benjami-or-5/results/",
 "matches": [
 {
@@ -367,17 +367,6 @@
 "ag": null
 },
 {
-"id": "match-c9b97f9d3829837e",
-"j": 12,
-"date": "2026-12-19",
-"time": "13:55",
-"status": "sched",
-"home": "VICIO PHC SANT CUGAT C",
-"away": "CE NOIA FREIXENET",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-3e00ebd43a5bbb60",
 "j": 12,
 "date": "2026-12-20",
@@ -396,6 +385,17 @@
 "status": "sched",
 "home": "SANT CELONI",
 "away": "IGUALADA HC C",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-c9b97f9d3829837e",
+"j": 12,
+"date": "2026-12-20",
+"time": "12:15",
+"status": "sched",
+"home": "VICIO PHC SANT CUGAT C",
+"away": "CE NOIA FREIXENET",
 "hg": null,
 "ag": null
 },

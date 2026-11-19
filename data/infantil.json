@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-17T16:02:35+00:00",
+"updated": "2026-11-19T15:47:36+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -884,6 +884,17 @@
 "ag": null
 },
 {
+"id": "match-3500af1bc91d579b",
+"j": 12,
+"date": "2026-12-19",
+"time": "14:45",
+"status": "sched",
+"home": "HOQUEI CLUB ALPICAT D",
+"away": "PONS LLEIDA C",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-c128170e6dd8b32b",
 "j": 12,
 "date": "2026-12-19",
@@ -891,17 +902,6 @@
 "status": "sched",
 "home": "CLUB PATI CALAFELL B",
 "away": "HC VALLS FM LOGISTIC",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-3500af1bc91d579b",
-"j": 12,
-"date": "2026-12-19",
-"time": "16:00",
-"status": "sched",
-"home": "HOQUEI CLUB ALPICAT D",
-"away": "PONS LLEIDA C",
 "hg": null,
 "ag": null
 },

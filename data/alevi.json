@@ -1,6 +1,6 @@
 {
 "id": "alevi",
-"updated": "2026-11-17T16:02:33+00:00",
+"updated": "2026-11-19T15:47:34+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/alevi-plata-2026-2027/grup/alevi-plata-2/results/",
 "matches": [
 {
@@ -664,6 +664,17 @@
 "ag": null
 },
 {
+"id": "match-c86db55c360f196f",
+"j": 11,
+"date": "2026-12-12",
+"time": "11:00",
+"status": "sched",
+"home": "CLUB HOQUEI CASTELLET",
+"away": "HC VALLS FM LOGISTIC B",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-356d2c6a5c3bb9a1",
 "j": 11,
 "date": "2026-12-12",
@@ -693,17 +704,6 @@
 "status": "sched",
 "home": "CLUB HOQUEI VILA-SECA C",
 "away": "CLUB PATI CALAFELL D",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-c86db55c360f196f",
-"j": 11,
-"date": "2026-12-13",
-"time": "10:00",
-"status": "sched",
-"home": "CLUB HOQUEI CASTELLET",
-"away": "HC VALLS FM LOGISTIC B",
 "hg": null,
 "ag": null
 },

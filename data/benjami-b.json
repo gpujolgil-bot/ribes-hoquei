@@ -1,6 +1,6 @@
 {
 "id": "benjami-b",
-"updated": "2026-11-16T15:50:30+00:00",
+"updated": "2026-11-19T15:47:32+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-plata-barcelona-2026-2027/grup/bcn-benjami-plata-5/results/",
 "matches": [
 {
@@ -491,7 +491,7 @@
 "id": "match-d1732e24ef643395",
 "j": 9,
 "date": "2026-11-22",
-"time": "15:30",
+"time": "15:15",
 "status": "sched",
 "home": "IGUALADA HC D",
 "away": "VICIO PHC SANT CUGAT E",
@@ -579,7 +579,7 @@
 "id": "match-2c66fee0021b55f3",
 "j": 11,
 "date": "2026-12-12",
-"time": "16:45",
+"time": "16:15",
 "status": "sched",
 "home": "VICIO PHC SANT CUGAT E",
 "away": "CP CONGRES E",
@@ -642,6 +642,17 @@
 "ag": null
 },
 {
+"id": "match-6767ccbdbc4d6ea8",
+"j": 12,
+"date": "2026-12-19",
+"time": "16:00",
+"status": "sched",
+"home": "CP VILANOVA A",
+"away": "IGUALADA HC D",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-85faa4a2498a5aff",
 "j": 12,
 "date": "2026-12-19",
@@ -660,17 +671,6 @@
 "status": "sched",
 "home": "CLUB PATÍ VILAFRANCA AKO B B",
 "away": "CP CORBERA B",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-6767ccbdbc4d6ea8",
-"j": 12,
-"date": "2026-12-20",
-"time": "12:45",
-"status": "sched",
-"home": "CP VILANOVA A",
-"away": "IGUALADA HC D",
 "hg": null,
 "ag": null
 },

@@ -1,6 +1,6 @@
 {
 "id": "tercera-b",
-"updated": "2026-11-16T15:50:37+00:00",
+"updated": "2026-11-19T15:47:42+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-e/results/",
 "matches": [
 {
@@ -557,7 +557,7 @@
 "id": "match-0d141160aeade0b1",
 "j": 9,
 "date": "2026-11-27",
-"time": "20:30",
+"time": "20:15",
 "status": "sched",
 "home": "CP VILANOVA A",
 "away": "CLUB PATI CALAFELL",
@@ -697,17 +697,6 @@
 "ag": null
 },
 {
-"id": "match-bc6faea5e38bc339",
-"j": 11,
-"date": "2026-12-19",
-"time": "16:00",
-"status": "sched",
-"home": "HOQUEI CLUB CASTELLAR",
-"away": "RIBES CP B B",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-656b15761db08648",
 "j": 11,
 "date": "2026-12-19",
@@ -715,6 +704,17 @@
 "status": "sched",
 "home": "CH JUNEDA B",
 "away": "CLUB PATI CALAFELL",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-bc6faea5e38bc339",
+"j": 11,
+"date": "2026-12-20",
+"time": "12:45",
+"status": "sched",
+"home": "HOQUEI CLUB CASTELLAR",
+"away": "RIBES CP B B",
 "hg": null,
 "ag": null
 },
