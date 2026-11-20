@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-16T15:50:36+00:00",
+"updated": "2026-11-20T15:29:42+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -1082,6 +1082,17 @@
 "ag": null
 },
 {
+"id": "match-6ec1175102228d80",
+"j": 13,
+"date": "2026-12-19",
+"time": "16:00",
+"status": "sched",
+"home": "CH NAVARCLES",
+"away": "CLUB PATÍ MONJOS A",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-71fb78d955b9aeec",
 "j": 13,
 "date": "2026-12-19",
@@ -1100,17 +1111,6 @@
 "status": "sched",
 "home": "CAMBRILS CH",
 "away": "CP MANRESA",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-6ec1175102228d80",
-"j": 13,
-"date": "2026-12-19",
-"time": "19:00",
-"status": "sched",
-"home": "CH NAVARCLES",
-"away": "CLUB PATÍ MONJOS A",
 "hg": null,
 "ag": null
 },
@@ -1140,7 +1140,7 @@
 "id": "match-fd572a6cea0f0ac8",
 "j": 13,
 "date": "2026-12-20",
-"time": "15:30",
+"time": "18:30",
 "status": "sched",
 "home": "CLUB PATI CUBELLES",
 "away": "CLUB PATI TORRELLES A",

@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-b",
-"updated": "2026-11-19T15:47:28+00:00",
+"updated": "2026-11-20T15:29:30+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/",
 "matches": [
 {
@@ -686,13 +686,13 @@
 "ag": null
 },
 {
-"id": "match-9efc2713e586bd31",
+"id": "match-c697c1dc361a47ea",
 "j": 13,
 "date": "2027-01-09",
 "time": "11:00",
 "status": "sched",
-"home": "HC MONTBUI",
-"away": "CP MONTESQUIU",
+"home": "JOIERIA MONER SANT RAMON B",
+"away": "RIBES CP B",
 "hg": null,
 "ag": null
 },
@@ -704,17 +704,6 @@
 "status": "sched",
 "home": "CP CORBERA",
 "away": "CP VILANOVA A",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-c697c1dc361a47ea",
-"j": 13,
-"date": "2027-01-09",
-"time": "13:00",
-"status": "sched",
-"home": "JOIERIA MONER SANT RAMON B",
-"away": "RIBES CP B",
 "hg": null,
 "ag": null
 },
@@ -737,6 +726,17 @@
 "status": "sched",
 "home": "HF SANT JOSEP SANT SADURNÍ D",
 "away": "UNIÓ ESPORTIVA D'HORTA A",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-9efc2713e586bd31",
+"j": 13,
+"date": "2027-01-09",
+"time": "17:00",
+"status": "sched",
+"home": "HC MONTBUI",
+"away": "CP MONTESQUIU",
 "hg": null,
 "ag": null
 },
