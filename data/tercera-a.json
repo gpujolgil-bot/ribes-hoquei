@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-21T14:59:25+00:00",
+"updated": "2026-11-21T20:46:54+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -722,21 +722,10 @@
 "id": "match-e4af28f9eaa35f72",
 "j": 9,
 "date": "2026-11-21",
-"time": "17:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CAMBRILS CH",
 "away": "CLUB PATI TORRELLES A",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-8b170b9b803863a5",
-"j": 9,
-"date": "2026-11-21",
-"time": "19:00",
-"status": "sched",
-"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
-"away": "CLUB PATÍ MONJOS A",
 "hg": null,
 "ag": null
 },
@@ -744,10 +733,21 @@
 "id": "match-0f2599260c2307eb",
 "j": 9,
 "date": "2026-11-21",
-"time": "20:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "HOQUEI CASAL ESPLUGA",
 "away": "VICIO PHC SANT CUGAT",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-8b170b9b803863a5",
+"j": 9,
+"date": "2026-11-21",
+"time": null,
+"status": "live",
+"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
+"away": "CLUB PATÍ MONJOS A",
 "hg": null,
 "ag": null
 },

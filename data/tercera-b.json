@@ -1,6 +1,6 @@
 {
 "id": "tercera-b",
-"updated": "2026-11-21T14:59:26+00:00",
+"updated": "2026-11-21T20:46:56+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-e/results/",
 "matches": [
 {
@@ -502,8 +502,8 @@
 "id": "match-038db705d7d1f344",
 "j": 8,
 "date": "2026-11-21",
-"time": "17:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "IGUALADA HC B",
 "away": "PONS LLEIDA A",
 "hg": null,
