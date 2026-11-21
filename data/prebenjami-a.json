@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-a",
-"updated": "2026-11-16T15:50:25+00:00",
+"updated": "2026-11-21T14:59:12+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/",
 "matches": [
 {
@@ -535,19 +535,19 @@
 "id": "match-dc481970b727c72a",
 "j": 9,
 "date": "2026-11-20",
-"time": "19:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP FOLGUEROLES B",
 "away": "CH MATARÓ B",
-"hg": null,
-"ag": null
+"hg": 3,
+"ag": 2
 },
 {
 "id": "match-63daec8371bdc979",
 "j": 9,
 "date": "2026-11-21",
-"time": "11:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "HF SANT JOSEP SANT SADURNÍ C",
 "away": "CH LES FRANQUESES B",
 "hg": null,
@@ -788,7 +788,7 @@
 "id": "match-4957c1da7ce948ed",
 "j": 12,
 "date": "2026-12-20",
-"time": "11:15",
+"time": "14:00",
 "status": "sched",
 "home": "MOLLET HC A",
 "away": "CLUB PATÍ VOLTREGÀ C",

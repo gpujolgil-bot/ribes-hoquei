@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-20T15:29:42+00:00",
+"updated": "2026-11-21T14:59:25+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -711,12 +711,12 @@
 "id": "match-8aa38f30399877b0",
 "j": 9,
 "date": "2026-11-20",
-"time": "21:55",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "JOIERIA MONER SANT RAMON A",
 "away": "RIBES CP A A",
-"hg": null,
-"ag": null
+"hg": 1,
+"ag": 7
 },
 {
 "id": "match-e4af28f9eaa35f72",
@@ -1085,7 +1085,7 @@
 "id": "match-6ec1175102228d80",
 "j": 13,
 "date": "2026-12-19",
-"time": "16:00",
+"time": "15:00",
 "status": "sched",
 "home": "CH NAVARCLES",
 "away": "CLUB PATÍ MONJOS A",

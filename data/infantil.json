@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-19T15:47:36+00:00",
+"updated": "2026-11-21T14:59:21+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -535,12 +535,12 @@
 "id": "match-f05943eb871667f0",
 "j": 7,
 "date": "2026-11-20",
-"time": "21:15",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CLUB HOQUEI VILA-SECA B",
 "away": "CLUB PATI CALAFELL B",
-"hg": null,
-"ag": null
+"hg": 6,
+"ag": 7
 },
 {
 "id": "match-00a7178530081776",
@@ -634,19 +634,19 @@
 "id": "match-984a623b05d2a4c4",
 "j": 9,
 "date": "2026-11-20",
-"time": "19:30",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "HC VALLS FM LOGISTIC",
 "away": "PONS LLEIDA C",
-"hg": null,
-"ag": null
+"hg": 0,
+"ag": 4
 },
 {
 "id": "match-fc856e978eeb6b9f",
 "j": 9,
 "date": "2026-11-21",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATÍ MONJOS",
 "away": "CLUB PATI CALAFELL B",
 "hg": null,
@@ -865,8 +865,8 @@
 "id": "match-2c881bc4b008d46f",
 "j": 12,
 "date": "2026-11-21",
-"time": "14:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB HOQUEI MONTBLANC",
 "away": "CE NOIA FREIXENET C",
 "hg": null,
@@ -898,7 +898,7 @@
 "id": "match-c128170e6dd8b32b",
 "j": 12,
 "date": "2026-12-19",
-"time": "15:00",
+"time": "16:30",
 "status": "sched",
 "home": "CLUB PATI CALAFELL B",
 "away": "HC VALLS FM LOGISTIC",
@@ -906,24 +906,24 @@
 "ag": null
 },
 {
-"id": "match-2b01fa9abcc746d6",
+"id": "match-25fa8567fade355a",
 "j": 12,
 "date": "2026-12-20",
-"time": "17:00",
+"time": "12:30",
 "status": "sched",
-"home": "CLUB HOQUEI VILA-SECA B",
-"away": "CLUB PATI CUBELLES B B",
+"home": "CLUB HOQUEI MOLLERUSSA A",
+"away": "CLUB PATÍ MONJOS",
 "hg": null,
 "ag": null
 },
 {
-"id": "match-25fa8567fade355a",
+"id": "match-2b01fa9abcc746d6",
 "j": 12,
 "date": "2026-12-20",
 "time": "17:30",
 "status": "sched",
-"home": "CLUB HOQUEI MOLLERUSSA A",
-"away": "CLUB PATÍ MONJOS",
+"home": "CLUB HOQUEI VILA-SECA B",
+"away": "CLUB PATI CUBELLES B B",
 "hg": null,
 "ag": null
 },

@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-19T15:47:38+00:00",
+"updated": "2026-11-21T14:59:23+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -898,8 +898,8 @@
 "id": "match-4ef63aedb6a3d061",
 "j": 11,
 "date": "2026-11-21",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "HCSENTMENAT",
 "away": "CLUB PATI TORRELLES",
 "hg": null,
@@ -1071,17 +1071,6 @@
 "ag": null
 },
 {
-"id": "match-d95d40cc3744cd5e",
-"j": 13,
-"date": "2026-12-19",
-"time": "12:30",
-"status": "sched",
-"home": "CLUB HOQUEI CASTELLET",
-"away": "CLUB PATI TORRELLES",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-4d2d183603ce85bb",
 "j": 13,
 "date": "2026-12-19",
@@ -1115,17 +1104,6 @@
 "ag": null
 },
 {
-"id": "match-88e0ef6888b46208",
-"j": 13,
-"date": "2026-12-20",
-"time": "11:00",
-"status": "sched",
-"home": "CP RIUDOMS",
-"away": "CLUB PATI VILAFRANCA AKO",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-0750c2ea1debfd05",
 "j": 13,
 "date": "2026-12-20",
@@ -1144,6 +1122,28 @@
 "status": "sched",
 "home": "FUTBOL CLUB MARTINENC",
 "away": "AUTO VIGATANA PATÍ VIC",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-d95d40cc3744cd5e",
+"j": 13,
+"date": "2026-12-20",
+"time": "13:15",
+"status": "sched",
+"home": "CLUB HOQUEI CASTELLET",
+"away": "CLUB PATI TORRELLES",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-88e0ef6888b46208",
+"j": 13,
+"date": "2026-12-20",
+"time": "16:30",
+"status": "sched",
+"home": "CP RIUDOMS",
+"away": "CLUB PATI VILAFRANCA AKO",
 "hg": null,
 "ag": null
 },
