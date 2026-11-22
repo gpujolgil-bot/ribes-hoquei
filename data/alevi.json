@@ -1,6 +1,6 @@
 {
 "id": "alevi",
-"updated": "2026-11-22T14:57:36+00:00",
+"updated": "2026-11-22T20:54:45+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/alevi-plata-2026-2027/grup/alevi-plata-2/results/",
 "matches": [
 {
@@ -590,8 +590,8 @@
 "id": "match-6bcd69748b01cdde",
 "j": 9,
 "date": "2026-11-22",
-"time": "16:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "IGUALADA HC D",
 "away": "CLUB PATI CALAFELL D",
 "hg": null,

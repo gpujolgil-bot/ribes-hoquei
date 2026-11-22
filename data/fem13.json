@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-22T14:57:39+00:00",
+"updated": "2026-11-22T20:54:47+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -763,6 +763,17 @@
 "ag": null
 },
 {
+"id": "match-db5f88085b3ba34d",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "live",
+"home": "CP CONGRÉS",
+"away": "AUTO VIGATANA PATÍ VIC",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-a87a72a6df68ec4c",
 "j": 9,
 "date": "2026-11-22",
@@ -785,22 +796,11 @@
 "ag": null
 },
 {
-"id": "match-db5f88085b3ba34d",
-"j": 9,
-"date": "2026-11-22",
-"time": "16:15",
-"status": "sched",
-"home": "CP CONGRÉS",
-"away": "AUTO VIGATANA PATÍ VIC",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-6165f528a541fcf7",
 "j": 9,
 "date": "2026-11-22",
-"time": "17:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "RIBES CP",
 "away": "CLUB PATI TORRELLES",
 "hg": null,

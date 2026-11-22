@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-22T14:57:38+00:00",
+"updated": "2026-11-22T20:54:46+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -664,6 +664,17 @@
 "ag": 1
 },
 {
+"id": "match-d093df5f5810aac0",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "live",
+"home": "CE NOIA FREIXENET C",
+"away": "RIBES CP",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-0158d247a407202f",
 "j": 9,
 "date": "2026-11-22",
@@ -686,22 +697,11 @@
 "ag": null
 },
 {
-"id": "match-d093df5f5810aac0",
-"j": 9,
-"date": "2026-11-22",
-"time": "16:15",
-"status": "sched",
-"home": "CE NOIA FREIXENET C",
-"away": "RIBES CP",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-2436198faf3dcbfc",
 "j": 9,
 "date": "2026-11-22",
-"time": "17:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "HOQUEI CLUB ALPICAT D",
 "away": "CLUB HOQUEI VILA-SECA B",
 "hg": null,

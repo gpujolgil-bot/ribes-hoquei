@@ -1,6 +1,6 @@
 {
 "id": "tercera-b",
-"updated": "2026-11-22T14:57:42+00:00",
+"updated": "2026-11-22T20:54:50+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-e/results/",
 "matches": [
 {
@@ -510,24 +510,24 @@
 "ag": 6
 },
 {
-"id": "match-bf07db6b41a29c16",
+"id": "match-103682aaea63125e",
 "j": 8,
 "date": "2026-11-22",
-"time": "17:30",
-"status": "sched",
-"home": "CP MASQUEFA",
-"away": "HC VILA-SANA ALPICAT",
+"time": null,
+"status": "live",
+"home": "CLUB PATI CALAFELL",
+"away": "JOIERIA MONER SANT RAMON B",
 "hg": null,
 "ag": null
 },
 {
-"id": "match-103682aaea63125e",
+"id": "match-bf07db6b41a29c16",
 "j": 8,
 "date": "2026-11-22",
-"time": "18:00",
-"status": "sched",
-"home": "CLUB PATI CALAFELL",
-"away": "JOIERIA MONER SANT RAMON B",
+"time": null,
+"status": "live",
+"home": "CP MASQUEFA",
+"away": "HC VILA-SANA ALPICAT",
 "hg": null,
 "ag": null
 },
@@ -535,8 +535,8 @@
 "id": "match-d0a1a1230c4e6c9f",
 "j": 8,
 "date": "2026-11-22",
-"time": "18:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "RIBES CP B B",
 "away": "CH JUNEDA B",
 "hg": null,

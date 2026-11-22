@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-22T14:57:41+00:00",
+"updated": "2026-11-22T20:54:49+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -752,6 +752,17 @@
 "ag": null
 },
 {
+"id": "match-f8a4bfd6cf3f1c33",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "live",
+"home": "CH NAVARCLES",
+"away": "CH JUNEDA A",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-6288eab052e9e7ce",
 "j": 9,
 "date": "2026-11-22",
@@ -774,22 +785,11 @@
 "ag": null
 },
 {
-"id": "match-f8a4bfd6cf3f1c33",
-"j": 9,
-"date": "2026-11-22",
-"time": "18:45",
-"status": "sched",
-"home": "CH NAVARCLES",
-"away": "CH JUNEDA A",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-0d83a0ac055a4021",
 "j": 9,
 "date": "2026-11-22",
-"time": "19:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CP MANRESA",
 "away": "CLUB HOQUEI CASTELLET",
 "hg": null,

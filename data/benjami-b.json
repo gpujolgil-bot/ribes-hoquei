@@ -1,6 +1,6 @@
 {
 "id": "benjami-b",
-"updated": "2026-11-22T14:57:35+00:00",
+"updated": "2026-11-22T20:54:44+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-plata-barcelona-2026-2027/grup/bcn-benjami-plata-5/results/",
 "matches": [
 {
@@ -502,8 +502,8 @@
 "id": "match-322f32b0b16b39e8",
 "j": 9,
 "date": "2026-11-22",
-"time": "16:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "RIBES CP B B",
 "away": "CP VILANOVA A",
 "hg": null,
