@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-a",
-"updated": "2026-11-21T14:59:12+00:00",
+"updated": "2026-11-22T00:46:43+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/",
 "matches": [
 {
@@ -546,8 +546,8 @@
 "id": "match-63daec8371bdc979",
 "j": 9,
 "date": "2026-11-21",
-"time": null,
-"status": "live",
+"time": "11:00",
+"status": "sched",
 "home": "HF SANT JOSEP SANT SADURNÍ C",
 "away": "CH LES FRANQUESES B",
 "hg": null,

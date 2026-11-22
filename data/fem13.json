@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-21T20:46:53+00:00",
+"updated": "2026-11-22T00:46:54+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -722,8 +722,8 @@
 "id": "match-7c58627ce4553092",
 "j": 9,
 "date": "2026-11-21",
-"time": null,
-"status": "live",
+"time": "16:45",
+"status": "sched",
 "home": "CP CALDES",
 "away": "CLUB PATI VILAFRANCA AKO",
 "hg": null,
@@ -898,8 +898,8 @@
 "id": "match-4ef63aedb6a3d061",
 "j": 11,
 "date": "2026-11-21",
-"time": null,
-"status": "live",
+"time": "10:00",
+"status": "sched",
 "home": "HCSENTMENAT",
 "away": "CLUB PATI TORRELLES",
 "hg": null,
