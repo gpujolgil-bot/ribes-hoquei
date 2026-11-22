@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-22T00:46:55+00:00",
+"updated": "2026-11-22T14:57:41+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -700,12 +700,12 @@
 "id": "match-a45ef7d2563d3ca6",
 "j": 8,
 "date": "2026-11-20",
-"time": "22:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP CORBERA",
 "away": "CLUB HOQUEI CADÍ",
-"hg": null,
-"ag": null
+"hg": 6,
+"ag": 5
 },
 {
 "id": "match-8aa38f30399877b0",
@@ -722,12 +722,12 @@
 "id": "match-e4af28f9eaa35f72",
 "j": 9,
 "date": "2026-11-21",
-"time": "17:45",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CAMBRILS CH",
 "away": "CLUB PATI TORRELLES A",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 3
 },
 {
 "id": "match-8b170b9b803863a5",
@@ -755,8 +755,8 @@
 "id": "match-6288eab052e9e7ce",
 "j": 9,
 "date": "2026-11-22",
-"time": "12:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB HOQUEI CADÍ",
 "away": "CP RIUDOMS",
 "hg": null,
@@ -766,8 +766,8 @@
 "id": "match-7276341b368871e1",
 "j": 9,
 "date": "2026-11-22",
-"time": "12:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATI CUBELLES",
 "away": "CP CORBERA",
 "hg": null,

@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-a",
-"updated": "2026-11-22T00:46:43+00:00",
+"updated": "2026-11-22T14:57:31+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-2/results/",
 "matches": [
 {
@@ -546,41 +546,19 @@
 "id": "match-63daec8371bdc979",
 "j": 9,
 "date": "2026-11-21",
-"time": "11:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "HF SANT JOSEP SANT SADURNÍ C",
 "away": "CH LES FRANQUESES B",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-4eb24909012bfca4",
-"j": 9,
-"date": "2026-11-22",
-"time": "10:00",
-"status": "sched",
-"home": "CLUB PATÍ VOLTREGÀ C",
-"away": "AUTO VIGATANA PATÍ VIC A",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-7f0f9d0ce675fbbd",
-"j": 9,
-"date": "2026-11-22",
-"time": "10:00",
-"status": "sched",
-"home": "ROTOTANK BIGUES I RIELLS A",
-"away": "RIBES CP A",
-"hg": null,
-"ag": null
+"hg": 4,
+"ag": 0
 },
 {
 "id": "match-5452a5d2e866faf7",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CH RIPOLLET B",
 "away": "CP MASQUEFA",
 "hg": null,
@@ -590,10 +568,32 @@
 "id": "match-60cc72b84645980e",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATÍ VILAFRANCA AKO C",
 "away": "MOLLET HC A",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-4eb24909012bfca4",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "live",
+"home": "CLUB PATÍ VOLTREGÀ C",
+"away": "AUTO VIGATANA PATÍ VIC A",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-7f0f9d0ce675fbbd",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "live",
+"home": "ROTOTANK BIGUES I RIELLS A",
+"away": "RIBES CP A",
 "hg": null,
 "ag": null
 },

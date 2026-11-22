@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-22T00:46:54+00:00",
+"updated": "2026-11-22T14:57:39+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -722,30 +722,19 @@
 "id": "match-7c58627ce4553092",
 "j": 9,
 "date": "2026-11-21",
-"time": "16:45",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP CALDES",
 "away": "CLUB PATI VILAFRANCA AKO",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-a87a72a6df68ec4c",
-"j": 9,
-"date": "2026-11-22",
-"time": "10:00",
-"status": "sched",
-"home": "FITONATUR IGUALADA FEMENÍ HCP",
-"away": "CLUB HOQUEI SANTA PERPÈTUA",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 4
 },
 {
 "id": "match-40a0bfc83c776919",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CH MATARÓ",
 "away": "VICIO PHC SANT CUGAT",
 "hg": null,
@@ -755,8 +744,8 @@
 "id": "match-bea5315179afa7d3",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB HOQUEI MOLINS DE REI",
 "away": "CP MASQUEFA",
 "hg": null,
@@ -766,10 +755,21 @@
 "id": "match-56467cdacea349aa",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB HOQUEI MOLLERUSSA",
 "away": "CP RIUDOMS",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-a87a72a6df68ec4c",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "live",
+"home": "FITONATUR IGUALADA FEMENÍ HCP",
+"away": "CLUB HOQUEI SANTA PERPÈTUA",
 "hg": null,
 "ag": null
 },
@@ -777,8 +777,8 @@
 "id": "match-4b0de25814f4e9da",
 "j": 9,
 "date": "2026-11-22",
-"time": "13:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "FUTBOL CLUB MARTINENC",
 "away": "CLUB HOQUEI CASTELLET",
 "hg": null,
@@ -898,12 +898,12 @@
 "id": "match-4ef63aedb6a3d061",
 "j": 11,
 "date": "2026-11-21",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "HCSENTMENAT",
 "away": "CLUB PATI TORRELLES",
-"hg": null,
-"ag": null
+"hg": 3,
+"ag": 2
 },
 {
 "id": "match-05fad6da4d60fa57",
@@ -1071,6 +1071,17 @@
 "ag": null
 },
 {
+"id": "match-ec678c465ea8fe03",
+"j": 13,
+"date": "2026-12-19",
+"time": "15:00",
+"status": "sched",
+"home": "FITONATUR IGUALADA FEMENÍ HCP",
+"away": "CH MATARÓ",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-4d2d183603ce85bb",
 "j": 13,
 "date": "2026-12-19",
@@ -1078,17 +1089,6 @@
 "status": "sched",
 "home": "CLUB PATÍ RODA-FOLGUEROLES",
 "away": "CLUB HOQUEI MOLINS DE REI",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-ec678c465ea8fe03",
-"j": 13,
-"date": "2026-12-20",
-"time": "10:00",
-"status": "sched",
-"home": "FITONATUR IGUALADA FEMENÍ HCP",
-"away": "CH MATARÓ",
 "hg": null,
 "ag": null
 },
@@ -1104,10 +1104,21 @@
 "ag": null
 },
 {
+"id": "match-d95d40cc3744cd5e",
+"j": 13,
+"date": "2026-12-20",
+"time": "11:15",
+"status": "sched",
+"home": "CLUB HOQUEI CASTELLET",
+"away": "CLUB PATI TORRELLES",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-0750c2ea1debfd05",
 "j": 13,
 "date": "2026-12-20",
-"time": "12:30",
+"time": "11:15",
 "status": "sched",
 "home": "CLUB HOQUEI MOLLERUSSA",
 "away": "CP CONGRÉS",
@@ -1122,17 +1133,6 @@
 "status": "sched",
 "home": "FUTBOL CLUB MARTINENC",
 "away": "AUTO VIGATANA PATÍ VIC",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-d95d40cc3744cd5e",
-"j": 13,
-"date": "2026-12-20",
-"time": "13:15",
-"status": "sched",
-"home": "CLUB HOQUEI CASTELLET",
-"away": "CLUB PATI TORRELLES",
 "hg": null,
 "ag": null
 },

@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-22T00:46:52+00:00",
+"updated": "2026-11-22T14:57:38+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -645,30 +645,30 @@
 "id": "match-fc856e978eeb6b9f",
 "j": 9,
 "date": "2026-11-21",
-"time": "10:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CLUB PATÍ MONJOS",
 "away": "CLUB PATI CALAFELL B",
-"hg": null,
-"ag": null
+"hg": 4,
+"ag": 3
 },
 {
 "id": "match-d156e1575f37e290",
 "j": 9,
 "date": "2026-11-21",
-"time": "17:30",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "HOQUEI CASAL ESPLUGA",
 "away": "CAMBRILS CH",
-"hg": null,
-"ag": null
+"hg": 8,
+"ag": 1
 },
 {
 "id": "match-0158d247a407202f",
 "j": 9,
 "date": "2026-11-22",
-"time": "12:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB HOQUEI MOLLERUSSA A",
 "away": "CLUB HOQUEI MONTBLANC",
 "hg": null,
@@ -678,8 +678,8 @@
 "id": "match-1650571b635231c1",
 "j": 9,
 "date": "2026-11-22",
-"time": "14:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATI CUBELLES B B",
 "away": "CP SUBUR SITGES B",
 "hg": null,
@@ -865,12 +865,12 @@
 "id": "match-2c881bc4b008d46f",
 "j": 12,
 "date": "2026-11-21",
-"time": "14:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CLUB HOQUEI MONTBLANC",
 "away": "CE NOIA FREIXENET C",
-"hg": null,
-"ag": null
+"hg": 4,
+"ag": 7
 },
 {
 "id": "match-e69e0af4b1b09ede",
@@ -884,17 +884,6 @@
 "ag": null
 },
 {
-"id": "match-3500af1bc91d579b",
-"j": 12,
-"date": "2026-12-19",
-"time": "14:45",
-"status": "sched",
-"home": "HOQUEI CLUB ALPICAT D",
-"away": "PONS LLEIDA C",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-c128170e6dd8b32b",
 "j": 12,
 "date": "2026-12-19",
@@ -902,6 +891,17 @@
 "status": "sched",
 "home": "CLUB PATI CALAFELL B",
 "away": "HC VALLS FM LOGISTIC",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-3500af1bc91d579b",
+"j": 12,
+"date": "2026-12-19",
+"time": "18:45",
+"status": "sched",
+"home": "HOQUEI CLUB ALPICAT D",
+"away": "PONS LLEIDA C",
 "hg": null,
 "ag": null
 },
