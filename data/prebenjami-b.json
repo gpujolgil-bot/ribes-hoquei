@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-b",
-"updated": "2026-11-23T01:14:07+00:00",
+"updated": "2026-11-26T16:56:38+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/",
 "matches": [
 {
@@ -502,12 +502,12 @@
 "id": "match-eae7d06be256c465",
 "j": 9,
 "date": "2026-11-22",
-"time": "13:45",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "INNOAESTHETICS HC SANT JUST A",
 "away": "UNIÓ ESPORTIVA D'HORTA A",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 4
 },
 {
 "id": "match-f54249dd8d8dc9be",
@@ -601,7 +601,7 @@
 "id": "match-a25d147154b962ca",
 "j": 11,
 "date": "2026-12-12",
-"time": "15:30",
+"time": "15:00",
 "status": "sched",
 "home": "VICIO PHC SANT CUGAT D",
 "away": "CLUB HOQUEI PRAT",
@@ -686,6 +686,17 @@
 "ag": null
 },
 {
+"id": "match-71d28c0d5bbec7dd",
+"j": 13,
+"date": "2027-01-09",
+"time": "10:00",
+"status": "sched",
+"home": "VICIO PHC SANT CUGAT D",
+"away": "CP RIUDEBITLLES B",
+"hg": null,
+"ag": null
+},
+{
 "id": "match-c697c1dc361a47ea",
 "j": 13,
 "date": "2027-01-09",
@@ -704,17 +715,6 @@
 "status": "sched",
 "home": "CP CORBERA",
 "away": "CP VILANOVA A",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-71d28c0d5bbec7dd",
-"j": 13,
-"date": "2027-01-09",
-"time": "13:55",
-"status": "sched",
-"home": "VICIO PHC SANT CUGAT D",
-"away": "CP RIUDEBITLLES B",
 "hg": null,
 "ag": null
 },
@@ -752,17 +752,6 @@
 "ag": null
 },
 {
-"id": "match-16c05d411b4944c7",
-"j": 14,
-"date": "2027-01-16",
-"time": "10:00",
-"status": "sched",
-"home": "INNOAESTHETICS HC SANT JUST A",
-"away": "HC MONTBUI",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-d6ebcfcff1460f15",
 "j": 14,
 "date": "2027-01-16",
@@ -781,6 +770,17 @@
 "status": "sched",
 "home": "CP VILANOVA A",
 "away": "VICIO PHC SANT CUGAT D",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-16c05d411b4944c7",
+"j": 14,
+"date": "2027-01-16",
+"time": "15:15",
+"status": "sched",
+"home": "INNOAESTHETICS HC SANT JUST A",
+"away": "HC MONTBUI",
 "hg": null,
 "ag": null
 },
