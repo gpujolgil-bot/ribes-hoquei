@@ -1,6 +1,6 @@
 {
 "id": "alevi",
-"updated": "2026-11-26T16:56:42+00:00",
+"updated": "2026-11-28T15:53:14+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/alevi-plata-2026-2027/grup/alevi-plata-2/results/",
 "matches": [
 {
@@ -598,22 +598,11 @@
 "ag": 6
 },
 {
-"id": "match-6d83608e56ccdd86",
-"j": 10,
-"date": "2026-11-28",
-"time": "10:00",
-"status": "sched",
-"home": "HCPIERA B",
-"away": "IGUALADA HC D",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-6f853d3abdf31948",
 "j": 10,
 "date": "2026-11-28",
-"time": "11:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATI CALAFELL D",
 "away": "CLUB PATI CUBELLES B B",
 "hg": null,
@@ -623,8 +612,8 @@
 "id": "match-e412fde49615d9c3",
 "j": 10,
 "date": "2026-11-28",
-"time": "12:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CP RIUDEBITLLES B",
 "away": "CEH OLÍMPIC REUS A",
 "hg": null,
@@ -634,10 +623,21 @@
 "id": "match-888aa4d961d17e2d",
 "j": 10,
 "date": "2026-11-28",
-"time": "16:45",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "HC VALLS FM LOGISTIC B",
 "away": "CP SUBUR SITGES",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-6d83608e56ccdd86",
+"j": 10,
+"date": "2026-11-28",
+"time": null,
+"status": "live",
+"home": "HCPIERA B",
+"away": "IGUALADA HC D",
 "hg": null,
 "ag": null
 },

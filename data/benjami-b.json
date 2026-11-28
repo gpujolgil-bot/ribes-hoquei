@@ -1,6 +1,6 @@
 {
 "id": "benjami-b",
-"updated": "2026-11-26T16:56:40+00:00",
+"updated": "2026-11-28T15:53:13+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/benjami-plata-barcelona-2026-2027/grup/bcn-benjami-plata-5/results/",
 "matches": [
 {
@@ -513,8 +513,8 @@
 "id": "match-f0b3081aaa83fa99",
 "j": 10,
 "date": "2026-11-28",
-"time": "10:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CHP MARTORELL",
 "away": "CLUB PATI CUBELLES A A",
 "hg": null,
@@ -524,8 +524,8 @@
 "id": "match-4b084187c667066a",
 "j": 10,
 "date": "2026-11-28",
-"time": "12:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CP CONGRES E",
 "away": "IGUALADA HC D",
 "hg": null,

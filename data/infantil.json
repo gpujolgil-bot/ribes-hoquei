@@ -1,6 +1,6 @@
 {
 "id": "infantil",
-"updated": "2026-11-27T16:42:07+00:00",
+"updated": "2026-11-28T15:53:15+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/infantil-plata-2026-2027/grup/infantil-plata-6/results/",
 "matches": [
 {
@@ -708,22 +708,11 @@
 "ag": 6
 },
 {
-"id": "match-c62f23794c89d7ce",
-"j": 10,
-"date": "2026-11-28",
-"time": "12:45",
-"status": "sched",
-"home": "CP SUBUR SITGES B",
-"away": "CE NOIA FREIXENET C",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-8da2511ef5eca4ee",
 "j": 10,
 "date": "2026-11-28",
-"time": "15:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CAMBRILS CH",
 "away": "HOQUEI CLUB ALPICAT D",
 "hg": null,
@@ -733,10 +722,21 @@
 "id": "match-d91d9bb4e868f239",
 "j": 10,
 "date": "2026-11-28",
-"time": "16:30",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CLUB PATI CALAFELL B",
 "away": "CLUB PATI CUBELLES B B",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-c62f23794c89d7ce",
+"j": 10,
+"date": "2026-11-28",
+"time": null,
+"status": "live",
+"home": "CP SUBUR SITGES B",
+"away": "CE NOIA FREIXENET C",
 "hg": null,
 "ag": null
 },

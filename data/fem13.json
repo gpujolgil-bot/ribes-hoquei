@@ -1,6 +1,6 @@
 {
 "id": "fem13",
-"updated": "2026-11-23T01:14:12+00:00",
+"updated": "2026-11-28T15:53:16+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/fem-13-plata-2026-2027/results/",
 "matches": [
 {
@@ -730,79 +730,90 @@
 "ag": 4
 },
 {
-"id": "match-a87a72a6df68ec4c",
-"j": 9,
-"date": "2026-11-22",
-"time": "10:00",
-"status": "sched",
-"home": "FITONATUR IGUALADA FEMENÍ HCP",
-"away": "CLUB HOQUEI SANTA PERPÈTUA",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-40a0bfc83c776919",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:15",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CH MATARÓ",
 "away": "VICIO PHC SANT CUGAT",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 0
 },
 {
 "id": "match-bea5315179afa7d3",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:15",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CLUB HOQUEI MOLINS DE REI",
 "away": "CP MASQUEFA",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 4
 },
 {
 "id": "match-56467cdacea349aa",
 "j": 9,
 "date": "2026-11-22",
-"time": "11:30",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CLUB HOQUEI MOLLERUSSA",
 "away": "CP RIUDOMS",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-4b0de25814f4e9da",
-"j": 9,
-"date": "2026-11-22",
-"time": "13:00",
-"status": "sched",
-"home": "FUTBOL CLUB MARTINENC",
-"away": "CLUB HOQUEI CASTELLET",
-"hg": null,
-"ag": null
+"hg": 1,
+"ag": 8
 },
 {
 "id": "match-db5f88085b3ba34d",
 "j": 9,
 "date": "2026-11-22",
-"time": "16:15",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP CONGRÉS",
 "away": "AUTO VIGATANA PATÍ VIC",
-"hg": null,
-"ag": null
+"hg": 1,
+"ag": 3
+},
+{
+"id": "match-a87a72a6df68ec4c",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "ft",
+"home": "FITONATUR IGUALADA FEMENÍ HCP",
+"away": "CLUB HOQUEI SANTA PERPÈTUA",
+"hg": 0,
+"ag": 10
+},
+{
+"id": "match-4b0de25814f4e9da",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "ft",
+"home": "FUTBOL CLUB MARTINENC",
+"away": "CLUB HOQUEI CASTELLET",
+"hg": 3,
+"ag": 6
 },
 {
 "id": "match-6165f528a541fcf7",
 "j": 9,
 "date": "2026-11-22",
-"time": "17:15",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "RIBES CP",
 "away": "CLUB PATI TORRELLES",
+"hg": 7,
+"ag": 1
+},
+{
+"id": "match-bf2deccc10485a2e",
+"j": 10,
+"date": "2026-11-28",
+"time": null,
+"status": "live",
+"home": "CLUB HOQUEI SANTA PERPÈTUA",
+"away": "CLUB HOQUEI MOLLERUSSA",
 "hg": null,
 "ag": null
 },
@@ -810,21 +821,10 @@
 "id": "match-dab3c0435b9220d7",
 "j": 10,
 "date": "2026-11-28",
-"time": "12:00",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "VICIO PHC SANT CUGAT",
 "away": "FITONATUR IGUALADA FEMENÍ HCP",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-bf2deccc10485a2e",
-"j": 10,
-"date": "2026-11-28",
-"time": "12:30",
-"status": "sched",
-"home": "CLUB HOQUEI SANTA PERPÈTUA",
-"away": "CLUB HOQUEI MOLLERUSSA",
 "hg": null,
 "ag": null
 },
@@ -854,7 +854,7 @@
 "id": "match-acbb8139f235287b",
 "j": 10,
 "date": "2026-11-29",
-"time": "10:30",
+"time": "10:00",
 "status": "sched",
 "home": "CLUB PATI TORRELLES",
 "away": "CP CALDES",
@@ -887,7 +887,7 @@
 "id": "match-1c2fb499c08c528a",
 "j": 10,
 "date": "2026-11-29",
-"time": "17:15",
+"time": "16:45",
 "status": "sched",
 "home": "AUTO VIGATANA PATÍ VIC",
 "away": "CH MATARÓ",
@@ -1258,17 +1258,6 @@
 "ag": null
 },
 {
-"id": "match-6de6e92de20f2921",
-"j": 15,
-"date": "2027-01-16",
-"time": "13:55",
-"status": "sched",
-"home": "VICIO PHC SANT CUGAT",
-"away": "CLUB PATI VILAFRANCA AKO",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-9c2227ec013a905c",
 "j": 15,
 "date": "2027-01-17",
@@ -1305,7 +1294,7 @@
 "id": "match-66f0d208bba14a30",
 "j": 15,
 "date": "2027-01-17",
-"time": "12:30",
+"time": "12:45",
 "status": "sched",
 "home": "CLUB HOQUEI MOLLERUSSA",
 "away": "FITONATUR IGUALADA FEMENÍ HCP",
@@ -1320,6 +1309,17 @@
 "status": "sched",
 "home": "FUTBOL CLUB MARTINENC",
 "away": "CH MATARÓ",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-6de6e92de20f2921",
+"j": 15,
+"date": "2027-01-17",
+"time": "14:00",
+"status": "sched",
+"home": "VICIO PHC SANT CUGAT",
+"away": "CLUB PATI VILAFRANCA AKO",
 "hg": null,
 "ag": null
 },

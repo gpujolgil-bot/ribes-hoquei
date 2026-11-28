@@ -1,6 +1,6 @@
 {
 "id": "prebenjami-b",
-"updated": "2026-11-26T16:56:38+00:00",
+"updated": "2026-11-28T15:53:10+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/prebenjami-plata-barcelona-2026-2027/grup/bcn-prebenjami-plata-4/results/",
 "matches": [
 {
@@ -400,6 +400,17 @@
 "ag": 4
 },
 {
+"id": "match-17d748d18ddbd3b6",
+"j": 8,
+"date": "2026-11-14",
+"time": null,
+"status": "ft",
+"home": "UNIÓ ESPORTIVA D'HORTA A",
+"away": "CP MONTESQUIU",
+"hg": 1,
+"ag": 0
+},
+{
 "id": "match-88acc0eaf304d0b6",
 "j": 8,
 "date": "2026-11-14",
@@ -409,17 +420,6 @@
 "away": "JOIERIA MONER SANT RAMON B",
 "hg": 4,
 "ag": 0
-},
-{
-"id": "match-17d748d18ddbd3b6",
-"j": 8,
-"date": "2026-11-14",
-"time": "12:45",
-"status": "sched",
-"home": "UNIÓ ESPORTIVA D'HORTA A",
-"away": "CP MONTESQUIU",
-"hg": null,
-"ag": null
 },
 {
 "id": "match-24e6f11a9717aa54",
@@ -510,24 +510,24 @@
 "ag": 4
 },
 {
-"id": "match-f54249dd8d8dc9be",
+"id": "match-ba95f67f54913259",
 "j": 10,
 "date": "2026-11-28",
-"time": "10:00",
-"status": "sched",
-"home": "CP RIUDEBITLLES B",
-"away": "HF SANT JOSEP SANT SADURNÍ D",
+"time": null,
+"status": "live",
+"home": "CP MONTESQUIU",
+"away": "INNOAESTHETICS HC SANT JUST A",
 "hg": null,
 "ag": null
 },
 {
-"id": "match-ba95f67f54913259",
+"id": "match-f54249dd8d8dc9be",
 "j": 10,
 "date": "2026-11-28",
-"time": "10:15",
-"status": "sched",
-"home": "CP MONTESQUIU",
-"away": "INNOAESTHETICS HC SANT JUST A",
+"time": null,
+"status": "live",
+"home": "CP RIUDEBITLLES B",
+"away": "HF SANT JOSEP SANT SADURNÍ D",
 "hg": null,
 "ag": null
 },
@@ -535,8 +535,8 @@
 "id": "match-a7badba9c17b24d0",
 "j": 10,
 "date": "2026-11-28",
-"time": "10:15",
-"status": "sched",
+"time": null,
+"status": "live",
 "home": "CP VILANOVA A",
 "away": "HC MONTBUI",
 "hg": null,

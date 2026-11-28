@@ -1,6 +1,6 @@
 {
 "id": "tercera-a",
-"updated": "2026-11-23T01:14:13+00:00",
+"updated": "2026-11-28T15:53:17+00:00",
 "source": "https://hoquei.info/hs/fecapa/2026-2027/competicio/tercera-catalana-masculina-2026-2027/grup/3a-catalana-grup-b/results/",
 "matches": [
 {
@@ -730,70 +730,81 @@
 "ag": 3
 },
 {
-"id": "match-8b170b9b803863a5",
-"j": 9,
-"date": "2026-11-21",
-"time": "19:00",
-"status": "sched",
-"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
-"away": "CLUB PATÍ MONJOS A",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-0f2599260c2307eb",
 "j": 9,
 "date": "2026-11-21",
-"time": "20:00",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "HOQUEI CASAL ESPLUGA",
 "away": "VICIO PHC SANT CUGAT",
-"hg": null,
-"ag": null
+"hg": 3,
+"ag": 0
 },
 {
-"id": "match-6288eab052e9e7ce",
+"id": "match-8b170b9b803863a5",
 "j": 9,
-"date": "2026-11-22",
-"time": "12:30",
-"status": "sched",
-"home": "CLUB HOQUEI CADÍ",
-"away": "CP RIUDOMS",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-7276341b368871e1",
-"j": 9,
-"date": "2026-11-22",
-"time": "12:45",
-"status": "sched",
-"home": "CLUB PATI CUBELLES",
-"away": "CP CORBERA",
-"hg": null,
-"ag": null
+"date": "2026-11-21",
+"time": null,
+"status": "ft",
+"home": "TRANSLOP ALCAÑIZ CLUB PATIN",
+"away": "CLUB PATÍ MONJOS A",
+"hg": 3,
+"ag": 2
 },
 {
 "id": "match-f8a4bfd6cf3f1c33",
 "j": 9,
 "date": "2026-11-22",
-"time": "18:45",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CH NAVARCLES",
 "away": "CH JUNEDA A",
-"hg": null,
-"ag": null
+"hg": 2,
+"ag": 7
+},
+{
+"id": "match-6288eab052e9e7ce",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "ft",
+"home": "CLUB HOQUEI CADÍ",
+"away": "CP RIUDOMS",
+"hg": 8,
+"ag": 6
+},
+{
+"id": "match-7276341b368871e1",
+"j": 9,
+"date": "2026-11-22",
+"time": null,
+"status": "ft",
+"home": "CLUB PATI CUBELLES",
+"away": "CP CORBERA",
+"hg": 3,
+"ag": 2
 },
 {
 "id": "match-0d83a0ac055a4021",
 "j": 9,
 "date": "2026-11-22",
-"time": "19:45",
-"status": "sched",
+"time": null,
+"status": "ft",
 "home": "CP MANRESA",
 "away": "CLUB HOQUEI CASTELLET",
-"hg": null,
-"ag": null
+"hg": 5,
+"ag": 3
+},
+{
+"id": "match-bf1d8734c8aa38e7",
+"j": 10,
+"date": "2026-11-27",
+"time": null,
+"status": "ft",
+"home": "CLUB HOQUEI CASTELLET",
+"away": "JOIERIA MONER SANT RAMON A",
+"hg": 5,
+"ag": 5
 },
 {
 "id": "match-2d7e9943e363ea6d",
@@ -803,17 +814,6 @@
 "status": "sched",
 "home": "CH JUNEDA A",
 "away": "HOQUEI CASAL ESPLUGA",
-"hg": null,
-"ag": null
-},
-{
-"id": "match-bf1d8734c8aa38e7",
-"j": 10,
-"date": "2026-11-27",
-"time": "21:55",
-"status": "sched",
-"home": "CLUB HOQUEI CASTELLET",
-"away": "JOIERIA MONER SANT RAMON A",
 "hg": null,
 "ag": null
 },
@@ -895,17 +895,6 @@
 "ag": null
 },
 {
-"id": "match-27abe207214b667a",
-"j": 11,
-"date": "2026-12-04",
-"time": "21:30",
-"status": "sched",
-"home": "CAMBRILS CH",
-"away": "CLUB HOQUEI CASTELLET",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-0fedfb9b18ff4463",
 "j": 11,
 "date": "2026-12-05",
@@ -979,6 +968,17 @@
 "status": "sched",
 "home": "JOIERIA MONER SANT RAMON A",
 "away": "CLUB PATÍ MONJOS A",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-27abe207214b667a",
+"j": 11,
+"date": "2026-12-18",
+"time": "21:30",
+"status": "sched",
+"home": "CAMBRILS CH",
+"away": "CLUB HOQUEI CASTELLET",
 "hg": null,
 "ag": null
 },
@@ -1104,17 +1104,6 @@
 "ag": null
 },
 {
-"id": "match-6da3e95bde173ccf",
-"j": 13,
-"date": "2026-12-19",
-"time": "19:00",
-"status": "sched",
-"home": "CAMBRILS CH",
-"away": "CP MANRESA",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-09dc54f108e345ed",
 "j": 13,
 "date": "2026-12-19",
@@ -1133,6 +1122,17 @@
 "status": "sched",
 "home": "CP CORBERA",
 "away": "CH JUNEDA A",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-6da3e95bde173ccf",
+"j": 13,
+"date": "2026-12-20",
+"time": "11:30",
+"status": "sched",
+"home": "CAMBRILS CH",
+"away": "CP MANRESA",
 "hg": null,
 "ag": null
 },
@@ -1258,17 +1258,6 @@
 "ag": null
 },
 {
-"id": "match-c4630ee0094279c1",
-"j": 15,
-"date": "2027-01-16",
-"time": "13:55",
-"status": "sched",
-"home": "VICIO PHC SANT CUGAT",
-"away": "CH JUNEDA A",
-"hg": null,
-"ag": null
-},
-{
 "id": "match-198b729045959650",
 "j": 15,
 "date": "2027-01-16",
@@ -1331,6 +1320,17 @@
 "status": "sched",
 "home": "CLUB HOQUEI CADÍ",
 "away": "CLUB PATÍ MONJOS A",
+"hg": null,
+"ag": null
+},
+{
+"id": "match-c4630ee0094279c1",
+"j": 15,
+"date": "2027-01-17",
+"time": "17:45",
+"status": "sched",
+"home": "VICIO PHC SANT CUGAT",
+"away": "CH JUNEDA A",
 "hg": null,
 "ag": null
 },
